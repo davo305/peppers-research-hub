@@ -146,6 +146,77 @@
       border-radius: 10px;
     }
 
+    /* CONTACT FORM */
+
+    .contact-form {
+      margin-top: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+    }
+
+    .form-group input[type="email"],
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: 1px solid #394039;
+      background: #0d110d;
+      color: white;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .form-group input:focus {
+      border-color: #d92b27;
+    }
+
+    .consent {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      color: #d2d2d2;
+      font-size: 14px;
+    }
+
+    .consent input {
+      margin-top: 5px;
+    }
+
+    .privacy-note {
+      background: #101410;
+      border-left: 4px solid #24733a;
+      padding: 14px;
+      border-radius: 8px;
+      color: #bfc5bf;
+      font-size: 14px;
+      margin: 18px 0;
+    }
+
+    .submit-button {
+      width: 100%;
+      padding: 15px 20px;
+      background: #d92b27;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      opacity: 0.92;
+    }
+
     footer {
       border-top: 1px solid #232823;
       padding: 35px 20px;
@@ -276,6 +347,98 @@
   </section>
 
 
+  <!-- STAY CONNECTED -->
+
+  <section class="section" id="stay-connected">
+
+    <h2 class="section-title">
+      📬 Stay Connected
+    </h2>
+
+    <div class="card">
+
+      <h3>Peppers Backup Contact List 🌶️</h3>
+
+      <p>
+        Add your contact information so we can reach you with
+        important Peppers Research Hub announcements or send you
+        a new Telegram community link if our current group becomes unavailable.
+      </p>
+
+      <form
+        class="contact-form"
+        action="https://formspree.io/f/mbgrkvlr"
+        method="POST">
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Peppers Research Hub Contact">
+
+        <div class="form-group">
+
+          <label for="email">
+            Email Address *
+          </label>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your@email.com"
+            required>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="telegram">
+            Telegram Username
+          </label>
+
+          <input
+            type="text"
+            id="telegram"
+            name="telegram"
+            placeholder="@username">
+
+        </div>
+
+        <label class="consent">
+
+          <input
+            type="checkbox"
+            name="consent"
+            value="Agreed"
+            required>
+
+          <span>
+            I agree to receive important Peppers Research Hub
+            announcements and replacement Telegram community links.
+          </span>
+
+        </label>
+
+        <div class="privacy-note">
+          🔒 <strong>Your privacy matters.</strong>
+          Your information will be kept private and will not be shared
+          or sold. It will only be used for important Peppers Research Hub
+          announcements and community contact.
+        </div>
+
+        <button
+          class="submit-button"
+          type="submit">
+          🌶️ Join Backup Contact List
+        </button>
+
+      </form>
+
+    </div>
+
+  </section>
+
+
   <!-- RESEARCH -->
 
   <section class="section" id="research">
@@ -334,6 +497,13 @@
     © 2026 Peppers Research Hub
     <br>
     Research • Education • Community
+    <br><br>
+    Contact:
+    <a
+      href="mailto:contact@peppersresearchhub.com"
+      style="color:#aaa;">
+      contact@peppersresearchhub.com
+    </a>
 
   </footer>
 
