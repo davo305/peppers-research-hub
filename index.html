@@ -1,168 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Peppers Research Hub</title>
 
-  <title>Peppers Research Hub</title>
+<style>
+*{box-sizing:border-box}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:#0b0e0b;
+color:white;
+line-height:1.5;
+}
+.hero{
+min-height:80vh;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+text-align:center;
+padding:40px 20px;
+background:
+linear-gradient(rgba(0,0,0,.15),rgba(0,0,0,.85)),
+url("Screenshot_20260814_132841_ChatGPT.jpg") center/cover no-repeat;
+}
+.hero-content{max-width:800px}
+h1{
+font-size:clamp(42px,10vw,75px);
+line-height:1;
+margin:15px 0;
+}
+.badge{
+display:inline-block;
+background:rgba(0,0,0,.75);
+padding:8px 15px;
+border-radius:30px;
+font-weight:bold;
+}
+.tagline{font-size:20px}
+.btn{
+display:inline-block;
+padding:14px 22px;
+margin:6px;
+border-radius:10px;
+background:#d92b27;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+.green{background:#24733a}
+.section{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+.card{
+background:#151915;
+border:1px solid #292f29;
+border-radius:15px;
+padding:22px;
+margin-bottom:15px;
+}
+.status{
+color:#83ff9f;
+font-weight:bold;
+}
+footer{
+text-align:center;
+color:#888;
+padding:30px;
+border-top:1px solid #222;
+}
+</style>
+</head>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<body>
 
-    html {
-      scroll-behavior: smooth;
-    }
+<div class="hero">
+<div class="hero-content">
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #0b0e0b;
-      color: white;
-      line-height: 1.6;
-    }
+<div class="badge">
+🌶️ PEPPER COLLECTIVE
+</div>
 
-    .hero {
-      position: relative;
-      min-height: 88vh;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.30),
-          rgba(0, 0, 0, 0.82)
-        ),
-        url('Screenshot_20260814_132841_ChatGPT.jpg')
-        center / cover no-repeat;
+<h1>Peppers Research Hub</h1>
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-      text-align: center;
-      padding: 50px 20px;
-    }
+<p class="tagline">
+Research • Share • Learn • Grow
+</p>
 
-    .hero-content {
-      max-width: 850px;
-      width: 100%;
-    }
+<a class="btn" href="#community">
+Community
+</a>
 
-    .brand-badge {
-      display: inline-block;
-      background: rgba(0, 0, 0, 0.78);
-      border: 1px solid rgba(255,255,255,.2);
-      padding: 8px 16px;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      margin-bottom: 15px;
-    }
+<a class="btn green" href="#research">
+Research Hub
+</a>
 
-    h1 {
-      margin: 0;
-      font-size: clamp(42px, 10vw, 78px);
-      line-height: 1;
-      text-shadow: 0 4px 16px rgba(0,0,0,.9);
-    }
+</div>
+</div>
 
-    .tagline {
-      margin: 18px 0 30px;
-      font-size: 20px;
-      color: #f1f1f1;
-      text-shadow: 0 2px 8px #000;
-    }
 
-    .buttons {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
+<div class="section">
 
-    .btn {
-      display: inline-block;
-      padding: 15px 24px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-weight: bold;
-      transition: 0.2s;
-    }
+<h2>🌶️ Welcome to the Hub</h2>
 
-    .btn:hover {
-      transform: translateY(-2px);
-    }
+<div class="card">
+<p>
+Peppers Research Hub is the online home of the
+Pepper Collective community.
+</p>
 
-    .btn-red {
-      background: #d92b27;
-    }
+<p>
+Research, education, discussion, information sharing
+and community resources — all in one place.
+</p>
+</div>
 
-    .btn-green {
-      background: #24733a;
-    }
+</div>
 
-    .section {
-      max-width: 950px;
-      margin: auto;
-      padding: 55px 20px;
-    }
 
-    .section-title {
-      font-size: 32px;
-      margin: 0 0 18px;
-    }
+<div class="section" id="community">
 
-    .card {
-      background: #151915;
-      border: 1px solid #272d27;
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 10px 28px rgba(0,0,0,.18);
-    }
+<h2>📡 Community Status</h2>
 
-    .status {
-      display: inline-block;
-      background: #143d20;
-      color: #83ff9f;
-      padding: 7px 13px;
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+<div class="card">
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
+<p class="status">
+● COMMUNITY ONLINE
+</p>
 
-    .mini-card {
-      background: #151915;
-      border: 1px solid #272d27;
-      border-radius: 16px;
-      padding: 22px;
-    }
+<p>
+If one of our community platforms becomes unavailable,
+official updates and new community links will be posted here.
+</p>
 
-    .mini-card h3 {
-      margin-top: 0;
-      color: #ffffff;
-    }
+<a class="btn" href="#">
+Official Community
+</a>
 
-    .announcement {
-      border-left: 4px solid #d92b27;
-    }
+</div>
+</div>
 
-    footer {
-      border-top: 1px solid #232823;
-      padding: 35px 20px;
-      text-align: center;
-      color: #888;
-      font-size: 14px;
-    }
 
-    @media (max-width: 600px) {
-      .hero {
-        min-height: 82vh;
-        background-position: center top;
-        padding-bottom: 38px;
+<div class="section" id="research">
+
+<h2>🔬 Research & Education</h2>
+
+<div class="card">
+<h3>📚 Research Library</h3>
+<p>
+Educational resources, studies and research references.
+</p>
+</div>
+
+<div class="card">
+<h3>🧪 Compound Information</h3>
+<p>
+Educational information covering compounds,
+research terminology and published studies.
+</p>
+</div>
+
+<div class="card">
+<h3>🌶️ Community Knowledge</h3>
+<p>
+Research information and useful resources
+shared by the community.
+</p>
+</div>
+
+</div>
+
+
+<div class="section">
+
+<h2>📢 Latest Announcements</h2>
+
+<div class="card">
+
+<h3>PeppersResearchHub.com is live 🌶️</h3>
+
+<p>
+Bookmark this website to find official updates
+and reconnect with the Pepper Collective community.
+</p>
+
+</div>
+</div>
+
+
+<footer>
+
+© 2026 Peppers Research Hub
+<br>
+Research • Education • Community
+
+</footer>
+
+</body>
+</html>
