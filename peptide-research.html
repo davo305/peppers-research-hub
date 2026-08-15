@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Peptide Research Library | Peppers Research Hub</title>
+
+  <meta
+    name="description"
+    content="Peptide-specific research articles, videos and educational resources collected by Peppers Research Hub."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
+        linear-gradient(180deg, #06090f, #090d12);
+      color: white;
+      min-height: 100vh;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: auto;
+      padding: 25px 18px 70px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 11px 16px;
+      border-radius: 10px;
+      background: #168bd2;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 8px;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      color: #aeb8c4;
+      margin: 0 0 28px;
+      font-size: 17px;
+    }
+
+    .notice {
+      border-left: 5px solid #168bd2;
+      background: rgba(5,44,80,.25);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      color: #c8d9e8;
+    }
+
+    .evidence-note {
+      border-left: 5px solid #8b5cf6;
+      background: rgba(65,35,110,.22);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      color: #ddd2f6;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 38px;
+    }
+
+    .quick-nav a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #121920;
+      border: 1px solid #34414b;
+      color: #dce4ea;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .compound {
+      margin-top: 48px;
+      scroll-margin-top: 20px;
+    }
+
+    .compound-title {
+      font-size: 29px;
+      margin: 0 0 7px;
+    }
+
+    .compound-description {
+      color: #9ea9b4;
+      margin: 0 0 20px;
+    }
+
+    .resource {
+      background: rgba(18,23,29,.95);
+      border: 1px solid #303a43;
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.30);
+    }
+
+    .resource h2 {
+      margin: 0 0 5px;
+      font-size: 20px;
+    }
+
+    .type {
+      display: inline-block;
+      color: #70d8ff;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .resource p {
+      color: #c4cbd2;
+    }
+
+    .resource-note {
+      margin: 16px 0;
+      padding: 11px 13px;
+      background: rgba(75,50,10,.16);
+      border-radius: 9px;
+      color: #d2b873;
+      font-size: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 10px;
+      background: #7040b8;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .video-button {
+      background: #c62828;
+    }
+
+    .protocol-button {
+      background: #b56b19;
+    }
+
+    .future-card {
+      background: rgba(18,23,29,.95);
+      border: 1px dashed #47515c;
+      border-radius: 18px;
+      padding: 24px;
+      margin-top: 45px;
+      text-align: center;
+      color: #aeb8c4;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding-top: 30px;
+      border-top: 1px solid #28313a;
+      text-align: center;
+      color: #7f8a94;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 20px 15px 55px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .resource {
+        padding: 19px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="page">
+
+  <a class="back" href="index.html">
+    ← Back to Peppers Research Hub
+  </a>
+
+  <h1>🧬 Peptide Research Library</h1>
+
+  <p class="subtitle">
+    Peptide-specific articles, videos, educational resources and research references.
+  </p>
+
+  <div class="notice">
+    <strong>🔬 Educational & Research Notice</strong>
+    <br><br>
+    Information and external links on this page are for general educational
+    and research purposes only. Peppers Research Hub does not provide medical
+    advice, diagnosis, treatment recommendations, dosing instructions or
+    individualized healthcare guidance.
+  </div>
+
+  <div class="evidence-note">
+    <strong>📖 How to Use This Library</strong>
+    <br><br>
+    Resources listed here may include scientific literature, third-party articles,
+    independent educational pages and videos. Inclusion does not mean Peppers
+    Research Hub endorses every statement or conclusion made by a source.
+    Readers should distinguish preliminary, preclinical, observational and
+    anecdotal information from evidence established through well-controlled
+    human clinical research.
+  </div>
+
+  <div class="quick-nav">
+    <a href="#pinealon">🧠 Pinealon</a>
+    <a href="#cartalax">🦴 Cartalax</a>
+    <a href="#epithalon">🧬 Epithalon / Epitalon</a>
+  </div>
+
+
+  <!-- PINEALON -->
+
+  <section class="compound" id="pinealon">
+
+    <h2 class="compound-title">🧠 Pinealon</h2>
+
+    <p class="compound-description">
+      Third-party educational resources discussing Pinealon,
+      proposed mechanisms and research findings.
+    </p>
+
+    <div class="resource">
+
+      <h2>Pinealon Peptide Reviews 2026</h2>
+
+      <span class="type">
+        📄 Third-Party Educational Article • InjectCo
+      </span>
+
+      <p>
+        Article discussing Pinealon, proposed mechanisms,
+        reported findings and other educational information.
+      </p>
+
+      <div class="resource-note">
+        ⚠️ Review supporting evidence and source quality independently.
+      </div>
+
+      <a
+        class="button"
+        href="https://injectco.com/pinealon-peptide-reviews-2026-benefits-results-dosage-does-it-work/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Read Pinealon Article
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Pinealon Video Resource</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <p>
+        Independent video discussing Pinealon and related research topics.
+      </p>
+
+      <div class="resource-note">
+        ⚠️ Video content represents the creator's views.
+        Verify important claims using reliable scientific literature.
+      </div>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/PFB00eiUf90?is=kq4VmmJqOS8XDdrx"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Pinealon Video
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- CARTALAX -->
+
+  <section class="compound" id="cartalax">
+
+    <h2 class="compound-title">🦴 Cartalax</h2>
+
+    <p class="compound-description">
+      Third-party articles and videos discussing Cartalax,
+      cartilage-related research and proposed mechanisms.
+    </p>
+
+
+    <div class="resource">
+
+      <h2>Cartalax Peptide & Joint Repair</h2>
+
+      <span class="type">
+        📄 Third-Party Educational Article • Joe Mars Report
+      </span>
+
+      <p>
+        Educational article discussing Cartalax and cartilage-related research claims.
+      </p>
+
+      <div class="resource-note">
+        ⚠️ Claims should be evaluated against the underlying scientific evidence.
+      </div>
+
+      <a
+        class="button"
+        href="https://joemarsreport.substack.com/p/cartalax-peptide-joint-repair?r=707o7m&utm_medium=ios&triedRedirect=true"
+        target="_blank"
+        rel="noopener noreferrer">
+        Read Cartalax Article
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Cartalax Research Protocol Information</h2>
+
+      <span class="type">
+        🧪 Third-Party Research Protocol Resource
+      </span>
+
+      <p>
+        Third-party page discussing experimental Cartalax research protocols.
+      </p>
+
+      <div class="resource-note">
+        ⚠️ Experimental research material should not be interpreted as
+        established human dosing guidance or medical advice.
+      </div>
+
+      <a
+        class="button protocol-button"
+        href="https://www.cartalaxpeptide.com/cartalax-peptide-dosage/"
+        target="_blank"
+        rel="noopener noreferrer">
+        View Research Protocol Information
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Cartalax Video Resource #1</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/W9IQjKATIww?is=u8_C0YwIKZQYY_c9"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Cartalax Video #1
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Cartalax Video Resource #2</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/Bw4-1662DHU?is=VhCAHiAN-ooWNNPJ"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Cartalax Video #2
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- EPITHALON -->
+
+  <section class="compound" id="epithalon">
+
+    <h2 class="compound-title">🧬 Epithalon / Epitalon</h2>
+
+    <p class="compound-description">
+      Third-party educational resources discussing Epithalon / Epitalon
+      and related peptide bioregulator research.
+    </p>
+
+
+    <div class="resource">
+
+      <h2>NA-Epitalon Research Information</h2>
+
+      <span class="type">
+        📄 Third-Party Educational Resource
+      </span>
+
+      <a
+        class="button"
+        href="https://support.pgb.shipsync.pro/portal/en/kb/articles/na-epitalon-10mg-2025"
+        target="_blank"
+        rel="noopener noreferrer">
+        View NA-Epitalon Resource
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Epitalon / Epithalon / Epithalamin Research Collection</h2>
+
+      <span class="type">
+        📚 Third-Party Research Collection
+      </span>
+
+      <a
+        class="button"
+        href="https://foofyrka.notion.site/Epitalon-Epithalon-Epithalamin-e1308471db6a48debe5ea1aee79f4045"
+        target="_blank"
+        rel="noopener noreferrer">
+        View Research Collection
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Epithalon / Epitalon Video #1</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/jsPgZfX0WSM?is=kz2FDrOYtpw1q5Ut"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Video #1
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Epithalon / Epitalon Video #2</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/Nr8roe5afho?is=RwwArdUgXbArKgqc"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Video #2
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Epithalon / Epitalon Video #3</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/CBx1Y0Rp3PU?is=LtjMQ-yp8709sC7p"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Video #3
+      </a>
+
+    </div>
+
+
+    <div class="resource">
+
+      <h2>Epithalon / Epitalon Video #4</h2>
+
+      <span class="type">
+        ▶️ Third-Party Video • YouTube
+      </span>
+
+      <a
+        class="button video-button"
+        href="https://youtu.be/SG6lWEaRLkI?is=bchR0zxi9HI4-klH"
+        target="_blank"
+        rel="noopener noreferrer">
+        ▶ Watch Video #4
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <div class="future-card">
+    <strong>🧬 More Peptide Research Coming</strong>
+    <br><br>
+    Additional peptide-specific research pages, articles,
+    studies and educational resources will be added as the library grows.
+  </div>
+
+
+  <footer>
+    🌶️ Peppers Research Hub
+    <br>
+    Research • Education • Community
+    <br><br>
+
+    <a href="research-information.html">
+      📚 General Research Information
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="index.html">
+      ← Main Hub
+    </a>
+  </footer>
+
+</main>
+
+</body>
+</html>
