@@ -36,9 +36,9 @@
     }
 
 
-    /* =========================
-       FLOATING LAB BACKGROUND
-    ========================== */
+    /* =====================================
+       FLOATING NEON LAB BACKGROUND
+    ===================================== */
 
     .lab-background {
       position: fixed;
@@ -51,89 +51,124 @@
     .lab-emoji {
       position: absolute;
 
-      /* MORE VISIBLE */
-      opacity: 0.20;
+      /* BRIGHTER */
+      opacity: 0.32;
 
+      /* NEON GLOW */
       filter:
-        drop-shadow(0 0 8px rgba(80, 220, 255, .35));
+        saturate(1.55)
+        brightness(1.25)
+        drop-shadow(0 0 5px rgba(70,255,220,.90))
+        drop-shadow(0 0 12px rgba(30,200,255,.65))
+        drop-shadow(0 0 22px rgba(70,255,170,.30));
 
-      animation: floatLab 12s ease-in-out infinite;
+      animation:
+        floatLab 12s ease-in-out infinite,
+        neonPulse 4s ease-in-out infinite;
+
       user-select: none;
     }
 
     .lab1 {
-      font-size: 44px;
+      font-size: 46px;
       left: 5%;
-      top: 12%;
+      top: 10%;
       animation-delay: 0s;
     }
 
     .lab2 {
-      font-size: 38px;
-      right: 7%;
-      top: 20%;
+      font-size: 41px;
+      right: 6%;
+      top: 22%;
       animation-delay: -3s;
     }
 
     .lab3 {
-      font-size: 46px;
-      left: 8%;
-      top: 42%;
+      font-size: 47px;
+      left: 5%;
+      top: 39%;
       animation-delay: -6s;
     }
 
     .lab4 {
-      font-size: 40px;
-      right: 6%;
-      top: 52%;
+      font-size: 43px;
+      right: 5%;
+      top: 51%;
       animation-delay: -2s;
     }
 
     .lab5 {
       font-size: 48px;
       left: 4%;
-      top: 70%;
+      top: 65%;
       animation-delay: -8s;
     }
 
     .lab6 {
-      font-size: 42px;
-      right: 8%;
-      top: 78%;
+      font-size: 43px;
+      right: 6%;
+      top: 77%;
       animation-delay: -4s;
     }
 
     .lab7 {
-      font-size: 40px;
-      left: 48%;
-      top: 88%;
+      font-size: 44px;
+      left: 47%;
+      top: 89%;
       animation-delay: -7s;
     }
+
 
     @keyframes floatLab {
 
       0% {
         transform:
           translateY(0px)
-          rotate(-4deg);
+          rotate(-5deg);
       }
 
       50% {
         transform:
-          translateY(-24px)
+          translateY(-25px)
           rotate(6deg);
       }
 
       100% {
         transform:
           translateY(0px)
-          rotate(-4deg);
+          rotate(-5deg);
       }
 
     }
 
 
-    /* EVERYTHING ABOVE BACKGROUND */
+    @keyframes neonPulse {
+
+      0%, 100% {
+        opacity: 0.27;
+
+        filter:
+          saturate(1.45)
+          brightness(1.15)
+          drop-shadow(0 0 5px rgba(70,255,220,.75))
+          drop-shadow(0 0 10px rgba(30,200,255,.50));
+      }
+
+      50% {
+        opacity: 0.38;
+
+        filter:
+          saturate(1.75)
+          brightness(1.35)
+          drop-shadow(0 0 7px rgba(70,255,220,1))
+          drop-shadow(0 0 16px rgba(30,200,255,.80))
+          drop-shadow(0 0 28px rgba(70,255,170,.40));
+      }
+
+    }
+
+
+    /* CONTENT ABOVE BACKGROUND */
 
     .site-content {
       position: relative;
@@ -141,9 +176,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        HERO
-    ========================== */
+    ===================================== */
 
     .hero {
       position: relative;
@@ -177,8 +212,7 @@
 
       background: rgba(0,0,0,.78);
 
-      border:
-        1px solid rgba(255,255,255,.25);
+      border: 1px solid rgba(255,255,255,.25);
 
       padding: 8px 16px;
 
@@ -216,9 +250,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        BUTTONS
-    ========================== */
+    ===================================== */
 
     .buttons {
       display: flex;
@@ -262,9 +296,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        PAGE SECTIONS
-    ========================== */
+    ===================================== */
 
     .section {
       max-width: 950px;
@@ -284,9 +318,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        CARDS
-    ========================== */
+    ===================================== */
 
     .card {
       background:
@@ -317,9 +351,7 @@
     }
 
 
-    /* =========================
-       STATUS
-    ========================== */
+    /* STATUS */
 
     .status {
       display: inline-block;
@@ -337,12 +369,15 @@
       font-weight: bold;
 
       margin-bottom: 10px;
+
+      box-shadow:
+        0 0 12px rgba(80,255,130,.20);
     }
 
 
-    /* =========================
+    /* =====================================
        CARD BUTTONS
-    ========================== */
+    ===================================== */
 
     .card-button {
       display: inline-block;
@@ -381,9 +416,9 @@
     }
 
 
-    /* =========================
+    /* =====================================
        RESEARCH GRID
-    ========================== */
+    ===================================== */
 
     .research-grid {
       display: grid;
@@ -404,9 +439,9 @@
     }
 
 
-    /* =========================
-       BACKUP CONTACT SIGNUP
-    ========================== */
+    /* =====================================
+       BACKUP CONTACT SECTION
+    ===================================== */
 
     .backup-section {
       background:
@@ -426,7 +461,15 @@
     .backup-card {
       border:
         1px solid rgba(70,200,120,.40);
+
+      box-shadow:
+        0 0 25px rgba(40,180,100,.08);
     }
+
+
+    /* =====================================
+       BACKUP FORM
+    ===================================== */
 
     .backup-form {
       display: grid;
@@ -434,7 +477,9 @@
       margin-top: 20px;
     }
 
-    .backup-form input {
+    .backup-form input[type="text"],
+    .backup-form input[type="email"] {
+
       width: 100%;
 
       padding: 15px;
@@ -455,9 +500,66 @@
 
     .backup-form input:focus {
       border-color: #4fbf72;
+
+      box-shadow:
+        0 0 8px rgba(79,191,114,.20);
     }
 
+
+    /* =====================================
+       CONSENT BOX
+    ===================================== */
+
+    .consent-box {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 12px;
+
+      margin:
+        8px 0 5px;
+
+      padding: 15px;
+
+      background:
+        rgba(20,45,30,.50);
+
+      border:
+        1px solid rgba(70,180,100,.30);
+
+      border-radius: 10px;
+
+      color: #c7d2ca;
+
+      font-size: 14px;
+
+      line-height: 1.5;
+
+      cursor: pointer;
+    }
+
+    .consent-box input {
+      width: 21px;
+      height: 21px;
+
+      margin:
+        2px 0 0;
+
+      flex-shrink: 0;
+
+      accent-color: #2ea653;
+    }
+
+    .consent-box strong {
+      color: #79e69b;
+    }
+
+
+    /* SUBMIT BUTTON */
+
     .backup-form button {
+
       border: none;
 
       padding: 15px 20px;
@@ -473,18 +575,38 @@
       font-weight: bold;
 
       cursor: pointer;
+
+      transition: .2s;
     }
+
+    .backup-form button:hover {
+      transform: translateY(-2px);
+
+      background: #2c9850;
+    }
+
+
+    /* PRIVACY NOTE */
 
     .privacy-note {
       color: #829087;
+
       font-size: 12px;
-      margin-top: 10px;
+
+      margin-top: 14px;
+
+      line-height: 1.6;
+    }
+
+    .privacy-note a {
+      color: #65c982;
+      text-decoration: none;
     }
 
 
-    /* =========================
+    /* =====================================
        THIRD PARTY
-    ========================== */
+    ===================================== */
 
     .third-party-card {
       border:
@@ -492,15 +614,16 @@
     }
 
 
-    /* =========================
+    /* =====================================
        FOOTER
-    ========================== */
+    ===================================== */
 
     footer {
       border-top:
         1px solid #232823;
 
-      padding: 38px 20px;
+      padding:
+        38px 20px;
 
       text-align: center;
 
@@ -515,15 +638,18 @@
     }
 
 
-    /* =========================
+    /* =====================================
        MOBILE
-    ========================== */
+    ===================================== */
 
     @media (max-width: 760px) {
 
       .hero {
         min-height: 82vh;
-        background-position: center top;
+
+        background-position:
+          center top;
+
         padding-bottom: 38px;
       }
 
@@ -532,7 +658,8 @@
       }
 
       .section {
-        padding: 45px 16px;
+        padding:
+          45px 16px;
       }
 
       .section-title {
@@ -541,16 +668,26 @@
 
       .card-button {
         display: block;
+
         width: 100%;
+
         text-align: center;
       }
 
       /*
-        Keep emojis visible on phones
+        BRIGHTER NEON EMOJIS ON MOBILE
       */
 
       .lab-emoji {
-        opacity: 0.22;
+
+        opacity: 0.35;
+
+        filter:
+          saturate(1.65)
+          brightness(1.30)
+          drop-shadow(0 0 6px rgba(70,255,220,.90))
+          drop-shadow(0 0 14px rgba(30,200,255,.70))
+          drop-shadow(0 0 24px rgba(70,255,170,.35));
       }
 
       .lab1,
@@ -568,15 +705,16 @@
     }
 
   </style>
+
 </head>
 
 
 <body>
 
 
-<!-- =========================
-     FLOATING LAB EMOJIS
-========================== -->
+<!-- =====================================
+     FLOATING NEON LAB EMOJIS
+===================================== -->
 
 <div class="lab-background">
 
@@ -615,9 +753,9 @@
 <div class="site-content">
 
 
-<!-- =========================
+<!-- =====================================
      HERO
-========================== -->
+===================================== -->
 
 <header class="hero">
 
@@ -672,9 +810,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      WELCOME
-========================== -->
+===================================== -->
 
 <section class="section">
 
@@ -700,9 +838,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      COMMUNITY
-========================== -->
+===================================== -->
 
 <section class="section">
 
@@ -742,9 +880,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      RESEARCH HUB
-========================== -->
+===================================== -->
 
 <section
   class="section"
@@ -755,8 +893,10 @@
   </h2>
 
   <p class="section-intro">
+
     Research information, educational resources,
     supplies and peptide research references.
+
   </p>
 
 
@@ -836,16 +976,15 @@
 
     </div>
 
-
   </div>
 
 </section>
 
 
 
-<!-- =========================
+<!-- =====================================
      BACKUP CONTACT LIST
-========================== -->
+===================================== -->
 
 <section
   class="backup-section"
@@ -858,9 +997,12 @@
     </h2>
 
     <p class="section-intro">
+
       Stay connected with Pepper Collective if our
       primary community platform ever becomes unavailable.
+
     </p>
+
 
     <div class="card backup-card">
 
@@ -874,10 +1016,16 @@
         to reconnect with the community.
       </p>
 
+
+      <!-- BACKUP FORM -->
+
       <form
         class="backup-form"
         action="https://formspree.io/f/mbgrkvlr"
         method="POST">
+
+
+        <!-- NAME -->
 
         <input
           type="text"
@@ -886,6 +1034,9 @@
           required
         >
 
+
+        <!-- EMAIL -->
+
         <input
           type="email"
           name="email"
@@ -893,22 +1044,72 @@
           required
         >
 
+
+        <!-- CONSENT CHECKBOX -->
+
+        <label class="consent-box">
+
+          <input
+            type="checkbox"
+            name="consent"
+            value="Agreed"
+            required
+          >
+
+          <span>
+
+            <strong>
+              I agree
+            </strong>
+
+            to receive important Peppers Research Hub
+            announcements, Pepper Collective community
+            updates and replacement community links
+            using the email address provided.
+
+          </span>
+
+        </label>
+
+
+        <!-- SUBJECT -->
+
         <input
           type="hidden"
           name="_subject"
           value="New Peppers Backup Contact Signup"
         >
 
+
+        <!-- SUBMIT -->
+
         <button type="submit">
+
           🌶️ Join Backup Contact List
+
         </button>
+
 
       </form>
 
+
+      <!-- PRIVACY -->
+
       <div class="privacy-note">
-        Contact information submitted here is intended
-        for Pepper Collective backup communication and
-        community continuity purposes.
+
+        🔒 Your information will only be used for
+        Peppers Research Hub and Pepper Collective
+        backup communication, important community
+        updates and replacement community links.
+
+        <br><br>
+
+        By signing up, you acknowledge our
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>.
+
       </div>
 
     </div>
@@ -919,9 +1120,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      THIRD-PARTY RESOURCES
-========================== -->
+===================================== -->
 
 <section class="section">
 
@@ -930,10 +1131,14 @@
   </h2>
 
   <p class="section-intro">
+
     Independent third-party resources shared for
     community convenience and informational purposes.
+
   </p>
 
+
+  <!-- GROUP BUYS -->
 
   <div class="card third-party-card">
 
@@ -956,6 +1161,8 @@
 
   </div>
 
+
+  <!-- VENDORS -->
 
   <div class="card third-party-card">
 
@@ -982,9 +1189,9 @@
 
 
 
-<!-- =========================
-     RULES
-========================== -->
+<!-- =====================================
+     COMMUNITY GUIDELINES
+===================================== -->
 
 <section class="section">
 
@@ -1017,9 +1224,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      ANNOUNCEMENTS
-========================== -->
+===================================== -->
 
 <section class="section">
 
@@ -1050,9 +1257,9 @@
 
 
 
-<!-- =========================
+<!-- =====================================
      FOOTER
-========================== -->
+===================================== -->
 
 <footer>
 
