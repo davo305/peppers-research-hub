@@ -37,7 +37,7 @@
 
 
     /* =====================================
-       FLOATING NEON LAB BACKGROUND
+       FLOATING NEON BACKGROUND
     ===================================== */
 
     .lab-background {
@@ -48,13 +48,10 @@
       z-index: 0;
     }
 
-    .lab-emoji {
+    .floating-icon {
       position: absolute;
-
-      /* BRIGHTER */
       opacity: 0.32;
 
-      /* NEON GLOW */
       filter:
         saturate(1.55)
         brightness(1.25)
@@ -63,11 +60,14 @@
         drop-shadow(0 0 22px rgba(70,255,170,.30));
 
       animation:
-        floatLab 12s ease-in-out infinite,
+        floatIcon 12s ease-in-out infinite,
         neonPulse 4s ease-in-out infinite;
 
       user-select: none;
     }
+
+
+    /* LAB ICONS */
 
     .lab1 {
       font-size: 46px;
@@ -119,23 +119,107 @@
     }
 
 
-    @keyframes floatLab {
+    /* PEPPER ICONS */
+
+    .pepper1 {
+      font-size: 42px;
+      right: 18%;
+      top: 14%;
+      animation-delay: -1s;
+
+      filter:
+        saturate(1.65)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(255,80,60,.90))
+        drop-shadow(0 0 14px rgba(255,60,40,.60));
+    }
+
+    .pepper2 {
+      font-size: 40px;
+      left: 18%;
+      top: 27%;
+      animation-delay: -5s;
+
+      filter:
+        saturate(1.55)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(80,255,120,.85))
+        drop-shadow(0 0 14px rgba(40,220,100,.55));
+    }
+
+    .pepper3 {
+      font-size: 44px;
+      right: 14%;
+      top: 43%;
+      animation-delay: -9s;
+
+      filter:
+        saturate(1.65)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(255,80,60,.90))
+        drop-shadow(0 0 14px rgba(255,60,40,.60));
+    }
+
+    .pepper4 {
+      font-size: 42px;
+      left: 20%;
+      top: 58%;
+      animation-delay: -4s;
+
+      filter:
+        saturate(1.55)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(80,255,120,.85))
+        drop-shadow(0 0 14px rgba(40,220,100,.55));
+    }
+
+    .pepper5 {
+      font-size: 45px;
+      right: 19%;
+      top: 70%;
+      animation-delay: -7s;
+
+      filter:
+        saturate(1.65)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(255,80,60,.90))
+        drop-shadow(0 0 14px rgba(255,60,40,.60));
+    }
+
+    .pepper6 {
+      font-size: 41px;
+      left: 14%;
+      top: 82%;
+      animation-delay: -2s;
+
+      filter:
+        saturate(1.55)
+        brightness(1.25)
+        drop-shadow(0 0 6px rgba(80,255,120,.85))
+        drop-shadow(0 0 14px rgba(40,220,100,.55));
+    }
+
+
+    @keyframes floatIcon {
 
       0% {
         transform:
           translateY(0px)
+          translateX(0px)
           rotate(-5deg);
       }
 
       50% {
         transform:
-          translateY(-25px)
+          translateY(-26px)
+          translateX(8px)
           rotate(6deg);
       }
 
       100% {
         transform:
           translateY(0px)
+          translateX(0px)
           rotate(-5deg);
       }
 
@@ -146,23 +230,10 @@
 
       0%, 100% {
         opacity: 0.27;
-
-        filter:
-          saturate(1.45)
-          brightness(1.15)
-          drop-shadow(0 0 5px rgba(70,255,220,.75))
-          drop-shadow(0 0 10px rgba(30,200,255,.50));
       }
 
       50% {
-        opacity: 0.38;
-
-        filter:
-          saturate(1.75)
-          brightness(1.35)
-          drop-shadow(0 0 7px rgba(70,255,220,1))
-          drop-shadow(0 0 16px rgba(30,200,255,.80))
-          drop-shadow(0 0 28px rgba(70,255,170,.40));
+        opacity: 0.40;
       }
 
     }
@@ -209,44 +280,28 @@
 
     .brand-badge {
       display: inline-block;
-
       background: rgba(0,0,0,.78);
-
       border: 1px solid rgba(255,255,255,.25);
-
       padding: 8px 16px;
-
       border-radius: 999px;
-
       font-size: 14px;
       font-weight: bold;
-
       letter-spacing: 1px;
-
       margin-bottom: 15px;
     }
 
     h1 {
       margin: 0;
-
-      font-size:
-        clamp(42px,10vw,78px);
-
+      font-size: clamp(42px,10vw,78px);
       line-height: 1;
-
-      text-shadow:
-        0 4px 16px rgba(0,0,0,.9);
+      text-shadow: 0 4px 16px rgba(0,0,0,.9);
     }
 
     .tagline {
       margin: 18px 0 30px;
-
       font-size: 20px;
-
       color: #f1f1f1;
-
-      text-shadow:
-        0 2px 8px #000;
+      text-shadow: 0 2px 8px #000;
     }
 
 
@@ -263,19 +318,12 @@
 
     .btn {
       display: inline-block;
-
       padding: 15px 24px;
-
       border-radius: 12px;
-
       text-decoration: none;
-
       color: white;
-
       font-weight: bold;
-
       transition: .2s;
-
       background: #d92b27;
     }
 
@@ -289,10 +337,6 @@
 
     .btn-blue {
       background: #168bd2;
-    }
-
-    .btn-orange {
-      background: #d77b00;
     }
 
 
@@ -323,21 +367,12 @@
     ===================================== */
 
     .card {
-      background:
-        rgba(21,25,21,.94);
-
-      border:
-        1px solid #292f29;
-
+      background: rgba(21,25,21,.94);
+      border: 1px solid #292f29;
       border-radius: 18px;
-
       padding: 24px;
-
-      box-shadow:
-        0 10px 28px rgba(0,0,0,.25);
-
+      box-shadow: 0 10px 28px rgba(0,0,0,.25);
       margin-bottom: 18px;
-
       backdrop-filter: blur(3px);
     }
 
@@ -355,23 +390,14 @@
 
     .status {
       display: inline-block;
-
       background: #143d20;
-
       color: #83ff9f;
-
       padding: 7px 13px;
-
       border-radius: 999px;
-
       font-size: 13px;
-
       font-weight: bold;
-
       margin-bottom: 10px;
-
-      box-shadow:
-        0 0 12px rgba(80,255,130,.20);
+      box-shadow: 0 0 12px rgba(80,255,130,.20);
     }
 
 
@@ -381,21 +407,13 @@
 
     .card-button {
       display: inline-block;
-
       margin-top: 10px;
-
       padding: 13px 19px;
-
       background: #258044;
-
       color: white;
-
       text-decoration: none;
-
       font-weight: bold;
-
       border-radius: 10px;
-
       transition: .2s;
     }
 
@@ -422,10 +440,7 @@
 
     .research-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 18px;
     }
 
@@ -451,19 +466,13 @@
           rgba(10,25,30,.65)
         );
 
-      border-top:
-        1px solid rgba(70,200,120,.20);
-
-      border-bottom:
-        1px solid rgba(70,200,120,.20);
+      border-top: 1px solid rgba(70,200,120,.20);
+      border-bottom: 1px solid rgba(70,200,120,.20);
     }
 
     .backup-card {
-      border:
-        1px solid rgba(70,200,120,.40);
-
-      box-shadow:
-        0 0 25px rgba(40,180,100,.08);
+      border: 1px solid rgba(70,200,120,.40);
+      box-shadow: 0 0 25px rgba(40,180,100,.08);
     }
 
 
@@ -479,75 +488,44 @@
 
     .backup-form input[type="text"],
     .backup-form input[type="email"] {
-
       width: 100%;
-
       padding: 15px;
-
       border-radius: 10px;
-
-      border:
-        1px solid #3c4742;
-
+      border: 1px solid #3c4742;
       background: #0c1210;
-
       color: white;
-
       font-size: 16px;
-
       outline: none;
     }
 
     .backup-form input:focus {
       border-color: #4fbf72;
-
-      box-shadow:
-        0 0 8px rgba(79,191,114,.20);
+      box-shadow: 0 0 8px rgba(79,191,114,.20);
     }
 
 
-    /* =====================================
-       CONSENT BOX
-    ===================================== */
+    /* CONSENT */
 
     .consent-box {
       display: flex;
-
       align-items: flex-start;
-
       gap: 12px;
-
-      margin:
-        8px 0 5px;
-
+      margin: 8px 0 5px;
       padding: 15px;
-
-      background:
-        rgba(20,45,30,.50);
-
-      border:
-        1px solid rgba(70,180,100,.30);
-
+      background: rgba(20,45,30,.50);
+      border: 1px solid rgba(70,180,100,.30);
       border-radius: 10px;
-
       color: #c7d2ca;
-
       font-size: 14px;
-
       line-height: 1.5;
-
       cursor: pointer;
     }
 
     .consent-box input {
       width: 21px;
       height: 21px;
-
-      margin:
-        2px 0 0;
-
+      margin: 2px 0 0;
       flex-shrink: 0;
-
       accent-color: #2ea653;
     }
 
@@ -556,45 +534,28 @@
     }
 
 
-    /* SUBMIT BUTTON */
-
     .backup-form button {
-
       border: none;
-
       padding: 15px 20px;
-
       border-radius: 10px;
-
       background: #258044;
-
       color: white;
-
       font-size: 16px;
-
       font-weight: bold;
-
       cursor: pointer;
-
       transition: .2s;
     }
 
     .backup-form button:hover {
       transform: translateY(-2px);
-
       background: #2c9850;
     }
 
 
-    /* PRIVACY NOTE */
-
     .privacy-note {
       color: #829087;
-
       font-size: 12px;
-
       margin-top: 14px;
-
       line-height: 1.6;
     }
 
@@ -604,31 +565,20 @@
     }
 
 
-    /* =====================================
-       THIRD PARTY
-    ===================================== */
+    /* THIRD PARTY */
 
     .third-party-card {
-      border:
-        1px solid rgba(220,150,50,.35);
+      border: 1px solid rgba(220,150,50,.35);
     }
 
 
-    /* =====================================
-       FOOTER
-    ===================================== */
+    /* FOOTER */
 
     footer {
-      border-top:
-        1px solid #232823;
-
-      padding:
-        38px 20px;
-
+      border-top: 1px solid #232823;
+      padding: 38px 20px;
       text-align: center;
-
       color: #888;
-
       font-size: 14px;
     }
 
@@ -638,18 +588,13 @@
     }
 
 
-    /* =====================================
-       MOBILE
-    ===================================== */
+    /* MOBILE */
 
     @media (max-width: 760px) {
 
       .hero {
         min-height: 82vh;
-
-        background-position:
-          center top;
-
+        background-position: center top;
         padding-bottom: 38px;
       }
 
@@ -658,8 +603,7 @@
       }
 
       .section {
-        padding:
-          45px 16px;
+        padding: 45px 16px;
       }
 
       .section-title {
@@ -668,37 +612,29 @@
 
       .card-button {
         display: block;
-
         width: 100%;
-
         text-align: center;
       }
 
-      /*
-        BRIGHTER NEON EMOJIS ON MOBILE
-      */
-
-      .lab-emoji {
-
+      .floating-icon {
         opacity: 0.35;
-
-        filter:
-          saturate(1.65)
-          brightness(1.30)
-          drop-shadow(0 0 6px rgba(70,255,220,.90))
-          drop-shadow(0 0 14px rgba(30,200,255,.70))
-          drop-shadow(0 0 24px rgba(70,255,170,.35));
       }
 
       .lab1,
       .lab3,
-      .lab5 {
+      .lab5,
+      .pepper2,
+      .pepper4,
+      .pepper6 {
         left: 2%;
       }
 
       .lab2,
       .lab4,
-      .lab6 {
+      .lab6,
+      .pepper1,
+      .pepper3,
+      .pepper5 {
         right: 2%;
       }
 
@@ -713,38 +649,30 @@
 
 
 <!-- =====================================
-     FLOATING NEON LAB EMOJIS
+     FLOATING LAB + PEPPER BACKGROUND
 ===================================== -->
 
 <div class="lab-background">
 
-  <span class="lab-emoji lab1">
-    🧪
-  </span>
+  <!-- LAB -->
 
-  <span class="lab-emoji lab2">
-    💉
-  </span>
+  <span class="floating-icon lab1">🧪</span>
+  <span class="floating-icon lab2">💉</span>
+  <span class="floating-icon lab3">🔬</span>
+  <span class="floating-icon lab4">⚗️</span>
+  <span class="floating-icon lab5">🧬</span>
+  <span class="floating-icon lab6">🧫</span>
+  <span class="floating-icon lab7">⚛️</span>
 
-  <span class="lab-emoji lab3">
-    🔬
-  </span>
 
-  <span class="lab-emoji lab4">
-    ⚗️
-  </span>
+  <!-- PEPPERS -->
 
-  <span class="lab-emoji lab5">
-    🧬
-  </span>
-
-  <span class="lab-emoji lab6">
-    🧫
-  </span>
-
-  <span class="lab-emoji lab7">
-    ⚛️
-  </span>
+  <span class="floating-icon pepper1">🌶️</span>
+  <span class="floating-icon pepper2">🫑</span>
+  <span class="floating-icon pepper3">🌶️</span>
+  <span class="floating-icon pepper4">🫑</span>
+  <span class="floating-icon pepper5">🌶️</span>
+  <span class="floating-icon pepper6">🫑</span>
 
 </div>
 
@@ -781,25 +709,19 @@
         href="https://t.me/+M25pGmfiPD4wZGIx"
         target="_blank"
         rel="noopener noreferrer">
-
         Join Community
-
-      </a>
-
-      <a
-        class="btn btn-green"
-        href="#research">
-
-        Research Hub
-
       </a>
 
       <a
         class="btn btn-blue"
         href="#backup">
-
         Backup Contact List
+      </a>
 
+      <a
+        class="btn btn-green"
+        href="#research">
+        Research Hub
       </a>
 
     </div>
@@ -807,6 +729,121 @@
   </div>
 
 </header>
+
+
+
+<!-- =====================================
+     BACKUP CONTACT LIST
+===================================== -->
+
+<section
+  class="backup-section"
+  id="backup">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      📡 Peppers Backup Contact List
+    </h2>
+
+    <p class="section-intro">
+      Stay connected with Pepper Collective if our
+      primary community platform ever becomes unavailable.
+    </p>
+
+
+    <div class="card backup-card">
+
+      <h3>
+        🌶️ Join the Backup List
+      </h3>
+
+      <p>
+        Add your contact information to the Peppers Backup Contact List
+        so we have another way to reconnect with the community.
+      </p>
+
+
+      <form
+        class="backup-form"
+        action="https://formspree.io/f/mbgrkvlr"
+        method="POST">
+
+
+        <input
+          type="text"
+          name="name"
+          placeholder="Your name or Telegram username"
+          required
+        >
+
+
+        <input
+          type="email"
+          name="email"
+          placeholder="Your email address"
+          required
+        >
+
+
+        <label class="consent-box">
+
+          <input
+            type="checkbox"
+            name="consent"
+            value="Agreed"
+            required
+          >
+
+          <span>
+
+            <strong>I agree</strong>
+
+            to receive important Peppers Research Hub
+            announcements, Pepper Collective community updates
+            and replacement community links using the email
+            address provided.
+
+          </span>
+
+        </label>
+
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="New Peppers Backup Contact Signup"
+        >
+
+
+        <button type="submit">
+          🌶️ Join Backup Contact List
+        </button>
+
+      </form>
+
+
+      <div class="privacy-note">
+
+        🔒 Your information will only be used for Peppers Research Hub
+        and Pepper Collective backup communication, important community
+        updates and replacement community links.
+
+        <br><br>
+
+        By signing up, you acknowledge our
+
+        <a href="privacy.html">
+          Privacy Policy
+        </a>.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 
@@ -828,8 +865,8 @@
     </p>
 
     <p>
-      Built around research, education, information
-      sharing and staying connected.
+      Built around research, education, information sharing
+      and staying connected.
     </p>
 
   </div>
@@ -860,8 +897,7 @@
 
     <p>
       Join our Telegram community for discussions,
-      announcements, research information and
-      community updates.
+      announcements, research information and community updates.
     </p>
 
     <a
@@ -869,9 +905,7 @@
       href="https://t.me/+M25pGmfiPD4wZGIx"
       target="_blank"
       rel="noopener noreferrer">
-
       Join Telegram Community
-
     </a>
 
   </div>
@@ -893,17 +927,13 @@
   </h2>
 
   <p class="section-intro">
-
     Research information, educational resources,
     supplies and peptide research references.
-
   </p>
 
 
   <div class="research-grid">
 
-
-    <!-- RESEARCH INFORMATION -->
 
     <div class="card research-card">
 
@@ -920,15 +950,11 @@
       <a
         class="card-button blue"
         href="research-information.html">
-
         View Research Information
-
       </a>
 
     </div>
 
-
-    <!-- RESEARCH SUPPLIES -->
 
     <div class="card research-card">
 
@@ -945,15 +971,11 @@
       <a
         class="card-button orange"
         href="research-supplies.html">
-
         View Research Supplies
-
       </a>
 
     </div>
 
-
-    <!-- PEPTIDE RESEARCH -->
 
     <div class="card research-card">
 
@@ -969,148 +991,8 @@
       <a
         class="card-button"
         href="peptide-research.html">
-
         View Peptide Research
-
       </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================
-     BACKUP CONTACT LIST
-===================================== -->
-
-<section
-  class="backup-section"
-  id="backup">
-
-  <div class="section">
-
-    <h2 class="section-title">
-      📡 Peppers Backup Contact List
-    </h2>
-
-    <p class="section-intro">
-
-      Stay connected with Pepper Collective if our
-      primary community platform ever becomes unavailable.
-
-    </p>
-
-
-    <div class="card backup-card">
-
-      <h3>
-        🌶️ Join the Backup List
-      </h3>
-
-      <p>
-        Add your contact information to the Peppers
-        Backup Contact List so we have another way
-        to reconnect with the community.
-      </p>
-
-
-      <!-- BACKUP FORM -->
-
-      <form
-        class="backup-form"
-        action="https://formspree.io/f/mbgrkvlr"
-        method="POST">
-
-
-        <!-- NAME -->
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Your name or Telegram username"
-          required
-        >
-
-
-        <!-- EMAIL -->
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Your email address"
-          required
-        >
-
-
-        <!-- CONSENT CHECKBOX -->
-
-        <label class="consent-box">
-
-          <input
-            type="checkbox"
-            name="consent"
-            value="Agreed"
-            required
-          >
-
-          <span>
-
-            <strong>
-              I agree
-            </strong>
-
-            to receive important Peppers Research Hub
-            announcements, Pepper Collective community
-            updates and replacement community links
-            using the email address provided.
-
-          </span>
-
-        </label>
-
-
-        <!-- SUBJECT -->
-
-        <input
-          type="hidden"
-          name="_subject"
-          value="New Peppers Backup Contact Signup"
-        >
-
-
-        <!-- SUBMIT -->
-
-        <button type="submit">
-
-          🌶️ Join Backup Contact List
-
-        </button>
-
-
-      </form>
-
-
-      <!-- PRIVACY -->
-
-      <div class="privacy-note">
-
-        🔒 Your information will only be used for
-        Peppers Research Hub and Pepper Collective
-        backup communication, important community
-        updates and replacement community links.
-
-        <br><br>
-
-        By signing up, you acknowledge our
-
-        <a href="privacy.html">
-          Privacy Policy
-        </a>.
-
-      </div>
 
     </div>
 
@@ -1131,14 +1013,10 @@
   </h2>
 
   <p class="section-intro">
-
     Independent third-party resources shared for
     community convenience and informational purposes.
-
   </p>
 
-
-  <!-- GROUP BUYS -->
 
   <div class="card third-party-card">
 
@@ -1154,15 +1032,11 @@
     <a
       class="card-button"
       href="group-buys.html">
-
       View Group Buys
-
     </a>
 
   </div>
 
-
-  <!-- VENDORS -->
 
   <div class="card third-party-card">
 
@@ -1178,9 +1052,7 @@
     <a
       class="card-button"
       href="vendors.html">
-
       View Vendors
-
     </a>
 
   </div>
@@ -1213,9 +1085,7 @@
     <a
       class="card-button blue"
       href="rules.html">
-
       View Community Rules
-
     </a>
 
   </div>
