@@ -1,888 +1,742 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Peppers Research Hub</title>
+<title>Peppers Research Hub</title>
 
-  <meta
-    name="description"
-    content="Official home of the Pepper Collective community. Research, education, community resources and updates."
-  >
+<style>
 
-  <style>
+* {
+    box-sizing: border-box;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: #05090f;
+    overflow-x: hidden;
+}
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
-        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
-        linear-gradient(180deg, #06090f 0%, #090d12 100%);
-      color: white;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    a {
-      color: inherit;
-    }
+a {
+    color: inherit;
+}
 
 
-    /* ==============================
-       FLOATING SCIENCE BACKGROUND
-    ============================== */
+/* ================================
+   FLOATING LAB BACKGROUND
+================================ */
 
-    .science-background {
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 0;
-    }
+.lab-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
 
-    .float-item {
-      position: absolute;
-      opacity: 0.24;
-      user-select: none;
+.float-item {
+    position: absolute;
+    opacity: .20;
+    user-select: none;
+    filter: drop-shadow(0 0 12px rgba(0,180,255,.45));
+}
 
-      filter:
-        drop-shadow(0 0 8px rgba(0, 200, 255, .65))
-        drop-shadow(0 0 18px rgba(0, 120, 255, .24));
-    }
+.syringe {
+    font-size: 52px;
+}
 
-    .float1 {
-      font-size: 54px;
-      left: 4%;
-      top: 15%;
-      animation: floatOne 11s ease-in-out infinite;
-    }
+.vial {
+    font-size: 55px;
+}
 
-    .float2 {
-      font-size: 50px;
-      right: 6%;
-      top: 26%;
-      animation: floatTwo 14s ease-in-out infinite;
-    }
+.molecule {
+    font-size: 50px;
+}
 
-    .float3 {
-      font-size: 58px;
-      left: 8%;
-      top: 56%;
-      animation: floatTwo 16s ease-in-out infinite;
-    }
+.microscope {
+    font-size: 55px;
+}
 
-    .float4 {
-      font-size: 48px;
-      right: 10%;
-      top: 69%;
-      animation: floatOne 13s ease-in-out infinite;
-    }
-
-    .float5 {
-      font-size: 44px;
-      left: 47%;
-      top: 45%;
-      animation: floatThree 18s linear infinite;
-    }
-
-    .float6 {
-      font-size: 50px;
-      right: 18%;
-      top: 84%;
-      animation: floatOne 15s ease-in-out infinite;
-    }
-
-    .float7 {
-      font-size: 48px;
-      left: 20%;
-      top: 82%;
-      animation: floatTwo 17s ease-in-out infinite;
-    }
-
-    .float8 {
-      font-size: 42px;
-      right: 3%;
-      top: 48%;
-      animation: floatThree 21s linear infinite;
-    }
+.dna {
+    font-size: 55px;
+}
 
 
-    @keyframes floatOne {
+/* positions */
 
-      0%, 100% {
-        transform: translateY(0) rotate(-8deg);
-      }
+.f1 {
+    top: 12%;
+    left: 4%;
+    transform: rotate(-18deg);
+}
 
-      50% {
-        transform: translateY(-48px) rotate(10deg);
-      }
+.f2 {
+    top: 25%;
+    right: 5%;
+    transform: rotate(15deg);
+}
 
-    }
+.f3 {
+    top: 44%;
+    left: 3%;
+    transform: rotate(10deg);
+}
 
+.f4 {
+    top: 62%;
+    right: 5%;
+    transform: rotate(-15deg);
+}
 
-    @keyframes floatTwo {
+.f5 {
+    top: 80%;
+    left: 7%;
+}
 
-      0%, 100% {
-        transform: translateY(0) translateX(0) rotate(8deg);
-      }
-
-      50% {
-        transform: translateY(38px) translateX(-28px) rotate(-10deg);
-      }
-
-    }
-
-
-    @keyframes floatThree {
-
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-
-    }
+.f6 {
+    top: 91%;
+    right: 8%;
+}
 
 
-    .page {
-      position: relative;
-      z-index: 2;
-    }
+/* ================================
+   PAGE
+================================ */
+
+.page {
+    position: relative;
+    z-index: 2;
+}
 
 
-    /* ==============================
-       HERO
-    ============================== */
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(2,6,12,.10),
+            rgba(2,6,12,.40),
+            rgba(2,6,12,.95)
+        ),
+        url("peppers-lab-hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* dark overlay */
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.10),
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.80)
+        );
+}
+
+
+/* hero content */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+
+    max-width: 750px;
+    width: 100%;
+}
+
+
+/* badge */
+
+.badge {
+    display: inline-block;
+
+    padding: 11px 24px;
+
+    margin-bottom: 25px;
+
+    border-radius: 999px;
+
+    background: rgba(4,9,15,.92);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.35);
+}
+
+
+/* title */
+
+.hero h1 {
+    margin: 0;
+
+    font-size: 68px;
+
+    line-height: .98;
+
+    font-weight: 900;
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,.90);
+}
+
+.hero h1 span {
+    display: block;
+}
+
+
+/* subtitle */
+
+.tagline {
+    margin:
+        25px 0 35px;
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    text-shadow:
+        0 4px 15px black;
+}
+
+
+/* hero buttons */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    gap: 16px;
+}
+
+
+.hero-button {
+    display: inline-block;
+
+    min-width: 190px;
+
+    padding: 17px 22px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    font-size: 18px;
+    font-weight: 900;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+
+.hero-button:hover {
+    transform: translateY(-3px);
+}
+
+
+.join {
+    background: #159bd7;
+
+    box-shadow:
+        0 8px 25px rgba(21,155,215,.30);
+}
+
+
+.backup {
+    background: #ef2c2c;
+
+    box-shadow:
+        0 8px 25px rgba(239,44,44,.30);
+}
+
+
+.explore {
+    background: #279047;
+
+    box-shadow:
+        0 8px 25px rgba(39,144,71,.30);
+}
+
+
+/* ================================
+   STAY CONNECTED / EXPLORE
+================================ */
+
+.connected {
+    position: relative;
+
+    padding:
+        80px 30px 100px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #071827,
+            #0b1020 45%,
+            #140b1e
+        );
+}
+
+
+.connected-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+.connected h2 {
+    margin:
+        0 0 12px;
+
+    font-size: 45px;
+    line-height: 1.15;
+}
+
+
+.connected-intro {
+    margin:
+        0 0 40px;
+
+    color: #aeb6c1;
+
+    font-size: 21px;
+}
+
+
+/* ================================
+   DIRECTORY CARDS
+================================ */
+
+.directory {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+.directory-card {
+    display: flex;
+
+    align-items: center;
+
+    min-height: 145px;
+
+    padding:
+        25px 30px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(10,14,20,.93);
+
+    text-decoration: none;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+
+    backdrop-filter: blur(7px);
+}
+
+
+.directory-card:hover {
+    transform: translateY(-3px);
+}
+
+
+/* CARD COLORS */
+
+.group-card {
+    border: 1.5px solid #55c8ff;
+
+    box-shadow:
+        0 0 25px rgba(50,180,255,.08);
+}
+
+
+.vendor-card {
+    border: 1.5px solid #18779a;
+
+    box-shadow:
+        0 0 25px rgba(0,150,220,.06);
+}
+
+
+.supplies-card {
+    border: 1.5px solid #24865d;
+
+    box-shadow:
+        0 0 25px rgba(20,180,100,.06);
+}
+
+
+.info-card {
+    border: 1.5px solid #63399c;
+
+    box-shadow:
+        0 0 25px rgba(120,50,220,.08);
+}
+
+
+/* CARD ICON */
+
+.directory-icon {
+    width: 115px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+
+    font-size: 50px;
+}
+
+
+/* CARD TEXT */
+
+.directory-content {
+    flex: 1;
+}
+
+
+.directory-title {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 29px;
+
+    line-height: 1.2;
+
+    font-weight: 900;
+}
+
+
+.directory-description {
+    display: block;
+
+    color: #aeb5bf;
+
+    font-size: 20px;
+
+    line-height: 1.35;
+}
+
+
+/* arrow */
+
+.directory-arrow {
+    width: 45px;
+
+    text-align: right;
+
+    color: #71808d;
+
+    font-size: 45px;
+}
+
+
+/* ================================
+   COMMUNITY
+================================ */
+
+.community {
+    padding:
+        90px 30px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #140b1e,
+            #080c14
+        );
+}
+
+
+.community-inner {
+    max-width: 850px;
+    margin: auto;
+}
+
+
+.community h2 {
+    margin:
+        0 0 20px;
+
+    font-size: 45px;
+
+    line-height: 1.15;
+}
+
+
+.community p {
+    color: #aeb6c1;
+
+    font-size: 20px;
+
+    line-height: 1.7;
+}
+
+
+/* ================================
+   DISCLAIMER
+================================ */
+
+.disclaimer {
+    margin-top: 35px;
+
+    padding: 22px;
+
+    border-left: 5px solid #e29b2e;
+
+    border-radius: 12px;
+
+    background:
+        rgba(90,55,5,.20);
+
+    color: #d9c49a;
+
+    line-height: 1.6;
+}
+
+
+.disclaimer strong {
+    color: #f0c66d;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding:
+        40px 20px;
+
+    text-align: center;
+
+    background: #05080d;
+
+    border-top:
+        1px solid rgba(255,255,255,.08);
+
+    color: #77828d;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
 
     .hero {
-      position: relative;
-      min-height: 92vh;
+        min-height: 92vh;
 
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
-
-      text-align: center;
-
-      padding: 55px 20px;
-
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.08),
-          rgba(0, 0, 0, 0.28) 48%,
-          rgba(0, 0, 0, 0.92) 100%
-        ),
-        url('peppers-lab-hero.jpg')
-        center center / cover no-repeat;
+        padding:
+            45px 18px;
     }
 
 
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
+    .badge {
+        font-size: 16px;
 
-      box-shadow:
-        inset 0 -110px 110px rgba(0,0,0,.72);
-
-      pointer-events: none;
+        padding:
+            9px 18px;
     }
 
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-
-      width: 100%;
-      max-width: 900px;
-    }
-
-
-    .brand-badge {
-      display: inline-block;
-
-      padding: 8px 17px;
-
-      border-radius: 999px;
-
-      background: rgba(0, 0, 0, .76);
-
-      border:
-        1px solid rgba(255,255,255,.25);
-
-      backdrop-filter: blur(8px);
-
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 1.2px;
-
-      margin-bottom: 15px;
-
-      box-shadow:
-        0 0 22px rgba(0,180,255,.12);
-    }
-
-
-    h1 {
-      margin: 0;
-
-      font-size:
-        clamp(43px, 10vw, 78px);
-
-      line-height: .98;
-
-      text-shadow:
-        0 5px 20px #000;
+    .hero h1 {
+        font-size: 50px;
     }
 
 
     .tagline {
-      margin: 17px 0 26px;
+        font-size: 19px;
 
-      font-size: 20px;
-      font-weight: 600;
-
-      text-shadow:
-        0 3px 10px #000;
+        letter-spacing: 1px;
     }
 
 
-    .buttons {
-      display: flex;
+    .hero-button {
+        min-width: 0;
 
-      justify-content: center;
+        flex:
+            1 1 42%;
 
-      gap: 12px;
+        padding:
+            15px 14px;
 
-      flex-wrap: wrap;
+        font-size: 16px;
     }
 
 
-    .btn {
-      display: inline-block;
-
-      padding: 14px 22px;
-
-      border-radius: 12px;
-
-      background: #e52b2b;
-
-      color: white;
-
-      text-decoration: none;
-
-      font-weight: 800;
-
-      box-shadow:
-        0 7px 20px rgba(229,43,43,.25);
-
-      transition: .2s ease;
+    .explore {
+        flex-basis: 55%;
     }
 
 
-    .btn:hover {
-      transform: translateY(-3px);
+    .connected {
+        padding:
+            65px 30px
+            85px;
     }
 
 
-    .btn-green {
-      background: #258044;
+    .connected h2 {
+        font-size: 39px;
     }
 
 
-    .btn-blue {
-      background: #168bd2;
+    .connected-intro {
+        font-size: 19px;
     }
 
 
-    /* ==============================
-       STAY CONNECTED
-    ============================== */
+    .directory-card {
+        min-height: 145px;
 
-    .transition-wrap {
-      max-width: 960px;
+        padding:
+            22px 22px;
 
-      margin: -26px auto 0;
-
-      padding: 0 20px;
-
-      position: relative;
-
-      z-index: 5;
+        border-radius: 27px;
     }
 
 
-    .transition-card {
-      background:
-        linear-gradient(
-          135deg,
-          rgba(4,22,30,.96),
-          rgba(13,18,24,.96)
-        );
+    .directory-icon {
+        width: 115px;
 
-      border:
-        1px solid rgba(0,255,145,.60);
-
-      border-radius: 22px;
-
-      padding: 22px;
-
-      text-align: center;
-
-      box-shadow:
-        0 0 32px rgba(0,255,145,.14),
-        0 16px 40px rgba(0,0,0,.42);
-
-      backdrop-filter: blur(10px);
+        font-size: 47px;
     }
 
 
-    .transition-card strong {
-      color: #69ffb2;
+    .directory-title {
+        font-size: 26px;
     }
 
 
-    .transition-card p {
-      margin: 7px 0 0;
-
-      color: #c5d0d9;
+    .directory-description {
+        font-size: 18px;
     }
 
 
-    /* ==============================
-       GENERAL SECTIONS
-    ============================== */
+    .directory-arrow {
+        width: 30px;
 
-    .section {
-      max-width: 960px;
-
-      margin: auto;
-
-      padding: 48px 20px;
+        font-size: 39px;
     }
 
 
-    .section-title {
-      margin: 0 0 18px;
-
-      font-size: 30px;
-
-      line-height: 1.2;
+    .community {
+        padding:
+            80px 30px;
     }
 
 
-    .section-subtitle {
-      color: #aeb8c4;
+    .community h2 {
+        font-size: 40px;
+    }
 
-      margin-top: -8px;
+}
 
-      margin-bottom: 22px;
+
+/* EXTRA SMALL PHONES */
+
+@media (max-width: 420px) {
+
+    .hero h1 {
+        font-size: 43px;
     }
 
 
-    .card {
-      background:
-        rgba(18, 23, 29, .92);
-
-      border:
-        1px solid #29323b;
-
-      border-radius: 20px;
-
-      padding: 24px;
-
-      margin-bottom: 18px;
-
-      box-shadow:
-        0 14px 35px rgba(0,0,0,.30);
-
-      backdrop-filter: blur(8px);
+    .hero-buttons {
+        gap: 11px;
     }
 
 
-    .card h3 {
-      margin-top: 0;
+    .hero-button {
+        font-size: 15px;
     }
 
 
-    .highlight-card {
-      border:
-        1px solid rgba(0,255,145,.55);
-
-      box-shadow:
-        0 15px 35px rgba(0,0,0,.35),
-        0 0 30px rgba(0,255,145,.10);
+    .connected {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
 
-    /* ==============================
-       SIGNUP
-    ============================== */
-
-    .signup-section {
-      padding-top: 32px;
+    .directory-card {
+        padding:
+            20px 17px;
     }
 
 
-    .signup-header {
-      text-align: center;
+    .directory-icon {
+        width: 95px;
 
-      margin-bottom: 20px;
+        font-size: 42px;
     }
 
 
-    .signup-header h2 {
-      margin-bottom: 8px;
-
-      font-size: 32px;
+    .directory-title {
+        font-size: 23px;
     }
 
 
-    .signup-header p {
-      color: #b8c0ca;
-
-      max-width: 700px;
-
-      margin: auto;
+    .directory-description {
+        font-size: 16px;
     }
 
 
-    .form-group {
-      margin-bottom: 18px;
+    .community {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
+}
 
-    label {
-      display: block;
-
-      font-weight: 800;
-
-      margin-bottom: 8px;
-    }
-
-
-    input[type="email"],
-    input[type="text"] {
-
-      width: 100%;
-
-      padding: 15px 16px;
-
-      border-radius: 12px;
-
-      border:
-        1px solid #46515c;
-
-      background: #090d10;
-
-      color: white;
-
-      font-size: 16px;
-
-      outline: none;
-    }
-
-
-    input:focus {
-      border-color: #e52b2b;
-
-      box-shadow:
-        0 0 0 3px rgba(229,43,43,.12);
-    }
-
-
-    .consent {
-      display: flex;
-
-      gap: 12px;
-
-      align-items: flex-start;
-
-      margin: 20px 0;
-
-      color: #d5d9df;
-    }
-
-
-    .consent input {
-      margin-top: 5px;
-
-      width: 20px;
-      height: 20px;
-
-      flex-shrink: 0;
-    }
-
-
-    .privacy-note {
-      background: #0d130f;
-
-      border-left:
-        5px solid #2d9b50;
-
-      padding: 17px;
-
-      border-radius: 10px;
-
-      margin: 18px 0;
-
-      color: #d5d9df;
-    }
-
-
-    .submit-button {
-      width: 100%;
-
-      border: 0;
-
-      padding: 16px 20px;
-
-      border-radius: 12px;
-
-      background: #e52b2b;
-
-      color: white;
-
-      font-size: 17px;
-
-      font-weight: 900;
-
-      cursor: pointer;
-    }
-
-
-    /* ==============================
-       RESOURCE DIRECTORY
-    ============================== */
-
-    .resource-grid {
-      display: grid;
-
-      grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 15px;
-    }
-
-
-    .resource-card {
-      min-height: 105px;
-
-      display: flex;
-
-      align-items: center;
-
-      gap: 14px;
-
-      padding: 18px;
-
-      background:
-        rgba(14,19,24,.96);
-
-      border:
-        1px solid #34404a;
-
-      border-radius: 18px;
-
-      text-decoration: none;
-
-      box-shadow:
-        0 10px 25px rgba(0,0,0,.25);
-
-      transition:
-        transform .2s ease,
-        border-color .2s ease,
-        box-shadow .2s ease;
-    }
-
-
-    .resource-card:hover {
-      transform: translateY(-4px);
-
-      border-color: #4fc3f7;
-
-      box-shadow:
-        0 12px 30px rgba(0,150,255,.12);
-    }
-
-
-    .resource-icon {
-      font-size: 34px;
-
-      flex-shrink: 0;
-    }
-
-
-    .resource-card strong {
-      display: block;
-
-      font-size: 18px;
-    }
-
-
-    .resource-card span {
-      display: block;
-
-      color: #9da8b3;
-
-      font-size: 13px;
-
-      margin-top: 3px;
-    }
-
-
-    .arrow {
-      margin-left: auto;
-
-      font-size: 32px;
-
-      color: #6e7d89;
-    }
-
-
-    .group-card {
-      border-color:
-        rgba(255,145,0,.45);
-    }
-
-
-    .vendor-card {
-      border-color:
-        rgba(0,190,255,.45);
-    }
-
-
-    .supplies-card {
-      border-color:
-        rgba(0,255,145,.45);
-    }
-
-
-    .research-card {
-      border-color:
-        rgba(150,90,255,.45);
-    }
-
-
-    /* ==============================
-       COMMUNITY
-    ============================== */
-
-    .community-image {
-      width: 100%;
-
-      max-height: 540px;
-
-      object-fit: cover;
-
-      object-position: center;
-
-      display: block;
-
-      border-radius: 16px;
-
-      margin-bottom: 22px;
-
-      border:
-        1px solid #333;
-    }
-
-
-    .status {
-      display: inline-block;
-
-      background: #123c20;
-
-      color: #84ffa1;
-
-      padding: 7px 13px;
-
-      border-radius: 999px;
-
-      font-size: 13px;
-
-      font-weight: 900;
-
-      margin-bottom: 10px;
-    }
-
-
-    .backup-status {
-      background: #30270d;
-
-      color: #ffd75e;
-    }
-
-
-    .telegram-button {
-      display: inline-block;
-
-      margin-top: 8px;
-
-      padding: 14px 20px;
-
-      border-radius: 11px;
-
-      text-decoration: none;
-
-      background: #168bd2;
-
-      color: white;
-
-      font-weight: 900;
-    }
-
-
-    .backup-button {
-      background: #e52b2b;
-    }
-
-
-    /* ==============================
-       RULES
-    ============================== */
-
-    .rule {
-      padding: 17px 0;
-
-      border-bottom:
-        1px solid #293039;
-    }
-
-
-    .rule:last-child {
-      border-bottom: none;
-
-      padding-bottom: 0;
-    }
-
-
-    .rule:first-child {
-      padding-top: 0;
-    }
-
-
-    .rule-title {
-      font-weight: 900;
-
-      font-size: 18px;
-
-      margin-bottom: 5px;
-    }
-
-
-    .rule p {
-      margin: 0;
-
-      color: #c6ccd3;
-    }
-
-
-    /* ==============================
-       FOOTER
-    ============================== */
-
-    footer {
-      text-align: center;
-
-      padding: 40px 20px;
-
-      border-top:
-        1px solid #242c34;
-
-      color: #8e99a5;
-
-      font-size: 14px;
-    }
-
-
-    footer a {
-      color: #c7d0d9;
-
-      text-decoration: none;
-    }
-
-
-    /* ==============================
-       MOBILE
-    ============================== */
-
-    @media (max-width: 650px) {
-
-      .hero {
-        min-height: 82vh;
-
-        background-position: center center;
-
-        padding: 35px 18px;
-      }
-
-
-      .transition-wrap {
-        margin-top: -20px;
-
-        padding: 0 14px;
-      }
-
-
-      .section {
-        padding: 38px 16px;
-      }
-
-
-      .card {
-        padding: 20px;
-      }
-
-
-      .resource-grid {
-        grid-template-columns: 1fr;
-      }
-
-
-      .resource-card {
-        min-height: 92px;
-      }
-
-
-      .community-image {
-        max-height: none;
-      }
-
-
-      .buttons {
-        gap: 9px;
-      }
-
-
-      .btn {
-        padding: 13px 17px;
-
-        font-size: 14px;
-      }
-
-
-      .float-item {
-        opacity: .20;
-      }
-
-    }
-
-  </style>
+</style>
 
 </head>
 
@@ -890,775 +744,380 @@
 <body>
 
 
-  <!-- FLOATING SCIENCE -->
+<!-- ==================================
+     FLOATING LAB ELEMENTS
+=================================== -->
 
-  <div class="science-background">
+<div class="lab-background">
 
-    <div class="float-item float1">🧪</div>
+    <div class="float-item vial f1">
+        🧪
+    </div>
 
-    <div class="float-item float2">💉</div>
+    <div class="float-item molecule f2">
+        ⚛️
+    </div>
 
-    <div class="float-item float3">🔬</div>
+    <div class="float-item syringe f3">
+        💉
+    </div>
 
-    <div class="float-item float4">🌶️</div>
+    <div class="float-item microscope f4">
+        🔬
+    </div>
 
-    <div class="float-item float5">⚗️</div>
+    <div class="float-item dna f5">
+        🧬
+    </div>
 
-    <div class="float-item float6">🧬</div>
+    <div class="float-item vial f6">
+        🧪
+    </div>
 
-    <div class="float-item float7">🧫</div>
-
-    <div class="float-item float8">⚛️</div>
-
-  </div>
-
-
-  <div class="page">
+</div>
 
 
-    <!-- ==============================
-         HERO
-    ============================== -->
 
-    <header class="hero">
+<div class="page">
 
-      <div class="hero-content">
 
-        <div class="brand-badge">
-          🌶️ PEPPER COLLECTIVE
+<!-- ==================================
+     HERO
+=================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+
+        <div class="badge">
+            🌶️ PEPPER COLLECTIVE
         </div>
 
 
         <h1>
-          Peppers<br>
-          Research Hub
+
+            <span>
+                Peppers
+            </span>
+
+            <span>
+                Research Hub
+            </span>
+
         </h1>
 
 
-        <p class="tagline">
-          Research • Share • Learn • Grow
-        </p>
+        <div class="tagline">
 
-
-        <div class="buttons">
-
-          <a
-            class="btn btn-blue"
-            href="https://t.me/+M25pGmfiPD4wZGIx"
-            target="_blank"
-            rel="noopener noreferrer">
-            Join Community
-          </a>
-
-
-          <a
-            class="btn"
-            href="#backup-list">
-            Backup Signup
-          </a>
-
-
-          <a
-            class="btn btn-green"
-            href="#resources">
-            Explore Hub
-          </a>
+            Research • Share • Learn • Grow
 
         </div>
 
-      </div>
 
-    </header>
+        <div class="hero-buttons">
 
 
-    <!-- ==============================
-         STAY CONNECTED
-    ============================== -->
+            <!-- TELEGRAM COMMUNITY -->
 
-    <div class="transition-wrap">
+            <a
+                class="hero-button join"
+                href="https://t.me/+M25pGmfiPD4wZGIx"
+                target="_blank"
+                rel="noopener noreferrer">
 
-      <div class="transition-card">
+                Join Community
 
-        <strong>
-          🌶️ Stay connected even if Telegram changes.
-        </strong>
+            </a>
 
-        <p>
-          Join the backup contact list so we can send important
-          announcements and replacement community links.
-        </p>
 
-      </div>
+            <!-- BACKUP SIGNUP -->
+
+            <a
+                class="hero-button backup"
+                href="#connected">
+
+                Backup Signup
+
+            </a>
+
+
+            <!-- RESEARCH HUB -->
+
+            <a
+                class="hero-button explore"
+                href="#connected">
+
+                Research Hub
+
+            </a>
+
+
+        </div>
+
 
     </div>
 
 
-    <!-- ==============================
-         BACKUP SIGNUP
-    ============================== -->
-
-    <section
-      class="section signup-section"
-      id="backup-list">
+</section>
 
 
-      <div class="signup-header">
+
+<!-- ==================================
+     STAY CONNECTED / DIRECTORY
+=================================== -->
+
+<section
+    class="connected"
+    id="connected">
+
+
+    <div class="connected-inner">
+
 
         <h2>
-          🌶️ Peppers Backup Contact List
+            🌶️ Explore Peppers<br>
+            Research Hub
         </h2>
 
-        <p>
-          Stay connected with Pepper Collective even if our
-          current Telegram community becomes unavailable.
-        </p>
 
-      </div>
-
-
-      <div class="card highlight-card">
-
-        <p>
-          Add your contact information so we can reach you
-          with important Peppers Research Hub announcements
-          or send you a new Telegram community link if our
-          current group becomes unavailable.
+        <p class="connected-intro">
+            Choose a section to continue.
         </p>
 
 
-        <form
-          action="https://formspree.io/f/mbgrkvlr"
-          method="POST">
+
+        <div class="directory">
 
 
-          <div class="form-group">
+            <!-- =====================
+                 GROUP BUYS
+            ====================== -->
 
-            <label for="email">
-              Email Address *
-            </label>
-
-            <input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              required>
-
-          </div>
+            <a
+                class="directory-card group-card"
+                href="group-buys.html">
 
 
-          <div class="form-group">
-
-            <label for="telegram">
-              Telegram Username
-            </label>
-
-            <input
-              id="telegram"
-              type="text"
-              name="telegram_username"
-              placeholder="@username">
-
-          </div>
+                <div class="directory-icon">
+                    🤝
+                </div>
 
 
-          <input
-            type="hidden"
-            name="_subject"
-            value="New Peppers Backup Contact List Signup">
+                <div class="directory-content">
+
+                    <span class="directory-title">
+                        Group Buys
+                    </span>
+
+                    <span class="directory-description">
+                        Third-party group-buy links
+                    </span>
+
+                </div>
 
 
-          <div class="consent">
-
-            <input
-              id="consent"
-              type="checkbox"
-              name="consent"
-              value="Agreed"
-              required>
+                <div class="directory-arrow">
+                    ›
+                </div>
 
 
-            <label for="consent">
-
-              I agree to receive important Peppers Research Hub
-              announcements and replacement Telegram community links.
-
-            </label>
-
-          </div>
+            </a>
 
 
-          <div class="privacy-note">
 
-            🔒 <strong>Your privacy matters.</strong>
+            <!-- =====================
+                 VENDORS
+            ====================== -->
 
-            Your information will be kept private and will not
-            be sold or shared for marketing purposes.
-
-            It will only be used for important Peppers Research Hub
-            announcements and community contact.
-
-          </div>
+            <a
+                class="directory-card vendor-card"
+                href="vendors.html">
 
 
-          <button
-            class="submit-button"
-            type="submit">
-
-            🌶️ Join Backup Contact List
-
-          </button>
+                <div class="directory-icon">
+                    🏪
+                </div>
 
 
-        </form>
+                <div class="directory-content">
 
-      </div>
+                    <span class="directory-title">
+                        Vendors
+                    </span>
 
-    </section>
+                    <span class="directory-description">
+                        Third-party vendor directory
+                    </span>
 
-
-    <!-- ==============================
-         RESOURCE PAGES
-    ============================== -->
-
-    <section
-      class="section"
-      id="resources">
+                </div>
 
 
-      <h2 class="section-title">
-        🌶️ Explore Peppers Research Hub
-      </h2>
+                <div class="directory-arrow">
+                    ›
+                </div>
 
 
-      <p class="section-subtitle">
-        Choose a section to continue.
-      </p>
+            </a>
 
 
-      <div class="resource-grid">
+
+            <!-- =====================
+                 RESEARCH SUPPLIES
+            ====================== -->
+
+            <a
+                class="directory-card supplies-card"
+                href="research-supplies.html">
 
 
-        <!-- GROUP BUYS -->
+                <div class="directory-icon">
+                    🔬
+                </div>
 
-        <a
-          href="group-buys.html"
-          class="resource-card group-card">
 
-          <div class="resource-icon">
-            🤝
-          </div>
+                <div class="directory-content">
 
-          <div>
+                    <span class="directory-title">
+                        Research Supplies
+                    </span>
+
+                    <span class="directory-description">
+                        Storage &amp; research supplies
+                    </span>
+
+                </div>
+
+
+                <div class="directory-arrow">
+                    ›
+                </div>
+
+
+            </a>
+
+
+
+            <!-- =====================
+                 RESEARCH INFORMATION
+            ====================== -->
+
+            <a
+                class="directory-card info-card"
+                href="research-information.html">
+
+
+                <div class="directory-icon">
+                    📚
+                </div>
+
+
+                <div class="directory-content">
+
+                    <span class="directory-title">
+                        Research Information
+                    </span>
+
+                    <span class="directory-description">
+                        Educational resources &amp; research
+                    </span>
+
+                </div>
+
+
+                <div class="directory-arrow">
+                    ›
+                </div>
+
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================
+     COMMUNITY
+=================================== -->
+
+<section class="community">
+
+
+    <div class="community-inner">
+
+
+        <h2>
+            🌶️ Pepper Collective<br>
+            Community
+        </h2>
+
+
+        <p>
+
+            Peppers Research Hub is designed to help our
+            community stay connected and organize useful
+            research and educational resources in one place.
+
+        </p>
+
+
+        <div class="disclaimer">
 
             <strong>
-              Group Buys
+                ⚠️ Third-Party Resource Notice
             </strong>
 
-            <span>
-              Community group-buy links
-            </span>
+            <br><br>
 
-          </div>
+            Links to vendors, group buys, research resources,
+            websites and other external services may lead to
+            independent third parties.
 
-          <div class="arrow">
-            ›
-          </div>
+            Peppers Research Hub and Pepper Collective do not
+            operate or control third-party websites, vendors,
+            group buys or services.
 
-        </a>
+            <br><br>
 
-
-        <!-- VENDORS -->
-
-        <a
-          href="vendors.html"
-          class="resource-card vendor-card">
-
-          <div class="resource-icon">
-            🏪
-          </div>
-
-          <div>
-
-            <strong>
-              Vendors
-            </strong>
-
-            <span>
-              Third-party vendor directory
-            </span>
-
-          </div>
-
-          <div class="arrow">
-            ›
-          </div>
-
-        </a>
-
-
-        <!-- RESEARCH SUPPLIES -->
-
-        <a
-          href="research-supplies.html"
-          class="resource-card supplies-card">
-
-          <div class="resource-icon">
-            🔬
-          </div>
-
-          <div>
-
-            <strong>
-              Research Supplies
-            </strong>
-
-            <span>
-              Storage & research supplies
-            </span>
-
-          </div>
-
-          <div class="arrow">
-            ›
-          </div>
-
-        </a>
-
-
-        <!-- RESEARCH INFORMATION -->
-
-        <a
-          href="research-information.html"
-          class="resource-card research-card">
-
-          <div class="resource-icon">
-            📚
-          </div>
-
-          <div>
-
-            <strong>
-              Research Information
-            </strong>
-
-            <span>
-              Educational resources & research
-            </span>
-
-          </div>
-
-          <div class="arrow">
-            ›
-          </div>
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         MAIN TELEGRAM
-    ============================== -->
-
-    <section
-      class="section"
-      id="community">
-
-
-      <h2 class="section-title">
-        🌶️ Pepper Collective Community
-      </h2>
-
-
-      <p class="section-subtitle">
-        Our main Telegram community.
-      </p>
-
-
-      <div class="card">
-
-
-        <img
-          class="community-image"
-          src="pepper-collective-main.jpg"
-          alt="Pepper Collective community">
-
-
-        <div class="status">
-          ● MAIN COMMUNITY ONLINE
-        </div>
-
-
-        <h3>
-          Pepper Collective
-        </h3>
-
-
-        <p>
-          Join the main Pepper Collective Telegram community
-          for discussions, research information, announcements
-          and community updates.
-        </p>
-
-
-        <a
-          class="telegram-button"
-          href="https://t.me/+M25pGmfiPD4wZGIx"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          ✈️ Join Main Telegram
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         BACKUP TELEGRAM
-    ============================== -->
-
-    <section class="section">
-
-
-      <h2 class="section-title">
-        🚨 Backup Community
-      </h2>
-
-
-      <div class="card">
-
-
-        <div class="status backup-status">
-          BACKUP COMMUNITY
-        </div>
-
-
-        <h3>
-          🌶️ Peppers Collective 2
-        </h3>
-
-
-        <p>
-          This is the official backup Telegram community.
-          Join it now so you have another way to find the
-          community if the main group becomes unavailable.
-        </p>
-
-
-        <p>
-
-          <strong>Note:</strong>
-
-          Peppers Collective 2 currently does not have a
-          profile picture.
-
-          Make sure the group name says
-          <strong>Peppers Collective 2</strong>.
-
-        </p>
-
-
-        <a
-          class="telegram-button backup-button"
-          href="https://t.me/+UIja7xE0s2YwNDA5"
-          target="_blank"
-          rel="noopener noreferrer">
-
-          🚨 Join Backup Telegram
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         COMMUNITY RULES
-    ============================== -->
-
-    <section
-      class="section"
-      id="rules">
-
-
-      <h2 class="section-title">
-        📋 Community Rules
-      </h2>
-
-
-      <div class="card">
-
-
-        <div class="rule">
-
-          <div class="rule-title">
-            🤝 1. Be Respectful
-          </div>
-
-          <p>
-            Treat members with respect.
-            No harassment, bullying, hate speech,
-            or personal attacks.
-          </p>
+            Visitors are responsible for conducting their own
+            research and due diligence before using any
+            third-party resource.
 
         </div>
 
 
-        <div class="rule">
+    </div>
 
-          <div class="rule-title">
-            🔬 2. Research & Education
-          </div>
 
-          <p>
-            Keep research discussions educational and informative.
-            Clearly separate research information from personal opinions.
-          </p>
+</section>
 
-        </div>
 
 
-        <div class="rule">
+<!-- ==================================
+     FOOTER
+=================================== -->
 
-          <div class="rule-title">
-            📝 3. No Conversations Inside Topics
-          </div>
+<footer>
 
-          <p>
-            Please do not have conversations inside topic threads.
+    🌶️ Peppers Research Hub
 
-            Topics are designed to organize information so members
-            can quickly find what they are looking for without
-            scrolling through long conversations.
-          </p>
+    <br>
 
-        </div>
+    Research • Share • Learn • Grow
 
+</footer>
 
-        <div class="rule">
 
-          <div class="rule-title">
-            🚫 4. No Unauthorized Selling or Reselling
-          </div>
+</div>
 
-          <p>
-            Selling, reselling, promotional activity,
-            advertising, or offers must not be posted
-            without admin approval.
-          </p>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-title">
-            📣 5. Promotion Requires Admin Approval
-          </div>
-
-          <p>
-            Anyone wishing to sell, promote, advertise,
-            or offer products or services must contact
-            an admin and receive approval first.
-          </p>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-title">
-            ⚠️ 6. Third-Party Responsibility
-          </div>
-
-          <p>
-            Pepper Collective and Peppers Research Hub
-            do not guarantee independent vendors,
-            services, products, or transactions.
-
-            Members are responsible for conducting
-            their own due diligence.
-          </p>
-
-        </div>
-
-
-        <div class="rule">
-
-          <div class="rule-title">
-            📚 7. Keep Information Organized
-          </div>
-
-          <p>
-            Use the appropriate areas so research
-            and community information remains easy to find.
-          </p>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         ANNOUNCEMENTS
-    ============================== -->
-
-    <section class="section">
-
-
-      <h2 class="section-title">
-        📢 Latest Announcements
-      </h2>
-
-
-      <div class="card">
-
-        <h3>
-          🌶️ PeppersResearchHub.com is Live
-        </h3>
-
-        <p>
-          Bookmark this website.
-
-          It serves as an official community hub where
-          members can find updates, community links,
-          research resources, and ways to reconnect
-          with Pepper Collective.
-        </p>
-
-      </div>
-
-
-      <div class="card">
-
-        <h3>
-          🚨 Join the Backup Community
-        </h3>
-
-        <p>
-          Members are encouraged to join Peppers Collective 2
-          and the backup contact list so the community has
-          multiple ways to stay connected.
-        </p>
-
-      </div>
-
-
-    </section>
-
-
-    <!-- ==============================
-         CONTACT
-    ============================== -->
-
-    <section class="section">
-
-
-      <h2 class="section-title">
-        ✉️ Contact
-      </h2>
-
-
-      <div class="card">
-
-        <h3>
-          Peppers Research Hub
-        </h3>
-
-
-        <p>
-          Questions, community matters,
-          or administrative inquiries:
-        </p>
-
-
-        <p>
-
-          <a href="mailto:contact@peppersresearchhub.com">
-
-            <strong>
-              contact@peppersresearchhub.com
-            </strong>
-
-          </a>
-
-        </p>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- ==============================
-         FOOTER
-    ============================== -->
-
-    <footer>
-
-      © 2026 Peppers Research Hub
-
-      <br>
-
-      Research • Education • Community
-
-      <br><br>
-
-
-      <a href="group-buys.html">
-        Group Buys
-      </a>
-
-      &nbsp; • &nbsp;
-
-
-      <a href="vendors.html">
-        Vendors
-      </a>
-
-      &nbsp; • &nbsp;
-
-
-      <a href="research-supplies.html">
-        Research Supplies
-      </a>
-
-      &nbsp; • &nbsp;
-
-
-      <a href="research-information.html">
-        Research Information
-      </a>
-
-
-      <br><br>
-
-
-      <a href="mailto:contact@peppersresearchhub.com">
-
-        contact@peppersresearchhub.com
-
-      </a>
-
-
-    </footer>
-
-
-  </div>
 
 </body>
-
 </html>
