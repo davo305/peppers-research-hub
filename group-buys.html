@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Explore | Peppers Research Hub</title>
+  <title>Group Buys | Peppers Research Hub</title>
+
+  <meta
+    name="description"
+    content="Independent third-party group-buy links shared through Peppers Research Hub."
+  >
 
   <style>
 
@@ -19,492 +24,249 @@
 
     body {
       margin: 0;
-      min-height: 100vh;
-
       font-family: Arial, Helvetica, sans-serif;
 
-      color: #ffffff;
-
       background:
-        radial-gradient(circle at 20% 10%, rgba(40,20,80,.35), transparent 35%),
-        radial-gradient(circle at 85% 50%, rgba(80,20,100,.25), transparent 40%),
-        linear-gradient(180deg, #080b15, #140b1d);
+        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 40%, #10212b 0%, transparent 35%),
+        linear-gradient(180deg, #06090f, #090d12);
 
-      overflow-x: hidden;
+      color: white;
+      min-height: 100vh;
+      line-height: 1.6;
     }
-
-
-    /* PAGE */
 
     .page {
-      position: relative;
-      max-width: 850px;
+      max-width: 920px;
       margin: auto;
-
-      padding:
-        70px 30px
-        90px;
-
-      min-height: 100vh;
+      padding: 25px 18px 70px;
     }
 
+    /* BACK BUTTON */
 
-    /* BACKGROUND LAB ELEMENTS */
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 11px 16px;
 
-    .background-icons {
-      position: fixed;
+      border-radius: 10px;
 
-      inset: 0;
+      background: #168bd2;
+      color: white;
 
-      pointer-events: none;
-
-      overflow: hidden;
-
-      z-index: 0;
-
-      opacity: .12;
+      text-decoration: none;
+      font-weight: bold;
     }
-
-
-    .floating-icon {
-      position: absolute;
-
-      font-size: 70px;
-
-      filter:
-        drop-shadow(
-          0 0 15px rgba(0,180,255,.35)
-        );
-    }
-
-
-    .icon1 {
-      top: 15%;
-      left: 6%;
-      transform: rotate(-15deg);
-    }
-
-
-    .icon2 {
-      top: 30%;
-      right: 5%;
-      transform: rotate(20deg);
-    }
-
-
-    .icon3 {
-      top: 55%;
-      left: 8%;
-      transform: rotate(10deg);
-    }
-
-
-    .icon4 {
-      top: 72%;
-      right: 8%;
-      transform: rotate(-10deg);
-    }
-
-
-    .icon5 {
-      top: 88%;
-      left: 12%;
-    }
-
-
-    /* CONTENT */
-
-    .content {
-      position: relative;
-      z-index: 5;
-    }
-
 
     /* HEADER */
 
     .header {
-      margin-bottom: 40px;
+      margin-bottom: 28px;
     }
 
-
-    .header h1 {
-      margin: 0 0 15px;
-
-      font-size: 54px;
-
+    h1 {
+      font-size: 38px;
+      margin: 0 0 8px;
       line-height: 1.15;
-
-      font-weight: 900;
-
-      letter-spacing: -1px;
     }
 
-
-    .header p {
+    .subtitle {
+      color: #aeb8c4;
       margin: 0;
-
-      color: #aeb6c1;
-
-      font-size: 25px;
+      font-size: 17px;
     }
 
+    /* MAIN DISCLAIMER */
 
-    /* MENU */
-
-    .menu {
-      display: flex;
-
-      flex-direction: column;
-
-      gap: 28px;
-    }
-
-
-    /* CARD */
-
-    .menu-card {
-      display: flex;
-
-      align-items: center;
-
-      min-height: 175px;
-
-      padding:
-        28px 35px;
-
-      border-radius: 32px;
+    .notice {
+      border-left: 5px solid #e53935;
 
       background:
-        rgba(11,15,21,.93);
+        rgba(100,15,15,.20);
 
-      text-decoration: none;
+      padding: 20px;
 
-      color: white;
+      border-radius: 12px;
 
-      transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+      margin-bottom: 25px;
 
-      backdrop-filter:
-        blur(8px);
+      color: #ffd0d0;
     }
 
-
-    .menu-card:hover {
-      transform:
-        translateY(-3px);
+    .notice strong {
+      color: #ff8d8d;
     }
 
+    /* DUE DILIGENCE */
 
-    /* GROUP BUY */
+    .due-diligence {
+      border-left: 5px solid #e09a2c;
+
+      background:
+        rgba(80,45,5,.24);
+
+      padding: 18px;
+
+      border-radius: 10px;
+
+      margin-bottom: 32px;
+
+      color: #e6d8bd;
+    }
+
+    /* GROUP BUY CARD */
 
     .group-buy {
+      background:
+        rgba(18,23,29,.95);
+
       border:
-        1.5px solid #55c8ff;
+        1px solid rgba(0,190,255,.45);
+
+      border-radius: 18px;
+
+      padding: 23px;
+
+      margin-bottom: 20px;
 
       box-shadow:
-        0 0 25px rgba(40,180,255,.08);
+        0 12px 30px rgba(0,0,0,.30),
+        0 0 22px rgba(0,190,255,.06);
     }
 
-
-    /* VENDORS */
-
-    .vendors {
-      border:
-        1.5px solid #18779a;
-
-      box-shadow:
-        0 0 25px rgba(0,150,220,.06);
+    .group-buy h2 {
+      margin: 0 0 6px;
+      font-size: 24px;
     }
 
-
-    /* SUPPLIES */
-
-    .supplies {
-      border:
-        1.5px solid #24865d;
-
-      box-shadow:
-        0 0 25px rgba(20,180,100,.06);
+    .group-buy p {
+      color: #c4cbd2;
     }
 
+    /* THIRD PARTY BADGE */
 
-    /* RESEARCH */
-
-    .research {
-      border:
-        1.5px solid #63399c;
-
-      box-shadow:
-        0 0 25px rgba(120,50,220,.08);
-    }
-
-
-    /* ICON */
-
-    .card-icon {
-      width: 105px;
-
-      flex-shrink: 0;
-
-      font-size: 50px;
-
-      text-align: center;
-    }
-
-
-    /* TEXT */
-
-    .card-content {
-      flex: 1;
-    }
-
-
-    .card-title {
-      display: block;
-
-      margin-bottom: 8px;
-
-      font-size: 32px;
-
-      line-height: 1.2;
-
-      font-weight: 900;
-    }
-
-
-    .card-description {
-      display: block;
-
-      color: #aeb5bf;
-
-      font-size: 22px;
-
-      line-height: 1.35;
-    }
-
-
-    /* ARROW */
-
-    .arrow {
-      width: 50px;
-
-      text-align: right;
-
-      font-size: 50px;
-
-      color: #71808d;
-
-      font-weight: 300;
-    }
-
-
-    /* COMMUNITY SECTION */
-
-    .community-section {
-      margin-top: 120px;
-
-      padding-top: 25px;
-    }
-
-
-    .community-section h2 {
-      margin:
-        0 0 20px;
-
-      font-size: 50px;
-
-      line-height: 1.15;
-    }
-
-
-    .community-section p {
-      color: #adb6c0;
-
-      font-size: 21px;
-
-      line-height: 1.7;
-    }
-
-
-    /* HOME BUTTON */
-
-    .home-button {
+    .status {
       display: inline-block;
 
-      margin-top: 30px;
+      background: #102e3b;
+      color: #72d8ff;
 
-      padding:
-        16px 24px;
+      padding: 7px 13px;
 
-      border-radius: 14px;
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: bold;
+
+      margin-bottom: 12px;
+    }
+
+    /* SMALL REMINDER */
+
+    .reminder {
+      margin: 17px 0;
+
+      padding: 14px;
 
       background:
-        linear-gradient(
-          135deg,
-          #159bd7,
-          #0876ad
-        );
+        rgba(90,60,10,.16);
+
+      border-radius: 9px;
+
+      color: #d2b873;
+
+      font-size: 12px;
+    }
+
+    /* TELEGRAM BUTTON */
+
+    .telegram-button {
+      display: inline-block;
+
+      padding: 14px 20px;
+
+      border-radius: 11px;
+
+      background: #168bd2;
 
       color: white;
 
       text-decoration: none;
 
-      font-size: 17px;
-
       font-weight: 900;
 
+      transition: .2s ease;
+
       box-shadow:
-        0 10px 25px
-        rgba(0,150,220,.18);
+        0 7px 20px rgba(22,139,210,.18);
     }
 
+    .telegram-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* MORE */
+
+    .more-coming {
+      margin-top: 35px;
+
+      padding: 20px;
+
+      text-align: center;
+
+      border:
+        1px dashed #3b4650;
+
+      border-radius: 15px;
+
+      color: #929da7;
+
+      background:
+        rgba(12,16,20,.65);
+    }
 
     /* FOOTER */
 
     footer {
-      margin-top: 80px;
+      margin-top: 55px;
 
       padding-top: 30px;
 
       border-top:
-        1px solid rgba(255,255,255,.10);
-
-      color: #78828d;
+        1px solid #28313a;
 
       text-align: center;
+
+      color: #7f8a94;
 
       font-size: 13px;
     }
 
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
 
     /* MOBILE */
 
     @media (max-width: 600px) {
 
       .page {
-        padding:
-          55px 30px
-          70px;
+        padding: 20px 15px 55px;
       }
 
-
-      .header {
-        margin-bottom: 35px;
+      h1 {
+        font-size: 33px;
       }
 
-
-      .header h1 {
-        font-size: 42px;
+      .group-buy {
+        padding: 20px;
       }
 
-
-      .header p {
-        font-size: 21px;
-      }
-
-
-      .menu {
-        gap: 24px;
-      }
-
-
-      .menu-card {
-        min-height: 150px;
-
-        padding:
-          24px 25px;
-
-        border-radius: 28px;
-      }
-
-
-      .card-icon {
-        width: 115px;
-
-        font-size: 48px;
-      }
-
-
-      .card-title {
-        font-size: 27px;
-      }
-
-
-      .card-description {
-        font-size: 19px;
-      }
-
-
-      .arrow {
-        width: 35px;
-
-        font-size: 42px;
-      }
-
-
-      .community-section {
-        margin-top: 100px;
-      }
-
-
-      .community-section h2 {
-        font-size: 42px;
-      }
-
-    }
-
-
-    /* SMALL PHONES */
-
-    @media (max-width: 420px) {
-
-      .page {
-        padding:
-          45px 20px
-          60px;
-      }
-
-
-      .header h1 {
-        font-size: 38px;
-      }
-
-
-      .header p {
-        font-size: 19px;
-      }
-
-
-      .menu-card {
-        min-height: 135px;
-
-        padding:
-          20px 18px;
-
-        border-radius: 24px;
-      }
-
-
-      .card-icon {
-        width: 90px;
-
-        font-size: 42px;
-      }
-
-
-      .card-title {
-        font-size: 24px;
-      }
-
-
-      .card-description {
-        font-size: 17px;
-      }
-
-
-      .arrow {
-        font-size: 35px;
+      .telegram-button {
+        display: block;
+        width: 100%;
+        text-align: center;
       }
 
     }
@@ -516,38 +278,18 @@
 
 <body>
 
-
-<!-- BACKGROUND DECORATIONS -->
-
-<div class="background-icons">
-
-  <div class="floating-icon icon1">
-    🧪
-  </div>
-
-  <div class="floating-icon icon2">
-    💉
-  </div>
-
-  <div class="floating-icon icon3">
-    🔬
-  </div>
-
-  <div class="floating-icon icon4">
-    🧬
-  </div>
-
-  <div class="floating-icon icon5">
-    ⚗️
-  </div>
-
-</div>
-
-
-
 <main class="page">
 
-<div class="content">
+
+  <!-- BACK -->
+
+  <a
+    class="back"
+    href="index.html">
+
+    ← Back to Peppers Research Hub
+
+  </a>
 
 
   <!-- HEADER -->
@@ -555,171 +297,138 @@
   <header class="header">
 
     <h1>
-      🌶️ Explore Peppers<br>
-      Research Hub
+      🤝 Group Buys
     </h1>
 
-    <p>
-      Choose a section to continue.
+    <p class="subtitle">
+      Independent third-party group-buy links shared
+      for informational and community convenience purposes.
     </p>
 
   </header>
 
 
+  <!-- MAIN DISCLAIMER -->
 
-  <!-- MENU -->
+  <div class="notice">
 
-  <nav class="menu">
+    <strong>
+      🚨 IMPORTANT GROUP-BUY DISCLAIMER
+    </strong>
 
+    <br><br>
 
-    <!-- GROUP BUYS -->
+    Peppers Research Hub and Pepper Collective are
+    <strong>
+      not affiliated with, associated with, partnered with,
+      employed by, or operators of the third-party group buys
+      listed on this page.
+    </strong>
 
-    <a
-      class="menu-card group-buy"
-      href="group-buys.html">
+    <br><br>
 
-      <div class="card-icon">
-        🤝
-      </div>
+    Links are provided for informational and community
+    convenience purposes only.
 
-      <div class="card-content">
+    Peppers Research Hub and Pepper Collective do not
+    operate these group buys, collect payments,
+    process orders, control products, or manage
+    shipping or fulfillment.
 
-        <span class="card-title">
-          Group Buys
-        </span>
-
-        <span class="card-description">
-          Third-party group-buy links
-        </span>
-
-      </div>
-
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
+  </div>
 
 
+  <!-- DUE DILIGENCE -->
 
-    <!-- VENDORS -->
+  <div class="due-diligence">
 
-    <a
-      class="menu-card vendors"
-      href="vendors.html">
+    <strong>
+      ⚠️ DO YOUR OWN RESEARCH &amp; DUE DILIGENCE
+    </strong>
 
-      <div class="card-icon">
-        🏪
-      </div>
+    <br><br>
 
-      <div class="card-content">
+    You are responsible for independently researching
+    and evaluating any third-party group buy before
+    participating.
 
-        <span class="card-title">
-          Vendors
-        </span>
+    <br><br>
 
-        <span class="card-description">
-          Third-party vendor directory
-        </span>
+    <strong>
+      Peppers Research Hub and Pepper Collective are not
+      responsible for purchases, payments, products,
+      product quality, authenticity, losses, disputes,
+      shipping, delivery, fulfillment, or transactions
+      involving third-party group buys.
+    </strong>
 
-      </div>
-
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
+  </div>
 
 
+  <!-- ==================================
+       KEVWELL GROUP BUY
+  =================================== -->
 
-    <!-- RESEARCH SUPPLIES -->
+  <section class="group-buy">
 
-    <a
-      class="menu-card supplies"
-      href="research-supplies.html">
-
-      <div class="card-icon">
-        🔬
-      </div>
-
-      <div class="card-content">
-
-        <span class="card-title">
-          Research Supplies
-        </span>
-
-        <span class="card-description">
-          Storage &amp; research supplies
-        </span>
-
-      </div>
-
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
-
-
-
-    <!-- RESEARCH INFORMATION -->
-
-    <a
-      class="menu-card research"
-      href="research-information.html">
-
-      <div class="card-icon">
-        📚
-      </div>
-
-      <div class="card-content">
-
-        <span class="card-title">
-          Research Information
-        </span>
-
-        <span class="card-description">
-          Educational resources &amp; research
-        </span>
-
-      </div>
-
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
-
-
-  </nav>
-
-
-
-  <!-- COMMUNITY -->
-
-  <section class="community-section">
+    <div class="status">
+      THIRD-PARTY GROUP BUY
+    </div>
 
     <h2>
-      🌶️ Pepper Collective<br>
-      Community
+      🤝 Kevwell Group Buy
     </h2>
 
     <p>
-      Peppers Research Hub provides convenient access
-      to community resources, independent third-party
-      links, research supplies and educational information.
+      Independent third-party group-buy page available
+      through Telegram.
     </p>
 
-    <a
-      class="home-button"
-      href="index.html">
 
-      ← Back to Main Page
+    <div class="reminder">
+
+      <strong>
+        ⚠️ Independent Group-Buy Reminder
+      </strong>
+
+      <br><br>
+
+      Peppers Research Hub and Pepper Collective are
+      <strong>not associated or affiliated with this group buy.</strong>
+
+      This link is provided for informational purposes only.
+
+      Please conduct your own research and due diligence
+      before deciding whether to participate.
+
+    </div>
+
+
+    <a
+      class="telegram-button"
+      href="https://t.me/+omXs3jk6p2o2NmIx"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      ✈️ Visit Kevwell Group Buy
 
     </a>
 
   </section>
 
+
+  <!-- FUTURE GROUP BUYS -->
+
+  <div class="more-coming">
+
+    🌶️ <strong>More Third-Party Group Buys Coming</strong>
+
+    <br><br>
+
+    Additional independent third-party group-buy links
+    may be added here in the future.
+
+  </div>
 
 
   <!-- FOOTER -->
@@ -730,15 +439,18 @@
 
     <br>
 
-    Research • Share • Learn • Grow
+    Research • Education • Community
+
+    <br><br>
+
+    <a href="index.html">
+      ← Return to Peppers Research Hub
+    </a>
 
   </footer>
 
 
-</div>
-
 </main>
-
 
 </body>
 
