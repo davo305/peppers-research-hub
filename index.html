@@ -15,7 +15,6 @@
     content="Peppers Research Hub — research, education, community resources and official Pepper Collective updates.">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -26,32 +25,14 @@
 
     body {
       margin: 0;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       color: white;
-
       line-height: 1.6;
 
       background:
-        radial-gradient(
-          circle at 20% 10%,
-          #071b2b 0%,
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 80% 35%,
-          #20102b 0%,
-          transparent 35%
-        ),
-        linear-gradient(
-          180deg,
-          #05080e,
-          #090d12
-        );
+        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
+        linear-gradient(180deg, #05080e, #090d12);
 
       overflow-x: hidden;
     }
@@ -60,211 +41,122 @@
       color: inherit;
     }
 
-
-    /* ======================================
-       FLOATING LAB BACKGROUND
-    ====================================== */
+    /* FLOATING LAB BACKGROUND */
 
     .science-background {
       position: fixed;
-
       inset: 0;
-
       overflow: hidden;
-
       pointer-events: none;
-
       z-index: 0;
     }
 
     .float-item {
       position: absolute;
-
       opacity: .24;
-
       user-select: none;
 
       filter:
-        drop-shadow(
-          0 0 8px
-          rgba(0,200,255,.60)
-        )
-        drop-shadow(
-          0 0 18px
-          rgba(0,100,255,.20)
-        );
+        drop-shadow(0 0 8px rgba(0,200,255,.60))
+        drop-shadow(0 0 18px rgba(0,100,255,.20));
     }
-
 
     .f1 {
       left: 3%;
       top: 13%;
-
       font-size: 55px;
-
-      animation:
-        floatOne
-        11s
-        ease-in-out
-        infinite;
+      animation: floatOne 11s ease-in-out infinite;
     }
 
     .f2 {
       right: 5%;
       top: 25%;
-
       font-size: 52px;
-
-      animation:
-        floatTwo
-        14s
-        ease-in-out
-        infinite;
+      animation: floatTwo 14s ease-in-out infinite;
     }
 
     .f3 {
       left: 5%;
       top: 42%;
-
       font-size: 58px;
-
-      animation:
-        floatTwo
-        16s
-        ease-in-out
-        infinite;
+      animation: floatTwo 16s ease-in-out infinite;
     }
 
     .f4 {
       right: 4%;
       top: 58%;
-
       font-size: 53px;
-
-      animation:
-        floatOne
-        13s
-        ease-in-out
-        infinite;
+      animation: floatOne 13s ease-in-out infinite;
     }
 
     .f5 {
       left: 10%;
       top: 73%;
-
       font-size: 50px;
-
-      animation:
-        rotateFloat
-        18s
-        linear
-        infinite;
+      animation: rotateFloat 18s linear infinite;
     }
 
     .f6 {
       right: 9%;
       top: 86%;
-
       font-size: 50px;
-
-      animation:
-        floatTwo
-        15s
-        ease-in-out
-        infinite;
+      animation: floatTwo 15s ease-in-out infinite;
     }
 
     .f7 {
       left: 46%;
       top: 52%;
-
       font-size: 42px;
-
-      animation:
-        rotateFloat
-        20s
-        linear
-        infinite;
+      animation: rotateFloat 20s linear infinite;
     }
-
 
     @keyframes floatOne {
-
-      0%,
-      100% {
-        transform:
-          translateY(0)
-          rotate(-10deg);
+      0%, 100% {
+        transform: translateY(0) rotate(-10deg);
       }
 
       50% {
-        transform:
-          translateY(-48px)
-          rotate(10deg);
+        transform: translateY(-48px) rotate(10deg);
       }
-
     }
-
 
     @keyframes floatTwo {
-
-      0%,
-      100% {
-        transform:
-          translate(0,0)
-          rotate(10deg);
+      0%, 100% {
+        transform: translate(0,0) rotate(10deg);
       }
 
       50% {
-        transform:
-          translate(-20px,35px)
-          rotate(-10deg);
+        transform: translate(-20px,35px) rotate(-10deg);
       }
-
     }
 
-
     @keyframes rotateFloat {
-
       from {
-        transform:
-          rotate(0deg);
+        transform: rotate(0deg);
       }
 
       to {
-        transform:
-          rotate(360deg);
+        transform: rotate(360deg);
       }
-
     }
-
 
     .page {
       position: relative;
-
       z-index: 2;
     }
 
-
-    /* ======================================
-       HERO
-    ====================================== */
+    /* HERO */
 
     .hero {
       position: relative;
-
       min-height: 92vh;
 
       display: flex;
-
       align-items: flex-end;
-
       justify-content: center;
-
       text-align: center;
 
-      padding:
-        55px 20px;
+      padding: 55px 20px;
 
       background:
         linear-gradient(
@@ -277,185 +169,95 @@
         center center / cover no-repeat;
     }
 
-
     .hero::after {
       content: "";
-
       position: absolute;
-
       inset: 0;
 
       box-shadow:
-        inset
-        0 -110px 110px
-        rgba(0,0,0,.72);
+        inset 0 -110px 110px rgba(0,0,0,.72);
 
       pointer-events: none;
     }
 
-
     .hero-content {
       position: relative;
-
       z-index: 2;
-
       width: 100%;
-
       max-width: 900px;
     }
 
-
     .brand-badge {
       display: inline-block;
-
-      padding:
-        8px 17px;
-
-      border-radius:
-        999px;
-
-      background:
-        rgba(0,0,0,.76);
-
-      border:
-        1px solid
-        rgba(255,255,255,.25);
-
-      font-size:
-        14px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        1.2px;
-
-      margin-bottom:
-        15px;
+      padding: 8px 17px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.76);
+      border: 1px solid rgba(255,255,255,.25);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      margin-bottom: 15px;
     }
-
 
     h1 {
       margin: 0;
-
-      font-size:
-        clamp(
-          43px,
-          10vw,
-          78px
-        );
-
+      font-size: clamp(43px, 10vw, 78px);
       line-height: .98;
-
-      text-shadow:
-        0 5px 20px #000;
+      text-shadow: 0 5px 20px #000;
     }
-
 
     .tagline {
-      margin:
-        17px 0 26px;
-
-      font-size:
-        20px;
-
-      font-weight:
-        600;
-
-      text-shadow:
-        0 3px 10px #000;
+      margin: 17px 0 26px;
+      font-size: 20px;
+      font-weight: 600;
+      text-shadow: 0 3px 10px #000;
     }
-
 
     .buttons {
       display: flex;
-
       justify-content: center;
-
       flex-wrap: wrap;
-
       gap: 12px;
     }
 
-
     .btn {
       display: inline-block;
-
-      padding:
-        14px 22px;
-
-      border-radius:
-        12px;
-
+      padding: 14px 22px;
+      border-radius: 12px;
       color: white;
-
       text-decoration: none;
-
-      font-weight:
-        800;
-
-      transition:
-        .2s ease;
+      font-weight: 800;
+      transition: .2s ease;
     }
-
 
     .btn:hover {
-      transform:
-        translateY(-3px);
+      transform: translateY(-3px);
     }
-
 
     .btn-blue {
-      background:
-        #168bd2;
-
-      box-shadow:
-        0 7px 20px
-        rgba(22,139,210,.25);
+      background: #168bd2;
+      box-shadow: 0 7px 20px rgba(22,139,210,.25);
     }
-
 
     .btn-red {
-      background:
-        #e52b2b;
-
-      box-shadow:
-        0 7px 20px
-        rgba(229,43,43,.25);
+      background: #e52b2b;
+      box-shadow: 0 7px 20px rgba(229,43,43,.25);
     }
-
 
     .btn-green {
-      background:
-        #258044;
-
-      box-shadow:
-        0 7px 20px
-        rgba(37,128,68,.25);
+      background: #258044;
+      box-shadow: 0 7px 20px rgba(37,128,68,.25);
     }
 
-
-    /* ======================================
-       HERO TRANSITION
-    ====================================== */
+    /* HERO TRANSITION */
 
     .transition-wrap {
-      max-width:
-        960px;
-
-      margin:
-        -26px auto 0;
-
-      padding:
-        0 20px;
-
-      position:
-        relative;
-
-      z-index:
-        5;
+      max-width: 960px;
+      margin: -26px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
     }
-
 
     .transition-card {
       background:
@@ -465,809 +267,431 @@
           rgba(13,18,24,.96)
         );
 
-      border:
-        1px solid
-        rgba(0,255,145,.60);
-
-      border-radius:
-        22px;
-
-      padding:
-        22px;
-
-      text-align:
-        center;
+      border: 1px solid rgba(0,255,145,.60);
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
 
       box-shadow:
-        0 0 32px
-        rgba(0,255,145,.14),
-        0 16px 40px
-        rgba(0,0,0,.42);
+        0 0 32px rgba(0,255,145,.14),
+        0 16px 40px rgba(0,0,0,.42);
     }
-
 
     .transition-card strong {
-      color:
-        #69ffb2;
+      color: #69ffb2;
     }
-
 
     .transition-card p {
-      margin:
-        7px 0 0;
-
-      color:
-        #c5d0d9;
+      margin: 7px 0 0;
+      color: #c5d0d9;
     }
 
-
-    /* ======================================
-       GENERAL SECTIONS
-    ====================================== */
+    /* GENERAL */
 
     .section {
-      max-width:
-        960px;
-
-      margin:
-        auto;
-
-      padding:
-        48px 20px;
+      max-width: 960px;
+      margin: auto;
+      padding: 48px 20px;
     }
-
 
     .section-title {
-      margin:
-        0 0 18px;
-
-      font-size:
-        30px;
-
-      line-height:
-        1.2;
+      margin: 0 0 18px;
+      font-size: 30px;
+      line-height: 1.2;
     }
-
 
     .section-subtitle {
-      color:
-        #aeb8c4;
-
-      margin:
-        -8px 0 22px;
+      color: #aeb8c4;
+      margin: -8px 0 22px;
     }
-
 
     .card {
-      background:
-        rgba(18,23,29,.93);
-
-      border:
-        1px solid
-        #29323b;
-
-      border-radius:
-        20px;
-
-      padding:
-        24px;
-
-      margin-bottom:
-        18px;
+      background: rgba(18,23,29,.93);
+      border: 1px solid #29323b;
+      border-radius: 20px;
+      padding: 24px;
+      margin-bottom: 18px;
 
       box-shadow:
-        0 14px 35px
-        rgba(0,0,0,.30);
+        0 14px 35px rgba(0,0,0,.30);
     }
 
-
-    /* ======================================
-       BACKUP SIGNUP
-    ====================================== */
+    /* SIGNUP */
 
     .signup-header {
-      text-align:
-        center;
-
-      margin-bottom:
-        20px;
+      text-align: center;
+      margin-bottom: 20px;
     }
-
 
     .signup-header h2 {
-      margin-bottom:
-        8px;
-
-      font-size:
-        32px;
+      margin-bottom: 8px;
+      font-size: 32px;
     }
-
 
     .signup-header p {
-      max-width:
-        700px;
-
-      margin:
-        auto;
-
-      color:
-        #b8c0ca;
+      max-width: 700px;
+      margin: auto;
+      color: #b8c0ca;
     }
-
 
     .signup-card {
-      border:
-        1px solid
-        rgba(0,255,145,.55);
+      border: 1px solid rgba(0,255,145,.55);
 
       box-shadow:
-        0 15px 35px
-        rgba(0,0,0,.35),
-        0 0 30px
-        rgba(0,255,145,.10);
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 30px rgba(0,255,145,.10);
     }
-
 
     .form-group {
-      margin-bottom:
-        18px;
+      margin-bottom: 18px;
     }
-
 
     label {
-      display:
-        block;
-
-      font-weight:
-        800;
-
-      margin-bottom:
-        8px;
+      display: block;
+      font-weight: 800;
+      margin-bottom: 8px;
     }
-
 
     input[type="email"],
     input[type="text"] {
-
-      width:
-        100%;
-
-      padding:
-        15px 16px;
-
-      border-radius:
-        12px;
-
-      border:
-        1px solid
-        #46515c;
-
-      background:
-        #090d10;
-
-      color:
-        white;
-
-      font-size:
-        16px;
-
-      outline:
-        none;
+      width: 100%;
+      padding: 15px 16px;
+      border-radius: 12px;
+      border: 1px solid #46515c;
+      background: #090d10;
+      color: white;
+      font-size: 16px;
+      outline: none;
     }
-
 
     input:focus {
-      border-color:
-        #e52b2b;
+      border-color: #e52b2b;
 
       box-shadow:
-        0 0 0 3px
-        rgba(229,43,43,.12);
+        0 0 0 3px rgba(229,43,43,.12);
     }
-
 
     .consent {
-      display:
-        flex;
-
-      gap:
-        12px;
-
-      align-items:
-        flex-start;
-
-      margin:
-        20px 0;
-
-      color:
-        #d5d9df;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin: 20px 0;
+      color: #d5d9df;
     }
-
 
     .consent input {
-      width:
-        20px;
-
-      height:
-        20px;
-
-      margin-top:
-        5px;
-
-      flex-shrink:
-        0;
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+      flex-shrink: 0;
     }
-
 
     .privacy-note {
-      background:
-        #0d130f;
-
-      border-left:
-        5px solid
-        #2d9b50;
-
-      padding:
-        17px;
-
-      border-radius:
-        10px;
-
-      margin:
-        18px 0;
-
-      color:
-        #d5d9df;
+      background: #0d130f;
+      border-left: 5px solid #2d9b50;
+      padding: 17px;
+      border-radius: 10px;
+      margin: 18px 0;
+      color: #d5d9df;
     }
-
 
     .submit-button {
-      width:
-        100%;
-
-      padding:
-        16px 20px;
-
-      border:
-        0;
-
-      border-radius:
-        12px;
-
-      background:
-        #e52b2b;
-
-      color:
-        white;
-
-      font-size:
-        17px;
-
-      font-weight:
-        900;
-
-      cursor:
-        pointer;
+      width: 100%;
+      padding: 16px 20px;
+      border: 0;
+      border-radius: 12px;
+      background: #e52b2b;
+      color: white;
+      font-size: 17px;
+      font-weight: 900;
+      cursor: pointer;
     }
 
-
-    /* ======================================
-       RESOURCE DIRECTORY
-    ====================================== */
+    /* RESOURCE DIRECTORY */
 
     .resource-grid {
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(2,1fr);
-
-      gap:
-        15px;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 15px;
     }
-
 
     .resource-card {
-      min-height:
-        105px;
+      min-height: 105px;
 
-      display:
-        flex;
+      display: flex;
+      align-items: center;
+      gap: 14px;
 
-      align-items:
-        center;
+      padding: 18px;
 
-      gap:
-        14px;
+      background: rgba(14,19,24,.96);
+      border-radius: 18px;
+      text-decoration: none;
 
-      padding:
-        18px;
-
-      background:
-        rgba(14,19,24,.96);
-
-      border-radius:
-        18px;
-
-      text-decoration:
-        none;
-
-      transition:
-        .2s ease;
+      transition: .2s ease;
 
       box-shadow:
-        0 10px 25px
-        rgba(0,0,0,.25);
+        0 10px 25px rgba(0,0,0,.25);
     }
-
 
     .resource-card:hover {
-      transform:
-        translateY(-4px);
+      transform: translateY(-4px);
     }
-
 
     .resource-icon {
-      font-size:
-        34px;
-
-      flex-shrink:
-        0;
+      font-size: 34px;
+      flex-shrink: 0;
     }
-
 
     .resource-card strong {
-      display:
-        block;
-
-      font-size:
-        18px;
+      display: block;
+      font-size: 18px;
     }
-
 
     .resource-card span {
-      display:
-        block;
-
-      color:
-        #9da8b3;
-
-      font-size:
-        13px;
-
-      margin-top:
-        3px;
+      display: block;
+      color: #9da8b3;
+      font-size: 13px;
+      margin-top: 3px;
     }
-
 
     .arrow {
-      margin-left:
-        auto;
-
-      font-size:
-        32px;
-
-      color:
-        #6e7d89;
+      margin-left: auto;
+      font-size: 32px;
+      color: #6e7d89;
     }
-
 
     .group-card {
-      border:
-        1px solid
-        rgba(255,145,0,.52);
+      border: 1px solid rgba(255,145,0,.52);
     }
-
 
     .vendor-card {
-      border:
-        1px solid
-        rgba(0,190,255,.52);
+      border: 1px solid rgba(0,190,255,.52);
     }
-
 
     .supplies-card {
-      border:
-        1px solid
-        rgba(0,255,145,.52);
+      border: 1px solid rgba(0,255,145,.52);
     }
-
 
     .research-card {
-      border:
-        1px solid
-        rgba(150,90,255,.52);
+      border: 1px solid rgba(150,90,255,.52);
     }
 
+    .peptide-card {
+      border: 1px solid rgba(255,65,150,.60);
 
-    /* ======================================
-       COMMUNITY
-    ====================================== */
-
-    .community-image {
-      width:
-        100%;
-
-      max-height:
-        540px;
-
-      object-fit:
-        cover;
-
-      border-radius:
-        16px;
-
-      margin-bottom:
-        22px;
-
-      border:
-        1px solid
-        #333;
+      box-shadow:
+        0 0 24px rgba(255,65,150,.07);
     }
 
-
-    .status {
-      display:
-        inline-block;
-
-      background:
-        #123c20;
-
-      color:
-        #84ffa1;
-
-      padding:
-        7px 13px;
-
-      border-radius:
-        999px;
-
-      font-size:
-        13px;
-
-      font-weight:
-        900;
-
-      margin-bottom:
-        10px;
-    }
-
-
-    .backup-status {
-      background:
-        #30270d;
-
-      color:
-        #ffd75e;
-    }
-
-
-    .telegram-button {
-      display:
-        inline-block;
-
-      margin-top:
-        8px;
-
-      padding:
-        14px 20px;
-
-      border-radius:
-        11px;
-
-      background:
-        #168bd2;
-
-      color:
-        white;
-
-      text-decoration:
-        none;
-
-      font-weight:
-        900;
-    }
-
-
-    .backup-button {
-      background:
-        #e52b2b;
-    }
-
-
-    /* ======================================
-       RULES
-    ====================================== */
-
-    .rule {
-      padding:
-        17px 0;
-
-      border-bottom:
-        1px solid
-        #293039;
-    }
-
-
-    .rule:first-child {
-      padding-top:
-        0;
-    }
-
-
-    .rule:last-child {
-      border-bottom:
-        none;
-
-      padding-bottom:
-        0;
-    }
-
-
-    .rule-title {
-      font-size:
-        18px;
-
-      font-weight:
-        900;
-
-      margin-bottom:
-        5px;
-    }
-
-
-    .rule p {
-      margin:
-        0;
-
-      color:
-        #c6ccd3;
-    }
-
-
-    /* ======================================
-       THIRD PARTY NOTICE
-    ====================================== */
+    /* THIRD PARTY */
 
     .third-party-notice {
-      border-left:
-        5px solid
-        #e09a2c;
-
-      background:
-        rgba(80,45,5,.22);
-
-      padding:
-        18px;
-
-      border-radius:
-        10px;
-
-      color:
-        #e6d8bd;
+      border-left: 5px solid #e09a2c;
+      background: rgba(80,45,5,.22);
+      padding: 18px;
+      border-radius: 10px;
+      color: #e6d8bd;
     }
 
+    /* COMMUNITY */
 
-    /* ======================================
-       FOOTER
-    ====================================== */
+    .community-image {
+      width: 100%;
+      max-height: 540px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 22px;
+      border: 1px solid #333;
+    }
+
+    .status {
+      display: inline-block;
+      background: #123c20;
+      color: #84ffa1;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    .backup-status {
+      background: #30270d;
+      color: #ffd75e;
+    }
+
+    .telegram-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 14px 20px;
+      border-radius: 11px;
+      background: #168bd2;
+      color: white;
+      text-decoration: none;
+      font-weight: 900;
+    }
+
+    .backup-button {
+      background: #e52b2b;
+    }
+
+    /* RULES */
+
+    .rule {
+      padding: 17px 0;
+      border-bottom: 1px solid #293039;
+    }
+
+    .rule:first-child {
+      padding-top: 0;
+    }
+
+    .rule:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .rule-title {
+      font-size: 18px;
+      font-weight: 900;
+      margin-bottom: 5px;
+    }
+
+    .rule p {
+      margin: 0;
+      color: #c6ccd3;
+    }
+
+    /* FOOTER */
 
     footer {
-      text-align:
-        center;
-
-      padding:
-        40px 20px;
-
-      border-top:
-        1px solid
-        #242c34;
-
-      color:
-        #8e99a5;
-
-      font-size:
-        14px;
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #242c34;
+      color: #8e99a5;
+      font-size: 14px;
     }
-
 
     footer a {
-      color:
-        #c7d0d9;
-
-      text-decoration:
-        none;
+      color: #c7d0d9;
+      text-decoration: none;
     }
 
-
-    /* ======================================
-       MOBILE
-    ====================================== */
+    /* MOBILE */
 
     @media (max-width:650px) {
-
       .hero {
-        min-height:
-          82vh;
-
-        padding:
-          35px 18px;
+        min-height: 82vh;
+        padding: 35px 18px;
       }
-
 
       .transition-wrap {
-        margin-top:
-          -20px;
-
-        padding:
-          0 14px;
+        margin-top: -20px;
+        padding: 0 14px;
       }
-
 
       .section {
-        padding:
-          38px 16px;
+        padding: 38px 16px;
       }
-
 
       .card {
-        padding:
-          20px;
+        padding: 20px;
       }
-
 
       .resource-grid {
-        grid-template-columns:
-          1fr;
+        grid-template-columns: 1fr;
       }
-
 
       .community-image {
-        max-height:
-          none;
+        max-height: none;
       }
-
 
       .buttons {
-        gap:
-          9px;
+        gap: 9px;
       }
-
 
       .btn {
-        padding:
-          13px 17px;
-
-        font-size:
-          14px;
+        padding: 13px 17px;
+        font-size: 14px;
       }
-
 
       .float-item {
-        opacity:
-          .22;
+        opacity: .22;
       }
-
     }
-
   </style>
-
 </head>
 
 
 <body>
 
-
-<!-- ======================================
-     FLOATING LAB ELEMENTS
-====================================== -->
+<!-- FLOATING LAB -->
 
 <div class="science-background">
 
-  <div class="float-item f1">
-    🧪
-  </div>
-
-  <div class="float-item f2">
-    💉
-  </div>
-
-  <div class="float-item f3">
-    🔬
-  </div>
-
-  <div class="float-item f4">
-    ⚗️
-  </div>
-
-  <div class="float-item f5">
-    🧬
-  </div>
-
-  <div class="float-item f6">
-    🧫
-  </div>
-
-  <div class="float-item f7">
-    ⚛️
-  </div>
+  <div class="float-item f1">🧪</div>
+  <div class="float-item f2">💉</div>
+  <div class="float-item f3">🔬</div>
+  <div class="float-item f4">⚗️</div>
+  <div class="float-item f5">🧬</div>
+  <div class="float-item f6">🧫</div>
+  <div class="float-item f7">⚛️</div>
 
 </div>
 
 
-
 <div class="page">
 
-
-<!-- ======================================
-     HERO
-====================================== -->
+<!-- HERO -->
 
 <header class="hero">
 
   <div class="hero-content">
 
-
     <div class="brand-badge">
       🌶️ PEPPER COLLECTIVE
     </div>
-
 
     <h1>
       Peppers<br>
       Research Hub
     </h1>
 
-
     <p class="tagline">
       Research • Share • Learn • Grow
     </p>
 
-
     <div class="buttons">
-
 
       <a
         class="btn btn-blue"
         href="https://t.me/+M25pGmfiPD4wZGIx"
         target="_blank"
         rel="noopener noreferrer">
-
         Join Community
-
       </a>
-
 
       <a
         class="btn btn-red"
         href="#backup-list">
-
         Backup Signup
-
       </a>
-
 
       <a
         class="btn btn-green"
         href="#resources">
-
         Research Hub
-
       </a>
 
-
     </div>
-
 
   </div>
 
 </header>
 
 
-
-<!-- ======================================
-     HERO TRANSITION
-====================================== -->
+<!-- TRANSITION -->
 
 <div class="transition-wrap">
 
@@ -1287,15 +711,11 @@
 </div>
 
 
-
-<!-- ======================================
-     BACKUP CONTACT SIGNUP
-====================================== -->
+<!-- BACKUP SIGNUP -->
 
 <section
   class="section"
   id="backup-list">
-
 
   <div class="signup-header">
 
@@ -1310,9 +730,7 @@
 
   </div>
 
-
   <div class="card signup-card">
-
 
     <p>
       Add your contact information so we can reach you with
@@ -1320,17 +738,14 @@
       you a replacement Telegram community link.
     </p>
 
-
     <form
       action="https://formspree.io/f/mbgrkvlr"
       method="POST">
-
 
       <input
         type="hidden"
         name="_subject"
         value="New Peppers Backup Contact List Signup">
-
 
       <div class="form-group">
 
@@ -1347,7 +762,6 @@
 
       </div>
 
-
       <div class="form-group">
 
         <label for="telegram">
@@ -1362,7 +776,6 @@
 
       </div>
 
-
       <div class="consent">
 
         <input
@@ -1372,30 +785,22 @@
           value="Agreed"
           required>
 
-
         <label for="consent">
-
           I agree to receive important Peppers Research Hub
           announcements and replacement Telegram community links.
-
         </label>
 
       </div>
 
-
       <div class="privacy-note">
 
-        🔒
-        <strong>
-          Your privacy matters.
-        </strong>
+        🔒 <strong>Your privacy matters.</strong>
 
         Your information will not be sold or shared for marketing
         purposes. It will only be used for important Peppers
         Research Hub announcements and community contact.
 
       </div>
-
 
       <button
         class="submit-button"
@@ -1405,37 +810,28 @@
 
       </button>
 
-
     </form>
-
 
   </div>
 
 </section>
 
 
-
-<!-- ======================================
-     RESOURCE DIRECTORY
-====================================== -->
+<!-- RESOURCE DIRECTORY -->
 
 <section
   class="section"
   id="resources">
 
-
   <h2 class="section-title">
     🌶️ Explore Peppers Research Hub
   </h2>
-
 
   <p class="section-subtitle">
     Choose a section to continue.
   </p>
 
-
   <div class="resource-grid">
-
 
     <!-- GROUP BUYS -->
 
@@ -1443,14 +839,11 @@
       class="resource-card group-card"
       href="group-buys.html">
 
-
       <div class="resource-icon">
         🤝
       </div>
 
-
       <div>
-
         <strong>
           Group Buys
         </strong>
@@ -1458,17 +851,13 @@
         <span>
           Third-party group-buy links
         </span>
-
       </div>
-
 
       <div class="arrow">
         ›
       </div>
 
-
     </a>
-
 
 
     <!-- VENDORS -->
@@ -1477,14 +866,11 @@
       class="resource-card vendor-card"
       href="vendors.html">
 
-
       <div class="resource-icon">
         🏪
       </div>
 
-
       <div>
-
         <strong>
           Vendors
         </strong>
@@ -1492,17 +878,13 @@
         <span>
           Third-party vendor directory
         </span>
-
       </div>
-
 
       <div class="arrow">
         ›
       </div>
 
-
     </a>
-
 
 
     <!-- RESEARCH SUPPLIES -->
@@ -1511,14 +893,11 @@
       class="resource-card supplies-card"
       href="research-supplies.html">
 
-
       <div class="resource-icon">
         🔬
       </div>
 
-
       <div>
-
         <strong>
           Research Supplies
         </strong>
@@ -1526,17 +905,13 @@
         <span>
           Storage &amp; research supplies
         </span>
-
       </div>
-
 
       <div class="arrow">
         ›
       </div>
 
-
     </a>
-
 
 
     <!-- RESEARCH INFORMATION -->
@@ -1545,32 +920,52 @@
       class="resource-card research-card"
       href="research-information.html">
 
-
       <div class="resource-icon">
         📚
       </div>
 
-
       <div>
-
         <strong>
           Research Information
         </strong>
 
         <span>
-          Educational resources &amp; research
+          Laboratory education &amp; research guides
         </span>
-
       </div>
-
 
       <div class="arrow">
         ›
       </div>
 
-
     </a>
 
+
+    <!-- PEPTIDE RESEARCH -->
+
+    <a
+      class="resource-card peptide-card"
+      href="peptide-research.html">
+
+      <div class="resource-icon">
+        🧬
+      </div>
+
+      <div>
+        <strong>
+          Peptide Research Library
+        </strong>
+
+        <span>
+          Peptide-specific research &amp; resources
+        </span>
+      </div>
+
+      <div class="arrow">
+        ›
+      </div>
+
+    </a>
 
   </div>
 
@@ -1578,7 +973,6 @@
   <div
     class="third-party-notice"
     style="margin-top:25px;">
-
 
     <strong>
       ⚠️ Third-Party Resource Notice
@@ -1598,55 +992,43 @@
 
   </div>
 
-
 </section>
 
 
-
-<!-- ======================================
-     MAIN TELEGRAM COMMUNITY
-====================================== -->
+<!-- MAIN TELEGRAM -->
 
 <section
   class="section"
   id="community">
 
-
   <h2 class="section-title">
     🌶️ Pepper Collective Community
   </h2>
-
 
   <p class="section-subtitle">
     Our main Telegram community.
   </p>
 
-
   <div class="card">
-
 
     <img
       class="community-image"
       src="pepper-collective-main.jpg"
       alt="Pepper Collective community">
 
-
     <div class="status">
       ● MAIN COMMUNITY ONLINE
     </div>
 
-
     <h3>
       Pepper Collective
     </h3>
-
 
     <p>
       Join the main Pepper Collective Telegram community
       for discussions, research information, announcements
       and community updates.
     </p>
-
 
     <a
       class="telegram-button"
@@ -1658,38 +1040,28 @@
 
     </a>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- ======================================
-     BACKUP TELEGRAM
-====================================== -->
+<!-- BACKUP TELEGRAM -->
 
 <section class="section">
-
 
   <h2 class="section-title">
     🚨 Backup Community
   </h2>
 
-
   <div class="card">
-
 
     <div class="status backup-status">
       BACKUP COMMUNITY
     </div>
 
-
     <h3>
       🌶️ Peppers Collective 2
     </h3>
-
 
     <p>
       This is the official backup Telegram community.
@@ -1697,24 +1069,14 @@
       if the main group becomes unavailable.
     </p>
 
-
     <p>
-
-      <strong>
-        Note:
-      </strong>
-
+      <strong>Note:</strong>
       Peppers Collective 2 currently does not have
       a profile picture.
 
       Make sure the group name says
-
-      <strong>
-        Peppers Collective 2
-      </strong>.
-
+      <strong>Peppers Collective 2</strong>.
     </p>
-
 
     <a
       class="telegram-button backup-button"
@@ -1726,30 +1088,22 @@
 
     </a>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- ======================================
-     COMMUNITY RULES
-====================================== -->
+<!-- COMMUNITY RULES -->
 
 <section
   class="section"
   id="rules">
 
-
   <h2 class="section-title">
     📋 Community Rules
   </h2>
 
-
   <div class="card">
-
 
     <div class="rule">
 
@@ -1765,7 +1119,6 @@
 
     </div>
 
-
     <div class="rule">
 
       <div class="rule-title">
@@ -1778,7 +1131,6 @@
       </p>
 
     </div>
-
 
     <div class="rule">
 
@@ -1797,7 +1149,6 @@
 
     </div>
 
-
     <div class="rule">
 
       <div class="rule-title">
@@ -1812,7 +1163,6 @@
 
     </div>
 
-
     <div class="rule">
 
       <div class="rule-title">
@@ -1826,7 +1176,6 @@
       </p>
 
     </div>
-
 
     <div class="rule">
 
@@ -1845,7 +1194,6 @@
 
     </div>
 
-
     <div class="rule">
 
       <div class="rule-title">
@@ -1859,25 +1207,18 @@
 
     </div>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- ======================================
-     ANNOUNCEMENTS
-====================================== -->
+<!-- ANNOUNCEMENTS -->
 
 <section class="section">
-
 
   <h2 class="section-title">
     📢 Latest Announcements
   </h2>
-
 
   <div class="card">
 
@@ -1887,12 +1228,11 @@
 
     <p>
       Bookmark this website to find official updates,
-      community information, research resources,
+      community information, research resources
       and replacement Telegram links.
     </p>
 
   </div>
-
 
   <div class="card">
 
@@ -1902,29 +1242,21 @@
 
     <p>
       Our official backup community is
-      <strong>
-        Peppers Collective 2
-      </strong>.
+      <strong>Peppers Collective 2</strong>.
     </p>
 
   </div>
 
-
 </section>
 
 
-
-<!-- ======================================
-     CONTACT
-====================================== -->
+<!-- CONTACT -->
 
 <section class="section">
-
 
   <h2 class="section-title">
     ✉️ Contact
   </h2>
-
 
   <div class="card">
 
@@ -1932,15 +1264,12 @@
       Peppers Research Hub
     </h3>
 
-
     <p>
-      Questions, community matters,
+      Questions, community matters
       or administrative inquiries:
     </p>
 
-
     <p>
-
       <a
         href="mailto:contact@peppersresearchhub.com">
 
@@ -1949,23 +1278,16 @@
         </strong>
 
       </a>
-
     </p>
 
-
   </div>
-
 
 </section>
 
 
-
-<!-- ======================================
-     FOOTER
-====================================== -->
+<!-- FOOTER -->
 
 <footer>
-
 
   © 2026 Peppers Research Hub
 
@@ -1973,9 +1295,7 @@
 
   Research • Education • Community
 
-
   <br><br>
-
 
   <a href="group-buys.html">
     Group Buys
@@ -1983,13 +1303,11 @@
 
   &nbsp; • &nbsp;
 
-
   <a href="vendors.html">
     Vendors
   </a>
 
   &nbsp; • &nbsp;
-
 
   <a href="research-supplies.html">
     Research Supplies
@@ -1997,30 +1315,26 @@
 
   &nbsp; • &nbsp;
 
-
   <a href="research-information.html">
     Research Information
   </a>
 
+  &nbsp; • &nbsp;
+
+  <a href="peptide-research.html">
+    Peptide Research
+  </a>
 
   <br><br>
 
-
-  <a
-    href="mailto:contact@peppersresearchhub.com">
-
+  <a href="mailto:contact@peppersresearchhub.com">
     contact@peppersresearchhub.com
-
   </a>
-
 
 </footer>
 
 
-
 </div>
 
-
 </body>
-
 </html>
