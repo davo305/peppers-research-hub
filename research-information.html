@@ -7,9 +7,18 @@
 
   <title>Research Information | Peppers Research Hub</title>
 
+  <meta
+    name="description"
+    content="Educational research resources, articles, videos and references collected by Peppers Research Hub."
+  >
+
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -17,6 +26,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background:
         radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
         linear-gradient(180deg, #06090f, #090d12);
       color: white;
       min-height: 100vh;
@@ -24,9 +34,9 @@
     }
 
     .page {
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
-      padding: 25px 18px 60px;
+      padding: 25px 18px 70px;
     }
 
     .back {
@@ -40,57 +50,164 @@
       font-weight: bold;
     }
 
+    .header {
+      margin-bottom: 28px;
+    }
+
     h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
+      font-size: 38px;
+      margin: 0 0 8px;
+      line-height: 1.15;
     }
 
     .subtitle {
       color: #aeb8c4;
-      margin-bottom: 28px;
+      margin: 0;
+      font-size: 17px;
     }
 
     .notice {
       border-left: 5px solid #168bd2;
-      background: rgba(5, 44, 80, .25);
+      background: rgba(5,44,80,.25);
       padding: 18px;
       border-radius: 10px;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       color: #c8d9e8;
     }
 
-    .construction {
-      text-align: center;
+    .evidence-note {
+      border-left: 5px solid #8b5cf6;
+      background: rgba(65,35,110,.22);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      color: #ddd2f6;
+    }
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 38px;
+    }
+
+    .quick-nav a {
+      padding: 9px 13px;
+      border-radius: 999px;
+      background: #121920;
+      border: 1px solid #34414b;
+      color: #dce4ea;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .compound {
+      margin-top: 44px;
+    }
+
+    .compound-title {
+      font-size: 28px;
+      margin: 0 0 7px;
+    }
+
+    .compound-description {
+      color: #9ea9b4;
+      margin: 0 0 20px;
+    }
+
+    .resource {
       background: rgba(18,23,29,.95);
       border: 1px solid #303a43;
       border-radius: 18px;
-      padding: 45px 20px;
-      margin-top: 25px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.30);
     }
 
-    .construction .icon {
-      font-size: 55px;
+    .resource h2 {
+      margin: 0 0 5px;
+      font-size: 20px;
     }
 
-    .construction h2 {
-      font-size: 28px;
-      margin: 12px 0 8px;
-    }
-
-    .construction p {
-      color: #aeb8c4;
-      max-width: 550px;
-      margin: auto;
-    }
-
-    .small-reminder {
-      margin-top: 30px;
-      padding: 14px;
-      border: 1px solid #303a43;
-      border-radius: 10px;
-      color: #9fa8b2;
+    .type {
+      display: inline-block;
+      color: #70d8ff;
       font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .resource p {
+      color: #c4cbd2;
+      margin-top: 4px;
+    }
+
+    .resource-note {
+      margin: 16px 0;
+      padding: 11px 13px;
+      background: rgba(75,50,10,.16);
+      border-radius: 9px;
+      color: #d2b873;
+      font-size: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 10px;
+      background: #7040b8;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #8251c9;
+    }
+
+    .video-button {
+      background: #c62828;
+    }
+
+    .video-button:hover {
+      background: #dc3434;
+    }
+
+    footer {
+      margin-top: 55px;
+      padding-top: 30px;
+      border-top: 1px solid #28313a;
+      text-align: center;
+      color: #7f8a94;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 20px 15px 55px;
+      }
+
+      h1 {
+        font-size: 33px;
+      }
+
+      .resource {
+        padding: 19px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -99,55 +216,310 @@
 
   <main class="page">
 
-    <a class="back" href="index.html">
+    <a
+      class="back"
+      href="index.html">
       ← Back to Peppers Research Hub
     </a>
 
-    <h1>📚 Research Information</h1>
 
-    <p class="subtitle">
-      Educational resources, scientific references, studies,
-      and research information.
-    </p>
+    <header class="header">
+
+      <h1>
+        📚 Research Information
+      </h1>
+
+      <p class="subtitle">
+        Articles, videos, educational resources and research references.
+      </p>
+
+    </header>
+
 
     <div class="notice">
 
-      <strong>🔬 Educational & Research Notice:</strong><br><br>
+      <strong>
+        🔬 Educational & Research Notice
+      </strong>
 
-      Information and links provided in this section are intended
-      for educational and research purposes.
+      <br><br>
+
+      Information and external links provided on this page are
+      for general educational and informational purposes.
 
       Peppers Research Hub does not provide medical advice,
-      diagnosis, treatment recommendations, or individualized
-      medical guidance.
-
-      When possible, original scientific publications and
-      reputable research sources will be linked so visitors
-      can review the information directly.
+      diagnosis, treatment recommendations, dosing instructions,
+      or individualized healthcare guidance.
 
     </div>
 
-    <section class="construction">
 
-      <div class="icon">🧬</div>
+    <div class="evidence-note">
 
-      <h2>Research Library Coming Soon</h2>
+      <strong>
+        📖 How to Use This Library
+      </strong>
 
-      <p>
-        We're building the Peppers Research Hub library.
-        Research articles, scientific publications, educational
-        resources, and useful reference links will be added here.
+      <br><br>
+
+      Many resources linked here are third-party articles or videos.
+      Inclusion does not mean Peppers Research Hub endorses every
+      statement or conclusion made by the author or creator.
+
+      Readers should distinguish preliminary, preclinical, observational,
+      and anecdotal information from evidence established through
+      well-controlled human clinical research.
+
+    </div>
+
+
+    <div class="quick-nav">
+
+      <a href="#pinealon">
+        🧠 Pinealon
+      </a>
+
+      <a href="#cartalax">
+        🦴 Cartalax
+      </a>
+
+    </div>
+
+
+    <!-- =========================
+         PINEALON
+    ========================== -->
+
+    <section
+      class="compound"
+      id="pinealon">
+
+      <h2 class="compound-title">
+        🧠 Pinealon
+      </h2>
+
+      <p class="compound-description">
+        Third-party educational resources discussing Pinealon,
+        proposed mechanisms, research claims and reported findings.
       </p>
+
+
+      <div class="resource">
+
+        <h2>
+          Pinealon Peptide Reviews 2026
+        </h2>
+
+        <span class="type">
+          📄 Third-Party Educational Article • InjectCo
+        </span>
+
+        <p>
+          Article discussing Pinealon, proposed benefits,
+          reported results, mechanisms, safety considerations,
+          and other educational information.
+        </p>
+
+        <div class="resource-note">
+          ⚠️ This is a third-party article. Review supporting evidence
+          and source quality independently rather than treating all
+          claims as established clinical findings.
+        </div>
+
+        <a
+          class="button"
+          href="https://injectco.com/pinealon-peptide-reviews-2026-benefits-results-dosage-does-it-work/"
+          target="_blank"
+          rel="noopener noreferrer">
+          Read Pinealon Article
+        </a>
+
+      </div>
+
+
+      <div class="resource">
+
+        <h2>
+          Pinealon Video Resource
+        </h2>
+
+        <span class="type">
+          ▶️ Third-Party Video • YouTube
+        </span>
+
+        <p>
+          Video resource discussing Pinealon for educational
+          and research-information purposes.
+        </p>
+
+        <div class="resource-note">
+          ⚠️ Video content represents the creator's views.
+          Review claims against reliable scientific literature.
+        </div>
+
+        <a
+          class="button video-button"
+          href="https://youtu.be/PFB00eiUf90?is=kq4VmmJqOS8XDdrx"
+          target="_blank"
+          rel="noopener noreferrer">
+          ▶ Watch Pinealon Video
+        </a>
+
+      </div>
 
     </section>
 
-    <div class="small-reminder">
 
-      🌶️ <strong>Reminder:</strong>
-      Educational information should not be treated as a substitute
-      for professional medical or scientific advice.
+    <!-- =========================
+         CARTALAX
+    ========================== -->
 
-    </div>
+    <section
+      class="compound"
+      id="cartalax">
+
+      <h2 class="compound-title">
+        🦴 Cartalax
+      </h2>
+
+      <p class="compound-description">
+        Third-party articles and videos discussing Cartalax,
+        cartilage-related research, joint-repair claims,
+        proposed mechanisms and research information.
+      </p>
+
+
+      <div class="resource">
+
+        <h2>
+          Cartalax Peptide & Joint Repair
+        </h2>
+
+        <span class="type">
+          📄 Third-Party Educational Article • Joe Mars Report
+        </span>
+
+        <p>
+          Educational article discussing Cartalax
+          and claims related to cartilage and joint research.
+        </p>
+
+        <div class="resource-note">
+          ⚠️ This is a third-party article. Claims should be evaluated
+          in the context of the underlying scientific evidence.
+        </div>
+
+        <a
+          class="button"
+          href="https://joemarsreport.substack.com/p/cartalax-peptide-joint-repair?r=707o7m&utm_medium=ios&triedRedirect=true"
+          target="_blank"
+          rel="noopener noreferrer">
+          Read Cartalax Article
+        </a>
+
+      </div>
+
+
+      <div class="resource">
+
+        <h2>
+          Cartalax Video Resource #1
+        </h2>
+
+        <span class="type">
+          ▶️ Third-Party Video • YouTube
+        </span>
+
+        <p>
+          Educational video resource discussing Cartalax
+          and related research topics.
+        </p>
+
+        <div class="resource-note">
+          ⚠️ Video content represents the creator's views.
+          Verify important claims using scientific literature.
+        </div>
+
+        <a
+          class="button video-button"
+          href="https://youtu.be/W9IQjKATIww?is=u8_C0YwIKZQYY_c9"
+          target="_blank"
+          rel="noopener noreferrer">
+          ▶ Watch Cartalax Video #1
+        </a>
+
+      </div>
+
+
+      <div class="resource">
+
+        <h2>
+          Cartalax Video Resource #2
+        </h2>
+
+        <span class="type">
+          ▶️ Third-Party Video • YouTube
+        </span>
+
+        <p>
+          Additional educational video discussing Cartalax
+          and research-related information.
+        </p>
+
+        <div class="resource-note">
+          ⚠️ Third-party educational content is not independently
+          verified by Peppers Research Hub.
+        </div>
+
+        <a
+          class="button video-button"
+          href="https://youtu.be/Bw4-1662DHU?is=VhCAHiAN-ooWNNPJ"
+          target="_blank"
+          rel="noopener noreferrer">
+          ▶ Watch Cartalax Video #2
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FUTURE LIBRARY -->
+
+    <section class="compound">
+
+      <h2 class="compound-title">
+        📚 More Research Coming
+      </h2>
+
+      <div class="resource">
+
+        <p>
+          Additional compounds, scientific papers, educational
+          articles, videos and reference material will be added
+          as the Peppers Research Hub library expands.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      🌶️ Peppers Research Hub
+
+      <br>
+
+      Research • Education • Community
+
+      <br><br>
+
+      <a href="index.html">
+        ← Return to Peppers Research Hub
+      </a>
+
+    </footer>
 
   </main>
 
