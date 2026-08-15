@@ -7,140 +7,400 @@
 
   <title>Group Buys | Peppers Research Hub</title>
 
+  <meta
+    name="description"
+    content="Community group-buy links shared through Peppers Research Hub."
+  >
+
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+
       background:
         radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 40%, #261707 0%, transparent 35%),
         linear-gradient(180deg, #06090f, #090d12);
+
       color: white;
       min-height: 100vh;
       line-height: 1.6;
     }
 
     .page {
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
-      padding: 25px 18px 60px;
+      padding: 25px 18px 70px;
     }
+
+
+    /* BACK BUTTON */
 
     .back {
       display: inline-block;
       margin-bottom: 25px;
       padding: 11px 16px;
+
       border-radius: 10px;
+
       background: #168bd2;
       color: white;
+
       text-decoration: none;
       font-weight: bold;
     }
 
+
+    /* HEADER */
+
+    .header {
+      margin-bottom: 28px;
+    }
+
     h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
+      font-size: 38px;
+      margin: 0 0 8px;
+      line-height: 1.15;
     }
 
     .subtitle {
       color: #aeb8c4;
-      margin-bottom: 28px;
+      margin: 0;
+      font-size: 17px;
     }
+
+
+    /* MAIN NOTICE */
 
     .notice {
       border-left: 5px solid #e09a2c;
-      background: rgba(80,45,5,.24);
+
+      background:
+        rgba(80,45,5,.24);
+
       padding: 18px;
+
       border-radius: 10px;
-      margin-bottom: 25px;
+
+      margin-bottom: 32px;
+
       color: #e6d8bd;
     }
 
-    .construction {
-      text-align: center;
-      background: rgba(18,23,29,.95);
-      border: 1px solid #303a43;
+
+    /* STATUS */
+
+    .status {
+      display: inline-block;
+
+      background: #143d20;
+      color: #83ff9f;
+
+      padding: 7px 13px;
+
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: bold;
+
+      margin-bottom: 12px;
+    }
+
+
+    /* GROUP BUY CARD */
+
+    .group-buy {
+      background:
+        rgba(18,23,29,.95);
+
+      border:
+        1px solid rgba(255,145,0,.48);
+
       border-radius: 18px;
-      padding: 45px 20px;
-      margin-top: 25px;
+
+      padding: 23px;
+
+      margin-bottom: 20px;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.30),
+        0 0 22px rgba(255,145,0,.06);
     }
 
-    .construction .icon {
-      font-size: 55px;
+    .group-buy h2 {
+      margin: 0 0 6px;
+      font-size: 23px;
     }
 
-    .construction h2 {
-      font-size: 28px;
-      margin: 12px 0 8px;
+    .group-buy p {
+      color: #c4cbd2;
     }
 
-    .construction p {
-      color: #aeb8c4;
-      max-width: 550px;
-      margin: auto;
+
+    /* REMINDER */
+
+    .reminder {
+      margin: 17px 0;
+
+      padding: 12px 14px;
+
+      background:
+        rgba(90,60,10,.16);
+
+      border-radius: 9px;
+
+      color: #d2b873;
+
+      font-size: 12px;
     }
 
-    .small-reminder {
-      margin-top: 30px;
-      padding: 14px;
-      border: 1px solid #303a43;
-      border-radius: 10px;
-      color: #9fa8b2;
+
+    /* TELEGRAM BUTTON */
+
+    .telegram-button {
+      display: inline-block;
+
+      padding: 14px 20px;
+
+      border-radius: 11px;
+
+      background: #168bd2;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: 900;
+
+      transition: .2s ease;
+
+      box-shadow:
+        0 7px 20px rgba(22,139,210,.18);
+    }
+
+    .telegram-button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    /* FUTURE LISTINGS */
+
+    .more-coming {
+      margin-top: 35px;
+
+      padding: 20px;
+
+      text-align: center;
+
+      border:
+        1px dashed #3b4650;
+
+      border-radius: 15px;
+
+      color: #929da7;
+
+      background:
+        rgba(12,16,20,.65);
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 30px;
+
+      border-top:
+        1px solid #28313a;
+
+      text-align: center;
+
+      color: #7f8a94;
+
       font-size: 13px;
     }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding:
+          20px 15px 55px;
+      }
+
+      h1 {
+        font-size: 33px;
+      }
+
+      .group-buy {
+        padding: 20px;
+      }
+
+      .telegram-button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+
   </style>
+
 </head>
+
 
 <body>
 
   <main class="page">
 
-    <a class="back" href="index.html">
+
+    <!-- BACK -->
+
+    <a
+      class="back"
+      href="index.html">
+
       ← Back to Peppers Research Hub
+
     </a>
 
-    <h1>🤝 Group Buys</h1>
 
-    <p class="subtitle">
-      Community group-buy links and opportunities shared through
-      Peppers Research Hub.
-    </p>
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <h1>
+        🤝 Group Buys
+      </h1>
+
+      <p class="subtitle">
+        Community group-buy links and opportunities shared through
+        Peppers Research Hub.
+      </p>
+
+    </header>
+
+
+    <!-- NOTICE -->
 
     <div class="notice">
-      <strong>⚠️ Group Buy Notice:</strong><br><br>
 
-      Peppers Research Hub and Pepper Collective provide these links
-      for informational and community convenience purposes.
+      <strong>
+        ⚠️ Group Buy Notice
+      </strong>
 
-      Participation is voluntary. Members are responsible for reviewing
-      the organizer, terms, products, payment arrangements and other
-      details before participating.
+      <br><br>
 
-      Peppers Research Hub does not guarantee third-party transactions,
-      products, shipping, payments or fulfillment.
+      Group-buy links are provided for community access
+      and informational purposes.
+
+      Participation is voluntary. Members are responsible
+      for reviewing the organizer, terms, products,
+      payment arrangements, shipping and other details
+      before participating.
+
+      Peppers Research Hub and Pepper Collective do not
+      guarantee third-party products, payments, shipping,
+      transactions or fulfillment.
+
     </div>
 
-    <section class="construction">
 
-      <div class="icon">🚧</div>
+    <!-- ==================================
+         GROUP BUY #1
+    =================================== -->
 
-      <h2>Group Buy Directory Coming Soon</h2>
+    <section class="group-buy">
+
+      <div class="status">
+        ● ACTIVE GROUP BUY
+      </div>
+
+
+      <h2>
+        🌶️ Pepper Collective Group Buy
+      </h2>
+
 
       <p>
-        We're building this section now. Approved group-buy links
-        will be added here as they become available.
+        Access the current Pepper Collective group-buy
+        community through Telegram.
       </p>
+
+
+      <div class="reminder">
+
+        ⚠️ <strong>Reminder:</strong>
+
+        Review all group-buy information, terms,
+        product details and payment arrangements before
+        choosing to participate.
+
+      </div>
+
+
+      <a
+        class="telegram-button"
+        href="https://t.me/+omXs3jk6p2o2NmIx"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ✈️ Join Group Buy on Telegram
+
+      </a>
 
     </section>
 
-    <div class="small-reminder">
-      🌶️ <strong>Reminder:</strong> Group-buy links appearing here
-      are informational listings and should not be interpreted as a
-      guarantee or endorsement.
+
+    <!-- MORE COMING -->
+
+    <div class="more-coming">
+
+      🌶️ <strong>More Group Buys Coming</strong>
+
+      <br>
+
+      Additional approved group-buy links will be
+      added here as they become available.
+
     </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      🌶️ Peppers Research Hub
+
+      <br>
+
+      Research • Education • Community
+
+      <br><br>
+
+      <a href="index.html">
+        ← Return to Peppers Research Hub
+      </a>
+
+    </footer>
+
 
   </main>
 
