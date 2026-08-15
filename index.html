@@ -225,7 +225,12 @@
       font-size: 14px;
     }
 
+    footer a {
+      color: #aaa;
+    }
+
     @media (max-width: 600px) {
+
       .hero {
         min-height: 82vh;
         background-position: center top;
@@ -239,9 +244,11 @@
       .btn {
         padding: 14px 20px;
       }
+
     }
   </style>
 </head>
+
 
 <body>
 
@@ -326,7 +333,9 @@
         ● COMMUNITY ONLINE
       </div>
 
-      <h3>Join Pepper Collective</h3>
+      <h3>
+        Join Pepper Collective
+      </h3>
 
       <p>
         Join our Telegram community for discussions,
@@ -357,23 +366,31 @@
 
     <div class="card">
 
-      <h3>Peppers Backup Contact List 🌶️</h3>
+      <h3>
+        Peppers Backup Contact List 🌶️
+      </h3>
 
       <p>
-        Add your contact information so we can reach you with
-        important Peppers Research Hub announcements or send you
-        a new Telegram community link if our current group becomes unavailable.
+        Add your contact information so we can reach you
+        with important Peppers Research Hub announcements
+        or send you a new Telegram community link if our
+        current group becomes unavailable.
       </p>
+
 
       <form
         class="contact-form"
         action="https://formspree.io/f/mbgrkvlr"
         method="POST">
 
+
         <input
           type="hidden"
           name="_subject"
           value="New Peppers Research Hub Contact">
+
+
+        <!-- EMAIL -->
 
         <div class="form-group">
 
@@ -386,9 +403,13 @@
             id="email"
             name="email"
             placeholder="your@email.com"
+            autocomplete="email"
             required>
 
         </div>
+
+
+        <!-- TELEGRAM -->
 
         <div class="form-group">
 
@@ -400,9 +421,13 @@
             type="text"
             id="telegram"
             name="telegram"
-            placeholder="@username">
+            placeholder="@username"
+            autocomplete="off">
 
         </div>
+
+
+        <!-- CONSENT -->
 
         <label class="consent">
 
@@ -419,17 +444,31 @@
 
         </label>
 
+
+        <!-- PRIVACY -->
+
         <div class="privacy-note">
+
           🔒 <strong>Your privacy matters.</strong>
-          Your information will be kept private and will not be shared
-          or sold. It will only be used for important Peppers Research Hub
-          announcements and community contact.
+
+          Your information will be kept private and will not
+          be sold or shared for marketing purposes.
+
+          It will only be used to send important Peppers
+          Research Hub announcements and replacement
+          Telegram community links.
+
         </div>
+
+
+        <!-- SUBMIT -->
 
         <button
           class="submit-button"
           type="submit">
+
           🌶️ Join Backup Contact List
+
         </button>
 
       </form>
@@ -449,7 +488,9 @@
 
     <div class="card">
 
-      <h3>Research Hub</h3>
+      <h3>
+        Research Hub
+      </h3>
 
       <p>
         Educational resources, research references,
@@ -495,17 +536,22 @@
   <footer>
 
     © 2026 Peppers Research Hub
+
     <br>
+
     Research • Education • Community
+
     <br><br>
+
     Contact:
-    <a
-      href="mailto:contact@peppersresearchhub.com"
-      style="color:#aaa;">
+
+    <a href="mailto:contact@peppersresearchhub.com">
       contact@peppersresearchhub.com
     </a>
 
   </footer>
 
+
 </body>
+
 </html>
