@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="Official home of the Pepper Collective community. Research, education, information sharing and community updates."
+    content="Official home of the Pepper Collective community. Research, education, community links and updates."
   >
 
   <style>
@@ -51,7 +51,7 @@
 
     .float-item {
       position: absolute;
-      opacity: 0.24;
+      opacity: 0.22;
       user-select: none;
       filter:
         drop-shadow(0 0 8px rgba(0, 200, 255, .65))
@@ -241,12 +241,18 @@
 
     .btn-green {
       background: #258044;
-      box-shadow: 0 7px 20px rgba(37,128,68,.25);
     }
 
     .btn-blue {
       background: #168bd2;
-      box-shadow: 0 7px 20px rgba(22,139,210,.25);
+    }
+
+    .btn-orange {
+      background: #b96d12;
+    }
+
+    .btn-purple {
+      background: #7040b8;
     }
 
     /* =========================
@@ -331,7 +337,7 @@
     }
 
     /* =========================
-       BACKUP SIGNUP
+       SIGNUP
     ========================== */
 
     .signup-section {
@@ -415,7 +421,111 @@
       font-size: 17px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 0 24px rgba(229,43,43,.18);
+    }
+
+    /* =========================
+       DIRECTORY NAVIGATION
+    ========================== */
+
+    .directory-nav {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .directory-button {
+      display: block;
+      text-align: center;
+      padding: 20px 15px;
+      text-decoration: none;
+      border-radius: 16px;
+      font-weight: 900;
+      font-size: 17px;
+      border: 1px solid #33404b;
+      background: rgba(14,19,24,.94);
+      transition: .2s ease;
+    }
+
+    .directory-button:hover {
+      transform: translateY(-3px);
+    }
+
+    .group-buy-nav {
+      border-color: rgba(255,145,0,.55);
+      box-shadow: 0 0 20px rgba(255,145,0,.08);
+    }
+
+    .vendor-nav {
+      border-color: rgba(0,190,255,.55);
+      box-shadow: 0 0 20px rgba(0,190,255,.08);
+    }
+
+    .supplies-nav {
+      border-color: rgba(0,255,145,.55);
+      box-shadow: 0 0 20px rgba(0,255,145,.08);
+    }
+
+    .research-nav {
+      border-color: rgba(150,90,255,.55);
+      box-shadow: 0 0 20px rgba(150,90,255,.08);
+    }
+
+    /* =========================
+       DIRECTORY CARDS
+    ========================== */
+
+    .directory-listing {
+      border: 1px solid #303a43;
+      border-radius: 16px;
+      padding: 20px;
+      margin-top: 16px;
+      background: rgba(11,15,19,.82);
+    }
+
+    .directory-listing h3 {
+      margin-bottom: 6px;
+    }
+
+    .directory-listing p {
+      color: #c4cbd2;
+    }
+
+    .big-notice {
+      border-left: 5px solid #e09a2c;
+      background: rgba(80,45,5,.24);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      color: #e6d8bd;
+    }
+
+    .small-reminder {
+      margin: 16px 0 12px;
+      color: #d2b873;
+      font-size: 13px;
+    }
+
+    .link-button {
+      display: inline-block;
+      padding: 13px 18px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 900;
+      background: #168bd2;
+      color: white;
+    }
+
+    .link-button.orange {
+      background: #b96d12;
+    }
+
+    .link-button.green {
+      background: #258044;
+    }
+
+    .link-button.purple {
+      background: #7040b8;
     }
 
     /* =========================
@@ -431,7 +541,6 @@
       border-radius: 16px;
       margin-bottom: 22px;
       border: 1px solid #333;
-      box-shadow: 0 0 24px rgba(255,40,40,.10);
     }
 
     .status {
@@ -495,37 +604,6 @@
     }
 
     /* =========================
-       GRID
-    ========================== */
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
-
-    .mini-card {
-      background: rgba(16,21,26,.9);
-      border: 1px solid #29323b;
-      padding: 20px;
-      border-radius: 16px;
-    }
-
-    .mini-card .icon {
-      font-size: 30px;
-      margin-bottom: 8px;
-    }
-
-    .mini-card h3 {
-      margin: 0 0 7px;
-    }
-
-    .mini-card p {
-      margin: 0;
-      color: #b8c0c8;
-    }
-
-    /* =========================
        FOOTER
     ========================== */
 
@@ -559,10 +637,6 @@
         padding: 0 14px;
       }
 
-      .transition-card {
-        padding: 18px;
-      }
-
       .section {
         padding: 38px 16px;
       }
@@ -571,7 +645,7 @@
         padding: 20px;
       }
 
-      .grid {
+      .directory-nav {
         grid-template-columns: 1fr;
       }
 
@@ -590,16 +664,6 @@
 
       .float-item {
         opacity: 0.20;
-      }
-
-      .float1,
-      .float3 {
-        left: 2%;
-      }
-
-      .float2,
-      .float4 {
-        right: 2%;
       }
     }
 
@@ -625,9 +689,7 @@
 
   <div class="page">
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
 
     <header class="hero">
 
@@ -664,7 +726,7 @@
 
           <a
             class="btn btn-green"
-            href="#research">
+            href="#research-information">
             Research Hub
           </a>
 
@@ -695,9 +757,7 @@
     </div>
 
 
-    <!-- =========================
-         BACKUP CONTACT LIST
-    ========================== -->
+    <!-- BACKUP SIGNUP -->
 
     <section class="section signup-section" id="backup-list">
 
@@ -808,41 +868,267 @@
     </section>
 
 
-    <!-- =========================
-         WELCOME
-    ========================== -->
+    <!-- DIRECTORY NAVIGATION -->
 
     <section class="section">
 
       <h2 class="section-title">
-        🌶️ Welcome to the Hub
+        🌶️ Explore Peppers Research Hub
       </h2>
 
-      <div class="card">
+      <p class="section-subtitle">
+        Choose a section below.
+      </p>
 
-        <h3>
-          Research. Education. Community.
-        </h3>
 
-        <p>
-          Peppers Research Hub is the online home of the
-          Pepper Collective community.
-        </p>
+      <div class="directory-nav">
 
-        <p>
-          Our goal is to provide a central place for research,
-          education, information sharing, community resources
-          and official updates.
-        </p>
+        <a
+          class="directory-button group-buy-nav"
+          href="#group-buys">
+          🛒 Group Buys
+        </a>
+
+        <a
+          class="directory-button vendor-nav"
+          href="#vendors">
+          🏪 Vendors
+        </a>
+
+        <a
+          class="directory-button supplies-nav"
+          href="#research-supplies">
+          🔬 Research Supplies
+        </a>
+
+        <a
+          class="directory-button research-nav"
+          href="#research-information">
+          📚 Research Information
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- =========================
-         MAIN COMMUNITY
-    ========================== -->
+    <!-- GROUP BUYS -->
+
+    <section class="section" id="group-buys">
+
+      <h2 class="section-title">
+        🛒 Group Buys
+      </h2>
+
+      <p class="section-subtitle">
+        Community group-buy links and current opportunities.
+      </p>
+
+
+      <div class="big-notice">
+
+        <strong>⚠️ Important Notice:</strong>
+
+        Group-buy links are provided for community access and
+        informational purposes. Peppers Research Hub and Pepper
+        Collective do not guarantee or verify third-party sellers,
+        products, payments, shipping, or transactions. Members are
+        responsible for reviewing all details and conducting their
+        own due diligence before participating.
+
+      </div>
+
+
+      <div class="directory-listing">
+
+        <h3>
+          🌶️ Group Buy Link
+        </h3>
+
+        <p>
+          Group buy details can be added here.
+        </p>
+
+        <div class="small-reminder">
+          ⚠️ Reminder: This is a third-party group buy.
+          Review all details and use your own judgment before participating.
+        </div>
+
+        <a
+          class="link-button orange"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Group Buy
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- VENDORS -->
+
+    <section class="section" id="vendors">
+
+      <h2 class="section-title">
+        🏪 Vendors
+      </h2>
+
+      <p class="section-subtitle">
+        Community vendor and supplier links.
+      </p>
+
+
+      <div class="big-notice">
+
+        <strong>⚠️ Vendor Notice:</strong>
+
+        Vendor links are provided for community convenience and
+        informational purposes. Peppers Research Hub and Pepper
+        Collective do not guarantee or verify third-party vendors,
+        products, payments, shipping, quality, or transactions.
+        Members are responsible for conducting their own due diligence.
+
+      </div>
+
+
+      <div class="directory-listing">
+
+        <h3>
+          Vendor Name
+        </h3>
+
+        <p>
+          Vendor information or description can be added here.
+        </p>
+
+        <div class="small-reminder">
+          ⚠️ Reminder: This is a third-party vendor.
+          Review the vendor and use your own judgment before making any transaction.
+        </div>
+
+        <a
+          class="link-button"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+          Visit Vendor
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESEARCH SUPPLIES -->
+
+    <section class="section" id="research-supplies">
+
+      <h2 class="section-title">
+        🔬 Research Supplies
+      </h2>
+
+      <p class="section-subtitle">
+        Links to third-party laboratory and research supply resources.
+      </p>
+
+
+      <div class="big-notice">
+
+        <strong>⚠️ Research Supplies Notice:</strong>
+
+        Links are provided for informational and community convenience
+        purposes. Peppers Research Hub and Pepper Collective do not
+        guarantee or verify third-party suppliers, products, payments,
+        shipping, quality, or transactions. Review product specifications
+        and supplier information before purchasing.
+
+      </div>
+
+
+      <div class="directory-listing">
+
+        <h3>
+          Research Supply Link
+        </h3>
+
+        <p>
+          Add a research supply or supplier description here.
+        </p>
+
+        <div class="small-reminder">
+          ⚠️ Reminder: Third-party supplier.
+          Review the product and supplier before purchasing.
+        </div>
+
+        <a
+          class="link-button green"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer">
+          View Research Supply
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- RESEARCH INFORMATION -->
+
+    <section class="section" id="research-information">
+
+      <h2 class="section-title">
+        📚 Research Information
+      </h2>
+
+      <p class="section-subtitle">
+        Educational links, research references, studies and resources.
+      </p>
+
+
+      <div class="card">
+
+        <div class="privacy-note">
+
+          📚 <strong>Research Information Notice:</strong>
+
+          Content and external links provided through Peppers Research Hub
+          are for general educational and informational purposes. They are
+          not medical advice and should not be used as a substitute for
+          guidance from a qualified healthcare professional.
+
+        </div>
+
+
+        <div class="directory-listing">
+
+          <h3>
+            Research Resource
+          </h3>
+
+          <p>
+            Add a study, educational resource, published reference,
+            research guide, or other research information here.
+          </p>
+
+          <a
+            class="link-button purple"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer">
+            View Research
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- MAIN COMMUNITY -->
 
     <section class="section" id="community">
 
@@ -892,9 +1178,7 @@
     </section>
 
 
-    <!-- =========================
-         BACKUP TELEGRAM
-    ========================== -->
+    <!-- BACKUP TELEGRAM -->
 
     <section class="section">
 
@@ -943,19 +1227,13 @@
     </section>
 
 
-    <!-- =========================
-         COMMUNITY RULES
-    ========================== -->
+    <!-- COMMUNITY RULES -->
 
     <section class="section" id="rules">
 
       <h2 class="section-title">
         📋 Community Rules
       </h2>
-
-      <p class="section-subtitle">
-        Help us keep Pepper Collective organized, useful and respectful.
-      </p>
 
 
       <div class="card">
@@ -998,8 +1276,7 @@
           <p>
             Please do not have conversations inside topic threads.
             Topics are designed to organize information so members
-            can quickly find what they are looking for without
-            scrolling through long conversations.
+            can quickly find what they are looking for.
           </p>
 
         </div>
@@ -1008,13 +1285,12 @@
         <div class="rule">
 
           <div class="rule-title">
-            🚫 4. No Selling or Reselling Discussions
+            🚫 4. No Unauthorized Selling or Reselling
           </div>
 
           <p>
-            Do not use the community to discuss selling or reselling.
-            Keep general community discussions focused on research,
-            education and information sharing.
+            Selling, reselling, promotional activity, advertising,
+            or offers must not be posted without admin approval.
           </p>
 
         </div>
@@ -1027,9 +1303,8 @@
           </div>
 
           <p>
-            Anyone wishing to promote a vendor, product, service,
-            group, website or other commercial offering must first
-            contact an admin and receive approval.
+            Anyone wishing to sell, promote, advertise, or offer products
+            or services must contact an admin and receive approval first.
           </p>
 
         </div>
@@ -1038,12 +1313,13 @@
         <div class="rule">
 
           <div class="rule-title">
-            💬 6. Keep It Helpful
+            ⚠️ 6. Third-Party Responsibility
           </div>
 
           <p>
-            Ask questions, share useful information and help keep
-            the community welcoming and organized.
+            Pepper Collective and Peppers Research Hub do not guarantee
+            independent vendors, services, or transactions. Members are
+            responsible for conducting their own due diligence.
           </p>
 
         </div>
@@ -1052,12 +1328,12 @@
         <div class="rule">
 
           <div class="rule-title">
-            🛡️ 7. Follow Admin & Telegram Rules
+            📚 7. Keep Information Organized
           </div>
 
           <p>
-            Follow moderator instructions and Telegram's applicable
-            rules and policies.
+            Use the appropriate areas so research and community
+            information remains easy to find.
           </p>
 
         </div>
@@ -1068,114 +1344,7 @@
     </section>
 
 
-    <!-- =========================
-         RESEARCH HUB
-    ========================== -->
-
-    <section class="section" id="research">
-
-      <h2 class="section-title">
-        🔬 Research & Education
-      </h2>
-
-
-      <div class="grid">
-
-
-        <div class="mini-card">
-
-          <div class="icon">
-            📚
-          </div>
-
-          <h3>
-            Research Library
-          </h3>
-
-          <p>
-            Research references and educational resources
-            will be organized here.
-          </p>
-
-        </div>
-
-
-        <div class="mini-card">
-
-          <div class="icon">
-            🧪
-          </div>
-
-          <h3>
-            Compound Information
-          </h3>
-
-          <p>
-            Educational compound information and research
-            references can be added here.
-          </p>
-
-        </div>
-
-
-        <div class="mini-card">
-
-          <div class="icon">
-            🧬
-          </div>
-
-          <h3>
-            Community Knowledge
-          </h3>
-
-          <p>
-            Useful research discussions and educational
-            information from the community.
-          </p>
-
-        </div>
-
-
-        <div class="mini-card">
-
-          <div class="icon">
-            🔎
-          </div>
-
-          <h3>
-            Research Resources
-          </h3>
-
-          <p>
-            Helpful research tools, references and educational
-            resources will be added as the hub grows.
-          </p>
-
-        </div>
-
-
-      </div>
-
-
-      <div class="card" style="margin-top:18px; text-align:center;">
-
-        <h3>
-          🚧 Research Library Coming Soon
-        </h3>
-
-        <p>
-          The research section will continue expanding as
-          resources are added to Peppers Research Hub.
-        </p>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ANNOUNCEMENTS
-    ========================== -->
+    <!-- ANNOUNCEMENTS -->
 
     <section class="section">
 
@@ -1217,9 +1386,7 @@
     </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================== -->
+    <!-- CONTACT -->
 
     <section class="section">
 
@@ -1249,9 +1416,7 @@
     </section>
 
 
-    <!-- =========================
-         FOOTER
-    ========================== -->
+    <!-- FOOTER -->
 
     <footer>
 
@@ -1259,6 +1424,19 @@
       <br>
 
       Research • Education • Community
+      <br><br>
+
+      <a href="#group-buys">Group Buys</a>
+      &nbsp; • &nbsp;
+
+      <a href="#vendors">Vendors</a>
+      &nbsp; • &nbsp;
+
+      <a href="#research-supplies">Research Supplies</a>
+      &nbsp; • &nbsp;
+
+      <a href="#research-information">Research Information</a>
+
       <br><br>
 
       <a href="mailto:contact@peppersresearchhub.com">
