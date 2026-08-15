@@ -7,200 +7,849 @@
 
   <title>Research Supplies | Peppers Research Hub</title>
 
+  <meta
+    name="description"
+    content="Research storage, laboratory, injection, mixing and safety supply resources shared by Peppers Research Hub."
+  >
+
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+
       background:
         radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 40%, #10251d 0%, transparent 35%),
         linear-gradient(180deg, #06090f, #090d12);
+
       color: white;
+      min-height: 100vh;
       line-height: 1.6;
     }
 
     .page {
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
-      padding: 25px 18px 60px;
+      padding: 25px 18px 70px;
     }
+
+    /* BACK BUTTON */
 
     .back {
       display: inline-block;
       margin-bottom: 25px;
       padding: 11px 16px;
+
       border-radius: 10px;
+
       background: #168bd2;
       color: white;
+
       text-decoration: none;
       font-weight: bold;
     }
 
+    /* HEADER */
+
+    .header {
+      margin-bottom: 28px;
+    }
+
     h1 {
-      font-size: 36px;
-      margin-bottom: 8px;
+      font-size: 38px;
+      margin: 0 0 8px;
+      line-height: 1.15;
     }
 
     .subtitle {
       color: #aeb8c4;
-      margin-bottom: 28px;
+      margin: 0;
+      font-size: 17px;
     }
+
+    /* NOTICE */
 
     .notice {
       border-left: 5px solid #e09a2c;
-      background: rgba(80,45,5,.24);
+
+      background:
+        rgba(80,45,5,.24);
+
       padding: 18px;
+
       border-radius: 10px;
-      margin-bottom: 25px;
+
+      margin-bottom: 32px;
+
       color: #e6d8bd;
     }
 
+    /* QUICK NAV */
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-bottom: 38px;
+    }
+
+    .quick-nav a {
+      padding: 9px 13px;
+      border-radius: 999px;
+
+      background: #121920;
+      border: 1px solid #34414b;
+
+      color: #dce4ea;
+
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* CATEGORY */
+
+    .category {
+      margin-top: 42px;
+    }
+
+    .category-title {
+      font-size: 25px;
+      margin: 0 0 6px;
+    }
+
+    .category-description {
+      margin: 0 0 18px;
+      color: #929da7;
+      font-size: 14px;
+    }
+
+    /* ITEM */
+
     .item {
-      background: rgba(18,23,29,.95);
-      border: 1px solid #303a43;
+      background:
+        rgba(18,23,29,.95);
+
+      border:
+        1px solid #303a43;
+
       border-radius: 18px;
+
       padding: 22px;
+
       margin-bottom: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.30);
     }
 
     .item h2 {
-      margin-top: 0;
+      margin: 0 0 5px;
+      font-size: 21px;
+    }
+
+    .supplier {
+      display: inline-block;
+      color: #70e3a0;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
 
     .item p {
       color: #c4cbd2;
+      margin-top: 4px;
     }
+
+    /* REMINDER */
 
     .reminder {
       margin: 16px 0;
+      padding: 11px 13px;
+
+      background: rgba(90,60,10,.16);
+
+      border-radius: 9px;
+
       color: #d2b873;
-      font-size: 13px;
+
+      font-size: 12px;
     }
+
+    /* BUTTON */
 
     .button {
       display: inline-block;
+
       padding: 13px 18px;
+
       border-radius: 10px;
+
       background: #258044;
+
       color: white;
+
       text-decoration: none;
+
       font-weight: bold;
+
+      transition: .2s ease;
     }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #2d9650;
+    }
+
+    /* SAFETY RESOURCE */
+
+    .safety-item {
+      border-color:
+        rgba(0,170,255,.45);
+    }
+
+    .safety-item .button {
+      background: #168bd2;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 30px;
+
+      border-top:
+        1px solid #28313a;
+
+      text-align: center;
+
+      color: #7f8a94;
+
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding:
+          20px 15px 55px;
+      }
+
+      h1 {
+        font-size: 33px;
+      }
+
+      .item {
+        padding: 19px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+
+    }
+
   </style>
 </head>
+
 
 <body>
 
   <main class="page">
 
-    <a class="back" href="index.html">
+
+    <!-- BACK -->
+
+    <a
+      class="back"
+      href="index.html">
+
       ← Back to Peppers Research Hub
+
     </a>
 
-    <h1>
-      🔬 Research Supplies
-    </h1>
 
-    <p class="subtitle">
-      Storage and laboratory supply links for research organization.
-    </p>
+    <!-- HEADER -->
+
+    <header class="header">
+
+      <h1>
+        🔬 Research Supplies
+      </h1>
+
+      <p class="subtitle">
+        Storage, laboratory, injection, mixing and safety supply resources.
+      </p>
+
+    </header>
+
+
+    <!-- NOTICE -->
 
     <div class="notice">
 
-      <strong>⚠️ Research Supplies Notice:</strong>
+      <strong>
+        ⚠️ Research Supplies Notice
+      </strong>
 
-      Links are provided for informational and community convenience
-      purposes. Peppers Research Hub and Pepper Collective do not
-      guarantee or verify third-party suppliers, products, payments,
-      shipping, quality, or transactions. Review product specifications
-      and supplier information before purchasing.
+      <br><br>
+
+      External links are provided for informational
+      and community convenience purposes.
+
+      Peppers Research Hub and Pepper Collective do not
+      guarantee or independently verify third-party suppliers,
+      product quality, availability, pricing, shipping,
+      payments, sterility, or transactions.
+
+      Always review the supplier, product specifications,
+      manufacturer information and intended use before purchasing.
 
     </div>
 
 
-    <section class="item">
+    <!-- QUICK NAV -->
 
-      <h2>
-        🧊 Freezer Storage Container
+    <div class="quick-nav">
+
+      <a href="#storage">
+        🧊 Storage
+      </a>
+
+      <a href="#medical">
+        💉 Injection & Medical
+      </a>
+
+      <a href="#mixing">
+        🧪 Mixing Supplies
+      </a>
+
+      <a href="#bac-water">
+        💧 Bacteriostatic Water
+      </a>
+
+      <a href="#safety">
+        ♻️ Safety & Disposal
+      </a>
+
+    </div>
+
+
+    <!-- ==============================
+         STORAGE
+    ============================== -->
+
+    <section
+      class="category"
+      id="storage">
+
+      <h2 class="category-title">
+        🧊 Storage & Organization
       </h2>
 
-      <p>
-        Storage container option for organizing research vials
-        and related materials in freezer storage.
+      <p class="category-description">
+        Resources for organizing and storing research materials.
       </p>
 
-      <div class="reminder">
-        ⚠️ Third-party supplier. Review the listing, specifications,
-        and supplier before purchasing.
+
+      <!-- FREEZER CONTAINER -->
+
+      <div class="item">
+
+        <h2>
+          🧊 Freezer Storage Container
+        </h2>
+
+        <span class="supplier">
+          Amazon
+        </span>
+
+        <p>
+          Storage container option for organizing research
+          vials and related materials.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Third-party listing. Review dimensions,
+          compatibility and product specifications before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://a.co/d/07b5yEwV"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Storage Container
+
+        </a>
+
       </div>
 
-      <a
-        class="button"
-        href="https://a.co/d/07b5yEwV"
-        target="_blank"
-        rel="noopener noreferrer">
-        View Freezer Storage Container
-      </a>
+
+      <!-- VIAL INSERTS -->
+
+      <div class="item">
+
+        <h2>
+          🧪 Vial Inserts for Storage
+        </h2>
+
+        <span class="supplier">
+          Amazon
+        </span>
+
+        <p>
+          Inserts for organizing and separating vials
+          inside compatible storage containers.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Verify dimensions and compatibility with your
+          storage container before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://a.co/d/04pnF3Re"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Vial Inserts
+
+        </a>
+
+      </div>
+
+
+      <!-- SILICA -->
+
+      <div class="item">
+
+        <h2>
+          💧 Silica Packs
+        </h2>
+
+        <span class="supplier">
+          Amazon
+        </span>
+
+        <p>
+          Desiccant silica packs for general
+          moisture-control applications in appropriate storage setups.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review the product specifications and
+          intended storage application before use.
+        </div>
+
+        <a
+          class="button"
+          href="https://a.co/d/0iWc78S4"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Silica Packs
+
+        </a>
+
+      </div>
 
     </section>
 
 
-    <section class="item">
+    <!-- ==============================
+         INJECTION & MEDICAL SUPPLIES
+    ============================== -->
 
-      <h2>
-        🧪 Vial Inserts for Storage
+    <section
+      class="category"
+      id="medical">
+
+      <h2 class="category-title">
+        💉 Injection & Medical Supplies
       </h2>
 
-      <p>
-        Storage inserts designed to help organize and separate
-        vials inside compatible storage containers.
+      <p class="category-description">
+        Third-party sources for medical and injection-related supplies.
       </p>
 
-      <div class="reminder">
-        ⚠️ Third-party supplier. Review compatibility,
-        dimensions, and supplier information before purchasing.
+
+      <!-- EASYTOUCH -->
+
+      <div class="item">
+
+        <h2>
+          💉 EasyTouch Insulin Syringes
+        </h2>
+
+        <span class="supplier">
+          Vitality Medical
+        </span>
+
+        <p>
+          EasyTouch insulin syringes with needles
+          available in multiple gauge and size options.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review gauge, needle length, capacity,
+          packaging and manufacturer information before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://www.vitalitymedical.com/easytouch-insulin-syringes-with-needle-all-gauge-sizes.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Syringes
+
+        </a>
+
       </div>
 
-      <a
-        class="button"
-        href="https://a.co/d/04pnF3Re"
-        target="_blank"
-        rel="noopener noreferrer">
-        View Vial Inserts
-      </a>
+
+      <!-- ARPOVO -->
+
+      <div class="item">
+
+        <h2>
+          🩺 Medical Supplies
+        </h2>
+
+        <span class="supplier">
+          Arpovo Health
+        </span>
+
+        <p>
+          Third-party medical and healthcare supply resource.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review individual products, specifications
+          and supplier information before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://arpovohealth.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Visit Arpovo Health
+
+        </a>
+
+      </div>
 
     </section>
 
 
-    <section class="item">
+    <!-- ==============================
+         MIXING & LAB SUPPLIES
+    ============================== -->
 
-      <h2>
-        💧 Silica Packs
+    <section
+      class="category"
+      id="mixing">
+
+      <h2 class="category-title">
+        🧪 Mixing & Laboratory Supplies
       </h2>
 
-      <p>
-        Desiccant silica packs for general moisture-control
-        applications in appropriate research storage setups.
+      <p class="category-description">
+        Sources for sterile vials and related laboratory supplies.
       </p>
 
-      <div class="reminder">
-        ⚠️ Third-party supplier. Review the product specifications
-        and intended use before purchasing.
+
+      <!-- UNDERGROUND SUPPLY -->
+
+      <div class="item">
+
+        <h2>
+          🧪 Medical Gear & Mixing Supplies
+        </h2>
+
+        <span class="supplier">
+          Underground Supply
+        </span>
+
+        <p>
+          Third-party source for medical gear,
+          mixing supplies and related accessories.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review individual product specifications,
+          supplier information and intended use before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://www.undergroundsupply.shop/shop/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Visit Underground Supply
+
+        </a>
+
       </div>
 
-      <a
-        class="button"
-        href="https://a.co/d/0iWc78S4"
-        target="_blank"
-        rel="noopener noreferrer">
-        View Silica Packs
-      </a>
+
+      <!-- FARRIS -->
+
+      <div class="item">
+
+        <h2>
+          🧴 Sterile Vials & Related Supplies
+        </h2>
+
+        <span class="supplier">
+          Farris Labs
+        </span>
+
+        <p>
+          Search page for sterile vials and related
+          injection and mixing supplies.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review vial size, packaging, sterility information
+          and manufacturer specifications before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://www.farrislabs.com/search?type=product&q=Sterile+vial"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Sterile Vials
+
+        </a>
+
+      </div>
 
     </section>
+
+
+    <!-- ==============================
+         BACTERIOSTATIC WATER
+    ============================== -->
+
+    <section
+      class="category"
+      id="bac-water">
+
+      <h2 class="category-title">
+        💧 Bacteriostatic Water Resources
+      </h2>
+
+      <p class="category-description">
+        Third-party product and supplier links for bacteriostatic water.
+      </p>
+
+
+      <!-- MEDEX -->
+
+      <div class="item">
+
+        <h2>
+          💧 Hospira Bacteriostatic Water
+        </h2>
+
+        <span class="supplier">
+          Medex Supply
+        </span>
+
+        <p>
+          Hospira Bacteriostatic Water for Injection,
+          30 mL — 25-pack listing.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Verify the product, manufacturer,
+          packaging, availability and seller information before ordering.
+        </div>
+
+        <a
+          class="button"
+          href="https://medexsupply.com/hospira-bacteriostatic-water-for-injection-30ml-sterile-25-pack/?couponcode=SUPPLY250"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Medex Supply
+
+        </a>
+
+      </div>
+
+
+      <!-- INJECTION SHOP -->
+
+      <div class="item">
+
+        <h2>
+          💉 Injection Supplies & Bacteriostatic Water
+        </h2>
+
+        <span class="supplier">
+          Injection Shop
+        </span>
+
+        <p>
+          Third-party source for injection supplies,
+          bacteriostatic water and related supplies.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review individual product details,
+          manufacturer information and supplier terms before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://injectionshop.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Visit Injection Shop
+
+        </a>
+
+      </div>
+
+
+      <!-- PEPTIDE TEST -->
+
+      <div class="item">
+
+        <h2>
+          💧 Bacteriostatic Water
+        </h2>
+
+        <span class="supplier">
+          Peptide Test
+        </span>
+
+        <p>
+          Third-party bacteriostatic water resource.
+        </p>
+
+        <div class="reminder">
+          ⚠️ Review the specific product listing,
+          manufacturer information and supplier terms before purchasing.
+        </div>
+
+        <a
+          class="button"
+          href="https://peptidetest.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Visit Peptide Test
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==============================
+         SAFETY
+    ============================== -->
+
+    <section
+      class="category"
+      id="safety">
+
+      <h2 class="category-title">
+        ♻️ Safety & Sharps Disposal
+      </h2>
+
+      <p class="category-description">
+        Resources for safer disposal of used sharps.
+      </p>
+
+
+      <!-- NOVOCARE -->
+
+      <div class="item safety-item">
+
+        <h2>
+          ♻️ Sharps Disposal Container Program
+        </h2>
+
+        <span class="supplier">
+          NovoCare
+        </span>
+
+        <p>
+          Safe-disposal information and information
+          about obtaining a sharps disposal container.
+        </p>
+
+        <div class="reminder">
+          ℹ️ Review the program page for current
+          eligibility, availability and disposal instructions.
+        </div>
+
+        <a
+          class="button"
+          href="https://www.novocare.com/diabetes/resources/safe-disposal.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          View Safe Disposal Program
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+      🌶️ Peppers Research Hub
+
+      <br>
+
+      Research • Education • Community
+
+      <br><br>
+
+      <a href="index.html">
+        ← Return to Peppers Research Hub
+      </a>
+
+    </footer>
+
 
   </main>
 
