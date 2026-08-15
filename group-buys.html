@@ -48,12 +48,9 @@
       display: inline-block;
       margin-bottom: 25px;
       padding: 11px 16px;
-
       border-radius: 10px;
-
       background: #168bd2;
       color: white;
-
       text-decoration: none;
       font-weight: bold;
     }
@@ -80,16 +77,10 @@
 
     .notice {
       border-left: 5px solid #e53935;
-
-      background:
-        rgba(100,15,15,.20);
-
+      background: rgba(100,15,15,.20);
       padding: 20px;
-
       border-radius: 12px;
-
       margin-bottom: 25px;
-
       color: #ffd0d0;
     }
 
@@ -101,32 +92,20 @@
 
     .due-diligence {
       border-left: 5px solid #e09a2c;
-
-      background:
-        rgba(80,45,5,.24);
-
+      background: rgba(80,45,5,.24);
       padding: 18px;
-
       border-radius: 10px;
-
       margin-bottom: 32px;
-
       color: #e6d8bd;
     }
 
     /* GROUP BUY CARD */
 
     .group-buy {
-      background:
-        rgba(18,23,29,.95);
-
-      border:
-        1px solid rgba(0,190,255,.45);
-
+      background: rgba(18,23,29,.95);
+      border: 1px solid rgba(0,190,255,.45);
       border-radius: 18px;
-
       padding: 23px;
-
       margin-bottom: 20px;
 
       box-shadow:
@@ -147,17 +126,12 @@
 
     .status {
       display: inline-block;
-
       background: #102e3b;
       color: #72d8ff;
-
       padding: 7px 13px;
-
       border-radius: 999px;
-
       font-size: 12px;
       font-weight: bold;
-
       margin-bottom: 12px;
     }
 
@@ -165,36 +139,32 @@
 
     .reminder {
       margin: 17px 0;
-
       padding: 14px;
-
-      background:
-        rgba(90,60,10,.16);
-
+      background: rgba(90,60,10,.16);
       border-radius: 9px;
-
       color: #d2b873;
-
       font-size: 12px;
+    }
+
+    /* BUTTON AREA */
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 5px;
     }
 
     /* TELEGRAM BUTTON */
 
     .telegram-button {
       display: inline-block;
-
       padding: 14px 20px;
-
       border-radius: 11px;
-
       background: #168bd2;
-
       color: white;
-
       text-decoration: none;
-
       font-weight: 900;
-
       transition: .2s ease;
 
       box-shadow:
@@ -203,42 +173,50 @@
 
     .telegram-button:hover {
       transform: translateY(-2px);
+      background: #1d9be8;
+    }
+
+    /* WEBSITE BUTTON */
+
+    .website-button {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 11px;
+      background: #258044;
+      color: white;
+      text-decoration: none;
+      font-weight: 900;
+      transition: .2s ease;
+
+      box-shadow:
+        0 7px 20px rgba(37,128,68,.18);
+    }
+
+    .website-button:hover {
+      transform: translateY(-2px);
+      background: #2d9650;
     }
 
     /* MORE */
 
     .more-coming {
       margin-top: 35px;
-
       padding: 20px;
-
       text-align: center;
-
-      border:
-        1px dashed #3b4650;
-
+      border: 1px dashed #3b4650;
       border-radius: 15px;
-
       color: #929da7;
-
-      background:
-        rgba(12,16,20,.65);
+      background: rgba(12,16,20,.65);
     }
 
     /* FOOTER */
 
     footer {
       margin-top: 55px;
-
       padding-top: 30px;
-
-      border-top:
-        1px solid #28313a;
-
+      border-top: 1px solid #28313a;
       text-align: center;
-
       color: #7f8a94;
-
       font-size: 13px;
     }
 
@@ -263,10 +241,16 @@
         padding: 20px;
       }
 
-      .telegram-button {
+      .button-row {
+        display: block;
+      }
+
+      .telegram-button,
+      .website-button {
         display: block;
         width: 100%;
         text-align: center;
+        margin-bottom: 10px;
       }
 
     }
@@ -404,15 +388,87 @@
     </div>
 
 
-    <a
-      class="telegram-button"
-      href="https://t.me/+omXs3jk6p2o2NmIx"
-      target="_blank"
-      rel="noopener noreferrer">
+    <div class="button-row">
 
-      ✈️ Visit Kevwell Group Buy
+      <a
+        class="telegram-button"
+        href="https://t.me/+omXs3jk6p2o2NmIx"
+        target="_blank"
+        rel="noopener noreferrer">
 
-    </a>
+        ✈️ Visit Kevwell Group Buy
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================================
+       TEGRITY GROUP BUY
+  =================================== -->
+
+  <section class="group-buy">
+
+    <div class="status">
+      THIRD-PARTY GROUP BUY
+    </div>
+
+    <h2>
+      🧪 Tegrity
+    </h2>
+
+    <p>
+      Independent third-party group-buy resource with
+      a website and Telegram community.
+    </p>
+
+
+    <div class="reminder">
+
+      <strong>
+        ⚠️ Independent Group-Buy Reminder
+      </strong>
+
+      <br><br>
+
+      Peppers Research Hub and Pepper Collective are
+      <strong>not associated or affiliated with Tegrity.</strong>
+
+      These links are provided for informational and
+      community convenience purposes only.
+
+      Please conduct your own research and due diligence
+      before deciding whether to participate.
+
+    </div>
+
+
+    <div class="button-row">
+
+      <a
+        class="website-button"
+        href="https://www.peptegridy.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        🌐 Visit Tegrity Website
+
+      </a>
+
+
+      <a
+        class="telegram-button"
+        href="https://t.me/+5IOkAVpKMjc1MTk5"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ✈️ Join Tegrity Telegram
+
+      </a>
+
+    </div>
 
   </section>
 
