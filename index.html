@@ -15,6 +15,7 @@
     content="Peppers Research Hub — research, education, community resources and official Pepper Collective updates.">
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -41,7 +42,10 @@
       color: inherit;
     }
 
-    /* FLOATING LAB BACKGROUND */
+
+    /* ============================
+       FLOATING LAB BACKGROUND
+    ============================ */
 
     .science-background {
       position: fixed;
@@ -145,7 +149,10 @@
       z-index: 2;
     }
 
-    /* HERO */
+
+    /* ============================
+       HERO
+    ============================ */
 
     .hero {
       position: relative;
@@ -249,7 +256,10 @@
       box-shadow: 0 7px 20px rgba(37,128,68,.25);
     }
 
-    /* HERO TRANSITION */
+
+    /* ============================
+       HERO TRANSITION
+    ============================ */
 
     .transition-wrap {
       max-width: 960px;
@@ -286,7 +296,10 @@
       color: #c5d0d9;
     }
 
-    /* GENERAL */
+
+    /* ============================
+       GENERAL
+    ============================ */
 
     .section {
       max-width: 960px;
@@ -316,7 +329,10 @@
         0 14px 35px rgba(0,0,0,.30);
     }
 
-    /* SIGNUP */
+
+    /* ============================
+       SIGNUP
+    ============================ */
 
     .signup-header {
       text-align: center;
@@ -407,7 +423,10 @@
       cursor: pointer;
     }
 
-    /* RESOURCE DIRECTORY */
+
+    /* ============================
+       RESOURCE CARDS
+    ============================ */
 
     .resource-grid {
       display: grid;
@@ -461,20 +480,12 @@
       color: #6e7d89;
     }
 
-    .group-card {
-      border: 1px solid rgba(255,145,0,.52);
-    }
-
-    .vendor-card {
-      border: 1px solid rgba(0,190,255,.52);
+    .research-card {
+      border: 1px solid rgba(150,90,255,.52);
     }
 
     .supplies-card {
       border: 1px solid rgba(0,255,145,.52);
-    }
-
-    .research-card {
-      border: 1px solid rgba(150,90,255,.52);
     }
 
     .peptide-card {
@@ -484,7 +495,33 @@
         0 0 24px rgba(255,65,150,.07);
     }
 
-    /* THIRD PARTY */
+    .group-card {
+      border: 1px solid rgba(255,145,0,.52);
+    }
+
+    .vendor-card {
+      border: 1px solid rgba(0,190,255,.52);
+    }
+
+
+    /* ============================
+       THIRD PARTY SECTION
+    ============================ */
+
+    .third-party-section {
+      background:
+        linear-gradient(
+          180deg,
+          rgba(32,18,8,.32),
+          rgba(12,15,19,.18)
+        );
+
+      border-top:
+        1px solid rgba(255,145,0,.12);
+
+      border-bottom:
+        1px solid rgba(255,145,0,.12);
+    }
 
     .third-party-notice {
       border-left: 5px solid #e09a2c;
@@ -492,9 +529,13 @@
       padding: 18px;
       border-radius: 10px;
       color: #e6d8bd;
+      margin-bottom: 22px;
     }
 
-    /* COMMUNITY */
+
+    /* ============================
+       COMMUNITY
+    ============================ */
 
     .community-image {
       width: 100%;
@@ -536,7 +577,10 @@
       background: #e52b2b;
     }
 
-    /* RULES */
+
+    /* ============================
+       RULES
+    ============================ */
 
     .rule {
       padding: 17px 0;
@@ -563,7 +607,10 @@
       color: #c6ccd3;
     }
 
-    /* FOOTER */
+
+    /* ============================
+       FOOTER
+    ============================ */
 
     footer {
       text-align: center;
@@ -578,9 +625,13 @@
       text-decoration: none;
     }
 
-    /* MOBILE */
+
+    /* ============================
+       MOBILE
+    ============================ */
 
     @media (max-width:650px) {
+
       .hero {
         min-height: 82vh;
         padding: 35px 18px;
@@ -619,14 +670,16 @@
       .float-item {
         opacity: .22;
       }
+
     }
+
   </style>
 </head>
 
 
 <body>
 
-<!-- FLOATING LAB -->
+<!-- FLOATING SCIENCE -->
 
 <div class="science-background">
 
@@ -643,7 +696,10 @@
 
 <div class="page">
 
-<!-- HERO -->
+
+<!-- ============================
+     HERO
+============================ -->
 
 <header class="hero">
 
@@ -680,7 +736,7 @@
 
       <a
         class="btn btn-green"
-        href="#resources">
+        href="#research-hub">
         Research Hub
       </a>
 
@@ -691,7 +747,9 @@
 </header>
 
 
-<!-- TRANSITION -->
+<!-- ============================
+     STAY CONNECTED
+============================ -->
 
 <div class="transition-wrap">
 
@@ -711,7 +769,9 @@
 </div>
 
 
-<!-- BACKUP SIGNUP -->
+<!-- ============================
+     BACKUP SIGNUP
+============================ -->
 
 <section
   class="section"
@@ -730,6 +790,7 @@
 
   </div>
 
+
   <div class="card signup-card">
 
     <p>
@@ -737,6 +798,7 @@
       important Peppers Research Hub announcements or send
       you a replacement Telegram community link.
     </p>
+
 
     <form
       action="https://formspree.io/f/mbgrkvlr"
@@ -746,6 +808,7 @@
         type="hidden"
         name="_subject"
         value="New Peppers Backup Contact List Signup">
+
 
       <div class="form-group">
 
@@ -762,6 +825,7 @@
 
       </div>
 
+
       <div class="form-group">
 
         <label for="telegram">
@@ -775,6 +839,7 @@
           placeholder="@username">
 
       </div>
+
 
       <div class="consent">
 
@@ -792,6 +857,7 @@
 
       </div>
 
+
       <div class="privacy-note">
 
         🔒 <strong>Your privacy matters.</strong>
@@ -801,6 +867,7 @@
         Research Hub announcements and community contact.
 
       </div>
+
 
       <button
         class="submit-button"
@@ -817,67 +884,46 @@
 </section>
 
 
-<!-- RESOURCE DIRECTORY -->
+<!-- ============================
+     RESEARCH HUB
+============================ -->
 
 <section
   class="section"
-  id="resources">
+  id="research-hub">
 
   <h2 class="section-title">
-    🌶️ Explore Peppers Research Hub
+    🔬 Research Hub
   </h2>
 
   <p class="section-subtitle">
-    Choose a section to continue.
+    Educational information, laboratory resources and peptide research.
   </p>
+
 
   <div class="resource-grid">
 
-    <!-- GROUP BUYS -->
+
+    <!-- RESEARCH INFORMATION -->
 
     <a
-      class="resource-card group-card"
-      href="group-buys.html">
+      class="resource-card research-card"
+      href="research-information.html">
 
       <div class="resource-icon">
-        🤝
+        📚
       </div>
 
       <div>
+
         <strong>
-          Group Buys
+          Research Information
         </strong>
 
         <span>
-          Third-party group-buy links
+          Storage, handling, safety &amp; laboratory guides
         </span>
-      </div>
 
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
-
-
-    <!-- VENDORS -->
-
-    <a
-      class="resource-card vendor-card"
-      href="vendors.html">
-
-      <div class="resource-icon">
-        🏪
-      </div>
-
-      <div>
-        <strong>
-          Vendors
-        </strong>
-
-        <span>
-          Third-party vendor directory
-        </span>
       </div>
 
       <div class="arrow">
@@ -898,40 +944,15 @@
       </div>
 
       <div>
+
         <strong>
           Research Supplies
         </strong>
 
         <span>
-          Storage &amp; research supplies
+          Storage &amp; research supply resources
         </span>
-      </div>
 
-      <div class="arrow">
-        ›
-      </div>
-
-    </a>
-
-
-    <!-- RESEARCH INFORMATION -->
-
-    <a
-      class="resource-card research-card"
-      href="research-information.html">
-
-      <div class="resource-icon">
-        📚
-      </div>
-
-      <div>
-        <strong>
-          Research Information
-        </strong>
-
-        <span>
-          Laboratory education &amp; research guides
-        </span>
       </div>
 
       <div class="arrow">
@@ -952,6 +973,7 @@
       </div>
 
       <div>
+
         <strong>
           Peptide Research Library
         </strong>
@@ -959,6 +981,7 @@
         <span>
           Peptide-specific research &amp; resources
         </span>
+
       </div>
 
       <div class="arrow">
@@ -967,35 +990,118 @@
 
     </a>
 
-  </div>
-
-
-  <div
-    class="third-party-notice"
-    style="margin-top:25px;">
-
-    <strong>
-      ⚠️ Third-Party Resource Notice
-    </strong>
-
-    <br><br>
-
-    Vendor, group-buy, supply and external research links may
-    lead to independent third parties.
-
-    Peppers Research Hub and Pepper Collective do not operate
-    or control independent third-party websites, vendors,
-    group buys or services.
-
-    Visitors are responsible for conducting their own research
-    and due diligence.
 
   </div>
 
 </section>
 
 
-<!-- MAIN TELEGRAM -->
+<!-- ============================
+     THIRD PARTY RESOURCES
+============================ -->
+
+<section class="third-party-section">
+
+  <div class="section">
+
+    <h2 class="section-title">
+      🌐 Third-Party Resources
+    </h2>
+
+    <p class="section-subtitle">
+      Independent external resources shared for informational convenience.
+    </p>
+
+
+    <div class="third-party-notice">
+
+      <strong>
+        ⚠️ Independent Third-Party Notice
+      </strong>
+
+      <br><br>
+
+      Peppers Research Hub and Pepper Collective do not operate,
+      control or guarantee independent vendors, group buys,
+      products, payments, shipping, fulfillment or transactions.
+
+      Visitors are responsible for conducting their own
+      research and due diligence before using any third-party resource.
+
+    </div>
+
+
+    <div class="resource-grid">
+
+
+      <!-- GROUP BUYS -->
+
+      <a
+        class="resource-card group-card"
+        href="group-buys.html">
+
+        <div class="resource-icon">
+          🤝
+        </div>
+
+        <div>
+
+          <strong>
+            Group Buys
+          </strong>
+
+          <span>
+            Independent third-party group-buy links
+          </span>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+      <!-- VENDORS -->
+
+      <a
+        class="resource-card vendor-card"
+        href="vendors.html">
+
+        <div class="resource-icon">
+          🏪
+        </div>
+
+        <div>
+
+          <strong>
+            Vendors
+          </strong>
+
+          <span>
+            Independent third-party vendor directory
+          </span>
+
+        </div>
+
+        <div class="arrow">
+          ›
+        </div>
+
+      </a>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ============================
+     MAIN COMMUNITY
+============================ -->
 
 <section
   class="section"
@@ -1009,6 +1115,7 @@
     Our main Telegram community.
   </p>
 
+
   <div class="card">
 
     <img
@@ -1016,19 +1123,23 @@
       src="pepper-collective-main.jpg"
       alt="Pepper Collective community">
 
+
     <div class="status">
       ● MAIN COMMUNITY ONLINE
     </div>
 
+
     <h3>
       Pepper Collective
     </h3>
+
 
     <p>
       Join the main Pepper Collective Telegram community
       for discussions, research information, announcements
       and community updates.
     </p>
+
 
     <a
       class="telegram-button"
@@ -1045,7 +1156,9 @@
 </section>
 
 
-<!-- BACKUP TELEGRAM -->
+<!-- ============================
+     BACKUP COMMUNITY
+============================ -->
 
 <section class="section">
 
@@ -1053,15 +1166,18 @@
     🚨 Backup Community
   </h2>
 
+
   <div class="card">
 
     <div class="status backup-status">
       BACKUP COMMUNITY
     </div>
 
+
     <h3>
       🌶️ Peppers Collective 2
     </h3>
+
 
     <p>
       This is the official backup Telegram community.
@@ -1069,14 +1185,22 @@
       if the main group becomes unavailable.
     </p>
 
+
     <p>
+
       <strong>Note:</strong>
+
       Peppers Collective 2 currently does not have
       a profile picture.
 
       Make sure the group name says
-      <strong>Peppers Collective 2</strong>.
+
+      <strong>
+        Peppers Collective 2
+      </strong>.
+
     </p>
+
 
     <a
       class="telegram-button backup-button"
@@ -1093,7 +1217,9 @@
 </section>
 
 
-<!-- COMMUNITY RULES -->
+<!-- ============================
+     COMMUNITY RULES
+============================ -->
 
 <section
   class="section"
@@ -1103,7 +1229,9 @@
     📋 Community Rules
   </h2>
 
+
   <div class="card">
+
 
     <div class="rule">
 
@@ -1119,6 +1247,7 @@
 
     </div>
 
+
     <div class="rule">
 
       <div class="rule-title">
@@ -1132,6 +1261,7 @@
 
     </div>
 
+
     <div class="rule">
 
       <div class="rule-title">
@@ -1140,14 +1270,12 @@
 
       <p>
         Please do not have conversations inside topic threads.
-
         Topics are designed to organize information so members
         can quickly find what they are looking for.
-
-        Use general chat for conversations and follow-up discussion.
       </p>
 
     </div>
+
 
     <div class="rule">
 
@@ -1163,6 +1291,7 @@
 
     </div>
 
+
     <div class="rule">
 
       <div class="rule-title">
@@ -1176,6 +1305,7 @@
       </p>
 
     </div>
+
 
     <div class="rule">
 
@@ -1194,6 +1324,7 @@
 
     </div>
 
+
     <div class="rule">
 
       <div class="rule-title">
@@ -1207,18 +1338,22 @@
 
     </div>
 
+
   </div>
 
 </section>
 
 
-<!-- ANNOUNCEMENTS -->
+<!-- ============================
+     ANNOUNCEMENTS
+============================ -->
 
 <section class="section">
 
   <h2 class="section-title">
     📢 Latest Announcements
   </h2>
+
 
   <div class="card">
 
@@ -1233,6 +1368,7 @@
     </p>
 
   </div>
+
 
   <div class="card">
 
@@ -1250,7 +1386,9 @@
 </section>
 
 
-<!-- CONTACT -->
+<!-- ============================
+     CONTACT
+============================ -->
 
 <section class="section">
 
@@ -1258,18 +1396,22 @@
     ✉️ Contact
   </h2>
 
+
   <div class="card">
 
     <h3>
       Peppers Research Hub
     </h3>
 
+
     <p>
       Questions, community matters
       or administrative inquiries:
     </p>
 
+
     <p>
+
       <a
         href="mailto:contact@peppersresearchhub.com">
 
@@ -1278,6 +1420,7 @@
         </strong>
 
       </a>
+
     </p>
 
   </div>
@@ -1285,7 +1428,9 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- ============================
+     FOOTER
+============================ -->
 
 <footer>
 
@@ -1297,23 +1442,6 @@
 
   <br><br>
 
-  <a href="group-buys.html">
-    Group Buys
-  </a>
-
-  &nbsp; • &nbsp;
-
-  <a href="vendors.html">
-    Vendors
-  </a>
-
-  &nbsp; • &nbsp;
-
-  <a href="research-supplies.html">
-    Research Supplies
-  </a>
-
-  &nbsp; • &nbsp;
 
   <a href="research-information.html">
     Research Information
@@ -1321,11 +1449,36 @@
 
   &nbsp; • &nbsp;
 
+
+  <a href="research-supplies.html">
+    Research Supplies
+  </a>
+
+  &nbsp; • &nbsp;
+
+
   <a href="peptide-research.html">
     Peptide Research
   </a>
 
+
   <br><br>
+
+
+  <a href="group-buys.html">
+    Group Buys
+  </a>
+
+  &nbsp; • &nbsp;
+
+
+  <a href="vendors.html">
+    Vendors
+  </a>
+
+
+  <br><br>
+
 
   <a href="mailto:contact@peppersresearchhub.com">
     contact@peppersresearchhub.com
@@ -1337,4 +1490,5 @@
 </div>
 
 </body>
+
 </html>
