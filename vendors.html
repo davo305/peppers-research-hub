@@ -42,8 +42,7 @@
       padding: 25px 18px 70px;
     }
 
-
-    /* BACK BUTTON */
+    /* BACK */
 
     .back {
       display: inline-block;
@@ -58,7 +57,6 @@
       text-decoration: none;
       font-weight: bold;
     }
-
 
     /* HEADER */
 
@@ -78,8 +76,7 @@
       font-size: 17px;
     }
 
-
-    /* MAIN DISCLAIMER */
+    /* IMPORTANT DISCLAIMER */
 
     .notice {
       border-left: 5px solid #e53935;
@@ -91,7 +88,7 @@
 
       border-radius: 12px;
 
-      margin-bottom: 32px;
+      margin-bottom: 25px;
 
       color: #ffd0d0;
     }
@@ -100,8 +97,7 @@
       color: #ff8d8d;
     }
 
-
-    /* DUE DILIGENCE NOTICE */
+    /* DUE DILIGENCE */
 
     .due-diligence {
       border-left: 5px solid #e09a2c;
@@ -118,6 +114,33 @@
       color: #e6d8bd;
     }
 
+    /* QUICK NAV */
+
+    .quick-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+
+      margin-bottom: 35px;
+    }
+
+    .quick-nav a {
+      padding: 9px 14px;
+
+      border-radius: 999px;
+
+      background: #121920;
+
+      border:
+        1px solid #34414b;
+
+      color: #dce4ea;
+
+      text-decoration: none;
+
+      font-size: 13px;
+      font-weight: bold;
+    }
 
     /* VENDOR CARD */
 
@@ -137,19 +160,18 @@
       box-shadow:
         0 12px 30px rgba(0,0,0,.30),
         0 0 22px rgba(0,190,255,.06);
-    }
 
+      scroll-margin-top: 20px;
+    }
 
     .vendor h2 {
       margin: 0 0 6px;
       font-size: 24px;
     }
 
-
     .vendor p {
       color: #c4cbd2;
     }
-
 
     /* THIRD PARTY BADGE */
 
@@ -169,8 +191,7 @@
       margin-bottom: 12px;
     }
 
-
-    /* VENDOR DISCLAIMER */
+    /* REMINDER */
 
     .reminder {
       margin: 17px 0;
@@ -187,10 +208,9 @@
       font-size: 12px;
     }
 
+    /* BUTTON */
 
-    /* TELEGRAM BUTTON */
-
-    .telegram-button {
+    .vendor-button {
       display: inline-block;
 
       padding: 14px 20px;
@@ -211,13 +231,15 @@
         0 7px 20px rgba(22,139,210,.18);
     }
 
-
-    .telegram-button:hover {
+    .vendor-button:hover {
       transform: translateY(-2px);
     }
 
+    .website-button {
+      background: #258044;
+    }
 
-    /* MORE VENDORS */
+    /* MORE */
 
     .more-coming {
       margin-top: 35px;
@@ -237,7 +259,6 @@
         rgba(12,16,20,.65);
     }
 
-
     /* FOOTER */
 
     footer {
@@ -255,20 +276,17 @@
       font-size: 13px;
     }
 
-
     footer a {
       color: #b9c5ce;
       text-decoration: none;
     }
-
 
     /* MOBILE */
 
     @media (max-width: 600px) {
 
       .page {
-        padding:
-          20px 15px 55px;
+        padding: 20px 15px 55px;
       }
 
       h1 {
@@ -279,7 +297,7 @@
         padding: 20px;
       }
 
-      .telegram-button {
+      .vendor-button {
         display: block;
         width: 100%;
         text-align: center;
@@ -324,7 +342,7 @@
     </header>
 
 
-    <!-- IMPORTANT DISCLAIMER -->
+    <!-- MAIN DISCLAIMER -->
 
     <div class="notice">
 
@@ -335,18 +353,20 @@
       <br><br>
 
       Peppers Research Hub and Pepper Collective are
-      <strong>not affiliated with, associated with, employed by,
-      partnered with, or operators of any vendor listed on this page.</strong>
+      <strong>
+        not affiliated with, associated with, partnered with,
+        employed by, or operators of any vendor listed on this page.
+      </strong>
 
       <br><br>
 
-      Vendor links are provided only as informational
-      resources for the community.
+      These vendor links are provided for informational
+      and community convenience purposes only.
 
       Peppers Research Hub and Pepper Collective do not
-      sell products on behalf of these vendors, collect payments
-      for them, control their operations, or manage their
-      orders or fulfillment.
+      operate these vendors, collect payments for them,
+      process their orders, control their products,
+      or manage shipping or fulfillment.
 
     </div>
 
@@ -356,35 +376,57 @@
     <div class="due-diligence">
 
       <strong>
-        ⚠️ DO YOUR OWN RESEARCH
+        ⚠️ DO YOUR OWN RESEARCH & DUE DILIGENCE
       </strong>
 
       <br><br>
 
-      You are responsible for conducting your own research
-      and due diligence before dealing with any vendor.
+      You are responsible for researching and evaluating
+      every vendor before interacting or making a transaction.
 
-      Verify the vendor, products, product information,
-      payment methods, shipping policies, testing or documentation,
-      and any other information that is important to you.
+      Review the vendor, products, product information,
+      testing or documentation, payment methods, shipping
+      policies and any other information important to you.
 
       <br><br>
 
       <strong>
         Peppers Research Hub and Pepper Collective are not
-        responsible for purchases, payments, products, product
-        quality, losses, disputes, shipping, delivery,
-        transactions, or other issues involving third-party vendors.
+        responsible for purchases, payments, products,
+        product quality, authenticity, losses, disputes,
+        shipping, delivery, fulfillment or transactions
+        involving third-party vendors.
       </strong>
 
     </div>
 
 
-    <!-- ==================================
-         VENDOR #1 - UTHER
-    =================================== -->
+    <!-- QUICK NAV -->
 
-    <section class="vendor">
+    <div class="quick-nav">
+
+      <a href="#uther">
+        Uther
+      </a>
+
+      <a href="#avant">
+        Avant
+      </a>
+
+      <a href="#pgb">
+        PGB
+      </a>
+
+    </div>
+
+
+    <!-- ==============================
+         UTHER
+    ============================== -->
+
+    <section
+      class="vendor"
+      id="uther">
 
 
       <div class="status">
@@ -398,8 +440,8 @@
 
 
       <p>
-        Independent third-party vendor community available
-        through Telegram.
+        Independent third-party vendor community
+        available through Telegram.
       </p>
 
 
@@ -414,16 +456,16 @@
         Peppers Research Hub and Pepper Collective are
         <strong>not affiliated with Uther</strong>.
 
-        This listing is provided for informational purposes only.
+        This link is provided for informational purposes only.
 
-        You are responsible for researching the vendor and
-        deciding whether you want to interact or transact with them.
+        Research the vendor independently before deciding
+        whether to interact or transact with them.
 
       </div>
 
 
       <a
-        class="telegram-button"
+        class="vendor-button"
         href="https://t.me/+jihqNJYOESQ3NzEx"
         target="_blank"
         rel="noopener noreferrer">
@@ -436,7 +478,122 @@
     </section>
 
 
-    <!-- FUTURE VENDORS -->
+    <!-- ==============================
+         AVANT
+    ============================== -->
+
+    <section
+      class="vendor"
+      id="avant">
+
+
+      <div class="status">
+        THIRD-PARTY VENDOR
+      </div>
+
+
+      <h2>
+        🏪 Avant
+      </h2>
+
+
+      <p>
+        Independent third-party vendor community
+        available through Telegram.
+      </p>
+
+
+      <div class="reminder">
+
+        <strong>
+          ⚠️ Independent Vendor Reminder
+        </strong>
+
+        <br><br>
+
+        Peppers Research Hub and Pepper Collective are
+        <strong>not affiliated with Avant</strong>.
+
+        This link is provided for informational purposes only.
+
+        Research the vendor independently before deciding
+        whether to interact or transact with them.
+
+      </div>
+
+
+      <a
+        class="vendor-button"
+        href="https://t.me/+ezvFMA6FZr42YWQx"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        ✈️ Visit Avant on Telegram
+
+      </a>
+
+
+    </section>
+
+
+    <!-- ==============================
+         PGB
+    ============================== -->
+
+    <section
+      class="vendor"
+      id="pgb">
+
+
+      <div class="status">
+        THIRD-PARTY VENDOR
+      </div>
+
+
+      <h2>
+        🏪 PGB
+      </h2>
+
+
+      <p>
+        Independent third-party vendor website.
+      </p>
+
+
+      <div class="reminder">
+
+        <strong>
+          ⚠️ Independent Vendor Reminder
+        </strong>
+
+        <br><br>
+
+        Peppers Research Hub and Pepper Collective are
+        <strong>not affiliated with PGB</strong>.
+
+        This website is linked for informational purposes only.
+
+        Review the vendor, products, documentation,
+        policies and transaction terms independently.
+
+      </div>
+
+
+      <a
+        class="vendor-button website-button"
+        href="https://pgbsciences.com/shop/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        🌐 Visit PGB Website
+
+      </a>
+
+
+    </section>
+
+
+    <!-- MORE VENDORS -->
 
     <div class="more-coming">
 
