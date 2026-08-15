@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="Educational research resources, articles, videos and references collected by Peppers Research Hub."
+    content="Original educational guides covering laboratory terminology, storage, handling, analytical testing, organization and research safety."
   >
 
   <style>
@@ -30,11 +30,11 @@
         linear-gradient(180deg, #06090f, #090d12);
       color: white;
       min-height: 100vh;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .page {
-      max-width: 920px;
+      max-width: 960px;
       margin: auto;
       padding: 25px 18px 70px;
     }
@@ -51,8 +51,9 @@
     }
 
     h1 {
-      font-size: 38px;
+      font-size: 40px;
       margin: 0 0 8px;
+      line-height: 1.1;
     }
 
     .subtitle {
@@ -66,17 +67,8 @@
       background: rgba(5,44,80,.25);
       padding: 18px;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       color: #c8d9e8;
-    }
-
-    .evidence-note {
-      border-left: 5px solid #8b5cf6;
-      background: rgba(65,35,110,.22);
-      padding: 18px;
-      border-radius: 10px;
-      margin-bottom: 35px;
-      color: #ddd2f6;
     }
 
     .quick-nav {
@@ -97,77 +89,72 @@
       font-weight: bold;
     }
 
-    .compound {
-      margin-top: 48px;
-      scroll-margin-top: 20px;
-    }
-
-    .compound-title {
-      font-size: 28px;
-      margin: 0 0 7px;
-    }
-
-    .compound-description {
-      color: #9ea9b4;
-      margin: 0 0 20px;
-    }
-
-    .resource {
+    .guide {
       background: rgba(18,23,29,.95);
       border: 1px solid #303a43;
       border-radius: 18px;
-      padding: 22px;
-      margin-bottom: 18px;
+      padding: 24px;
+      margin-bottom: 22px;
       box-shadow: 0 12px 30px rgba(0,0,0,.30);
+      scroll-margin-top: 20px;
     }
 
-    .resource h2 {
-      margin: 0 0 5px;
-      font-size: 20px;
+    .guide h2 {
+      margin-top: 0;
+      font-size: 25px;
     }
 
-    .type {
+    .guide h3 {
+      margin-top: 24px;
+      margin-bottom: 8px;
+      color: #76e3aa;
+    }
+
+    .guide p,
+    .guide li {
+      color: #c7ced5;
+    }
+
+    .guide ul {
+      padding-left: 22px;
+    }
+
+    .highlight {
+      margin-top: 18px;
+      padding: 14px;
+      border-left: 4px solid #8b5cf6;
+      background: rgba(65,35,110,.18);
+      border-radius: 8px;
+      color: #ddd2f6;
+    }
+
+    .peptide-link {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(42,20,68,.95),
+          rgba(18,23,29,.95)
+        );
+      border: 1px solid rgba(150,90,255,.55);
+      border-radius: 18px;
+      padding: 25px;
+      margin: 40px 0;
+      text-align: center;
+    }
+
+    .peptide-link h2 {
+      margin-top: 0;
+    }
+
+    .peptide-button {
       display: inline-block;
-      color: #70d8ff;
-      font-size: 13px;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .resource p {
-      color: #c4cbd2;
-    }
-
-    .resource-note {
-      margin: 16px 0;
-      padding: 11px 13px;
-      background: rgba(75,50,10,.16);
-      border-radius: 9px;
-      color: #d2b873;
-      font-size: 12px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 13px 18px;
-      border-radius: 10px;
+      margin-top: 10px;
+      padding: 14px 20px;
+      border-radius: 11px;
       background: #7040b8;
       color: white;
       text-decoration: none;
-      font-weight: bold;
-      transition: .2s ease;
-    }
-
-    .button:hover {
-      transform: translateY(-2px);
-    }
-
-    .video-button {
-      background: #c62828;
-    }
-
-    .protocol-button {
-      background: #b56b19;
+      font-weight: 900;
     }
 
     footer {
@@ -190,17 +177,16 @@
       }
 
       h1 {
-        font-size: 33px;
+        font-size: 34px;
       }
 
-      .resource {
-        padding: 19px;
+      .guide {
+        padding: 20px;
       }
 
-      .button {
+      .peptide-button {
         display: block;
         width: 100%;
-        text-align: center;
       }
     }
   </style>
@@ -218,11 +204,10 @@
   <h1>📚 Research Information</h1>
 
   <p class="subtitle">
-    Articles, videos, educational resources and research references.
+    Original educational guides covering laboratory concepts,
+    storage, handling, testing, organization and research safety.
   </p>
 
-
-  <!-- MAIN NOTICE -->
 
   <div class="notice">
 
@@ -230,31 +215,15 @@
 
     <br><br>
 
-    Information and external links provided on this page are
-    for general educational and informational purposes.
+    Information on this page is provided for general educational
+    and research purposes.
 
     Peppers Research Hub does not provide medical advice,
-    diagnosis, treatment recommendations, dosing instructions,
-    or individualized healthcare guidance.
+    diagnosis, treatment recommendations, individualized healthcare
+    guidance or human-use instructions.
 
-  </div>
-
-
-  <div class="evidence-note">
-
-    <strong>📖 How to Use This Library</strong>
-
-    <br><br>
-
-    Resources linked here may include scientific literature,
-    third-party educational articles and independent videos.
-
-    Inclusion does not mean Peppers Research Hub endorses every
-    statement or conclusion made by an author or creator.
-
-    Readers should distinguish preliminary, preclinical,
-    observational and anecdotal information from findings
-    established through well-controlled human clinical research.
+    Product-specific manufacturer or laboratory documentation
+    should take priority over general information.
 
   </div>
 
@@ -263,497 +232,481 @@
 
   <div class="quick-nav">
 
-    <a href="#pinealon">
-      🧠 Pinealon
+    <a href="#lyophilization">
+      🧪 Lyophilization
     </a>
 
-    <a href="#cartalax">
-      🦴 Cartalax
+    <a href="#storage">
+      ❄️ Storage & Handling
     </a>
 
-    <a href="#epithalon">
-      🧬 Epithalon / Epitalon
+    <a href="#coa">
+      📊 COAs
+    </a>
+
+    <a href="#hplc">
+      🔬 HPLC
+    </a>
+
+    <a href="#mass-spec">
+      🧬 Mass Spectrometry
+    </a>
+
+    <a href="#water">
+      💧 Research Water
+    </a>
+
+    <a href="#organization">
+      🧊 Organization
+    </a>
+
+    <a href="#vendors">
+      🔎 Due Diligence
+    </a>
+
+    <a href="#terminology">
+      📖 Terminology
+    </a>
+
+    <a href="#safety">
+      🥽 Safety
+    </a>
+
+    <a href="#sharps">
+      ♻️ Sharps
     </a>
 
   </div>
 
 
-  <!-- =================================
-       PINEALON
-  ================================== -->
+  <!-- LYOPHILIZATION -->
 
-  <section class="compound" id="pinealon">
+  <section class="guide" id="lyophilization">
 
-    <h2 class="compound-title">
-      🧠 Pinealon
+    <h2>
+      🧪 Understanding Lyophilization
     </h2>
 
-    <p class="compound-description">
-      Educational resources discussing Pinealon,
-      proposed mechanisms, research claims and reported findings.
+    <p>
+      Lyophilization, commonly called freeze-drying, is a process
+      used to remove water from a material while it is frozen.
+      The goal is to produce a dry material that may be easier
+      to store, transport or preserve under appropriate conditions.
     </p>
 
+    <h3>
+      Why appearance can vary
+    </h3>
 
-    <div class="resource">
-
-      <h2>
-        Pinealon Peptide Reviews 2026
-      </h2>
-
-      <span class="type">
-        📄 Third-Party Educational Article • InjectCo
-      </span>
-
-      <p>
-        Article discussing Pinealon, proposed mechanisms,
-        reported benefits, safety considerations and other
-        educational information.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Review supporting evidence and source quality independently.
-      </div>
-
-      <a
-        class="button"
-        href="https://injectco.com/pinealon-peptide-reviews-2026-benefits-results-dosage-does-it-work/"
-        target="_blank"
-        rel="noopener noreferrer">
-        Read Pinealon Article
-      </a>
-
-    </div>
-
-
-    <div class="resource">
-
-      <h2>
-        Pinealon Video Resource
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Video discussing Pinealon for educational
-        and research-information purposes.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Video content represents the creator's views.
-        Verify important claims using reliable scientific literature.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/PFB00eiUf90?is=kq4VmmJqOS8XDdrx"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Pinealon Video
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =================================
-       CARTALAX
-  ================================== -->
-
-  <section class="compound" id="cartalax">
-
-    <h2 class="compound-title">
-      🦴 Cartalax
-    </h2>
-
-    <p class="compound-description">
-      Articles and videos discussing Cartalax,
-      cartilage-related research, proposed mechanisms
-      and experimental research information.
+    <p>
+      Freeze-dried material does not always form a perfectly
+      uniform cake. Appearance may vary depending on formulation,
+      vial geometry, fill volume, freeze-drying conditions and
+      handling during transportation.
     </p>
 
-
-    <!-- CARTALAX ARTICLE -->
-
-    <div class="resource">
-
-      <h2>
-        Cartalax Peptide & Joint Repair
-      </h2>
-
-      <span class="type">
-        📄 Third-Party Educational Article • Joe Mars Report
-      </span>
-
-      <p>
-        Educational article discussing Cartalax
-        and research related to cartilage and joints.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Claims should be evaluated in the context
-        of the underlying scientific evidence.
-      </div>
-
-      <a
-        class="button"
-        href="https://joemarsreport.substack.com/p/cartalax-peptide-joint-repair?r=707o7m&utm_medium=ios&triedRedirect=true"
-        target="_blank"
-        rel="noopener noreferrer">
-        Read Cartalax Article
-      </a>
-
-    </div>
-
-
-    <!-- CARTALAX PROTOCOL PAGE -->
-
-    <div class="resource">
-
-      <h2>
-        Cartalax Research Dosage & Protocol Information
-      </h2>
-
-      <span class="type">
-        🧪 Third-Party Research Protocol Resource
-      </span>
-
-      <p>
-        Third-party page discussing experimental Cartalax
-        dosage concepts and research protocols.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ This material discusses experimental protocols.
-        It should not be interpreted as an established human
-        dosing guideline or medical recommendation.
-      </div>
-
-      <a
-        class="button protocol-button"
-        href="https://www.cartalaxpeptide.com/cartalax-peptide-dosage/"
-        target="_blank"
-        rel="noopener noreferrer">
-        View Research Protocol Information
-      </a>
-
-    </div>
-
-
-    <!-- CARTALAX VIDEO 1 -->
-
-    <div class="resource">
-
-      <h2>
-        Cartalax Video Resource #1
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Educational video discussing Cartalax
-        and related research topics.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Video content represents the creator's views.
-        Verify important claims using scientific literature.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/W9IQjKATIww?is=u8_C0YwIKZQYY_c9"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Cartalax Video #1
-      </a>
-
-    </div>
-
-
-    <!-- CARTALAX VIDEO 2 -->
-
-    <div class="resource">
-
-      <h2>
-        Cartalax Video Resource #2
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Additional educational video discussing
-        Cartalax and research-related information.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Third-party educational content is not
-        independently verified by Peppers Research Hub.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/Bw4-1662DHU?is=VhCAHiAN-ooWNNPJ"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Cartalax Video #2
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- =================================
-       EPITHALON / EPITALON
-  ================================== -->
-
-  <section class="compound" id="epithalon">
-
-    <h2 class="compound-title">
-      🧬 Epithalon / Epitalon
-    </h2>
-
-    <p class="compound-description">
-      Educational resources discussing Epithalon / Epitalon,
-      peptide bioregulator research, aging-related research
-      and proposed biological mechanisms.
+    <p>
+      Visual appearance alone does not establish identity,
+      purity, sterility or quality.
     </p>
 
-
-    <!-- NA EPITALON -->
-
-    <div class="resource">
-
-      <h2>
-        NA-Epitalon Research Information
-      </h2>
-
-      <span class="type">
-        📄 Third-Party Educational Resource
-      </span>
-
-      <p>
-        Educational information discussing NA-Epitalon
-        and related research topics.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Review supporting research independently and
-        distinguish experimental information from established
-        clinical evidence.
-      </div>
-
-      <a
-        class="button"
-        href="https://support.pgb.shipsync.pro/portal/en/kb/articles/na-epitalon-10mg-2025"
-        target="_blank"
-        rel="noopener noreferrer">
-        View NA-Epitalon Resource
-      </a>
-
-    </div>
-
-
-    <!-- NOTION RESOURCE -->
-
-    <div class="resource">
-
-      <h2>
-        Epitalon / Epithalon / Epithalamin Research Collection
-      </h2>
-
-      <span class="type">
-        📚 Third-Party Research Collection
-      </span>
-
-      <p>
-        Collected educational information and references
-        relating to Epitalon, Epithalon and Epithalamin.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ This is an independent third-party resource.
-        Review original references whenever possible.
-      </div>
-
-      <a
-        class="button"
-        href="https://foofyrka.notion.site/Epitalon-Epithalon-Epithalamin-e1308471db6a48debe5ea1aee79f4045"
-        target="_blank"
-        rel="noopener noreferrer">
-        View Research Collection
-      </a>
-
-    </div>
-
-
-    <!-- EPITALON VIDEO 1 -->
-
-    <div class="resource">
-
-      <h2>
-        Epithalon / Epitalon Video #1
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Educational video discussing Epithalon / Epitalon
-        and related research.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Video content represents the creator's views.
-        Verify scientific claims independently.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/jsPgZfX0WSM?is=kz2FDrOYtpw1q5Ut"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Epitalon Video #1
-      </a>
-
-    </div>
-
-
-    <!-- EPITALON VIDEO 2 -->
-
-    <div class="resource">
-
-      <h2>
-        Epithalon / Epitalon Video #2
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Additional educational video covering
-        Epithalon / Epitalon research topics.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Third-party educational content is not
-        independently verified by Peppers Research Hub.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/Nr8roe5afho?is=RwwArdUgXbArKgqc"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Epitalon Video #2
-      </a>
-
-    </div>
-
-
-    <!-- EPITALON VIDEO 3 -->
-
-    <div class="resource">
-
-      <h2>
-        Epithalon / Epitalon Video #3
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Educational video discussing Epithalon / Epitalon
-        and related research information.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Review claims against reliable scientific
-        publications whenever possible.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/CBx1Y0Rp3PU?is=LtjMQ-yp8709sC7p"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Epitalon Video #3
-      </a>
-
-    </div>
-
-
-    <!-- EPITALON VIDEO 4 -->
-
-    <div class="resource">
-
-      <h2>
-        Epithalon / Epitalon Video #4
-      </h2>
-
-      <span class="type">
-        ▶️ Third-Party Video • YouTube
-      </span>
-
-      <p>
-        Additional video resource discussing
-        Epithalon / Epitalon research.
-      </p>
-
-      <div class="resource-note">
-        ⚠️ Inclusion in this library does not mean
-        Peppers Research Hub endorses every claim made
-        by the creator.
-      </div>
-
-      <a
-        class="button video-button"
-        href="https://youtu.be/SG6lWEaRLkI?is=bchR0zxi9HI4-klH"
-        target="_blank"
-        rel="noopener noreferrer">
-        ▶ Watch Epitalon Video #4
-      </a>
-
+    <div class="highlight">
+      Analytical documentation and validated testing are more
+      informative than appearance alone.
     </div>
 
   </section>
 
 
-  <!-- =================================
-       FUTURE RESEARCH
-  ================================== -->
+  <!-- STORAGE -->
 
-  <section class="compound">
+  <section class="guide" id="storage">
 
-    <h2 class="compound-title">
-      📚 More Research Coming
+    <h2>
+      ❄️ Storage & Handling of Research Materials
     </h2>
 
-    <div class="resource">
+    <p>
+      Storage conditions can influence stability and integrity.
+      Always follow manufacturer, supplier or validated laboratory
+      documentation when specific storage requirements are available.
+    </p>
 
-      <p>
-        Additional compounds, scientific papers,
-        educational articles, videos and reference
-        material will be added as the Peppers
-        Research Hub library expands.
-      </p>
+    <h3>Temperature</h3>
 
+    <p>
+      Different materials may require controlled room temperature,
+      refrigeration or frozen storage. Do not assume that every
+      research material has the same temperature requirements.
+    </p>
+
+    <h3>Light Exposure</h3>
+
+    <p>
+      Some materials may be sensitive to ultraviolet or visible
+      light. Appropriate protected storage may help limit
+      unnecessary exposure when required.
+    </p>
+
+    <h3>Moisture</h3>
+
+    <p>
+      Moisture can affect some dry materials. Keep containers
+      properly closed and follow product-specific guidance
+      regarding humidity or desiccant use.
+    </p>
+
+    <h3>Labeling</h3>
+
+    <p>
+      Clear labels help reduce mix-ups. Useful information may include
+      the material name, lot or batch number, date received and
+      documented storage requirements.
+    </p>
+
+    <h3>Contamination Prevention</h3>
+
+    <p>
+      Maintain clean work areas, minimize unnecessary handling
+      and follow appropriate laboratory hygiene and PPE practices.
+    </p>
+
+    <h3>Secure Storage</h3>
+
+    <p>
+      Research materials should be separated from food,
+      household products and medications, and kept away
+      from children, pets and unauthorized individuals.
+    </p>
+
+    <h3>When Storage Requirements Are Unknown</h3>
+
+    <p>
+      Contact the manufacturer or supplier rather than guessing.
+      Product-specific documentation should take priority over
+      general internet recommendations.
+    </p>
+
+  </section>
+
+
+  <!-- COA -->
+
+  <section class="guide" id="coa">
+
+    <h2>
+      📊 Understanding Certificates of Analysis
+    </h2>
+
+    <p>
+      A Certificate of Analysis, commonly called a COA,
+      summarizes analytical results associated with a particular
+      sample, batch or lot.
+    </p>
+
+    <h3>
+      Information commonly shown
+    </h3>
+
+    <ul>
+      <li>Material or sample name</li>
+      <li>Lot or batch identifier</li>
+      <li>Testing date</li>
+      <li>Analytical method</li>
+      <li>Purity or assay result</li>
+      <li>Identity information</li>
+      <li>Testing laboratory information</li>
+    </ul>
+
+    <h3>
+      What a COA does not automatically prove
+    </h3>
+
+    <p>
+      A COA should not automatically be interpreted as proof
+      of sterility, authenticity, safety or suitability for a
+      particular purpose unless those characteristics were
+      specifically tested using appropriate methods.
+    </p>
+
+  </section>
+
+
+  <!-- HPLC -->
+
+  <section class="guide" id="hplc">
+
+    <h2>
+      🔬 HPLC Explained
+    </h2>
+
+    <p>
+      High-performance liquid chromatography, or HPLC,
+      separates components of a sample so they can be detected
+      and measured.
+    </p>
+
+    <p>
+      HPLC is often used to estimate chromatographic purity,
+      but interpretation depends on the method, detector,
+      reference standards and sample preparation.
+    </p>
+
+    <div class="highlight">
+      A high chromatographic purity percentage does not by itself
+      prove identity, sterility or biological activity.
     </div>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- MASS SPEC -->
+
+  <section class="guide" id="mass-spec">
+
+    <h2>
+      🧬 Mass Spectrometry Explained
+    </h2>
+
+    <p>
+      Mass spectrometry measures ions according to their
+      mass-to-charge ratio.
+    </p>
+
+    <p>
+      In research testing, it can help determine whether a sample
+      contains material consistent with an expected molecular mass.
+    </p>
+
+    <p>
+      Mass spectrometry is often used alongside other methods
+      because identity testing and purity testing answer
+      different analytical questions.
+    </p>
+
+  </section>
+
+
+  <!-- WATER -->
+
+  <section class="guide" id="water">
+
+    <h2>
+      💧 Sterile Water vs. Bacteriostatic Water
+    </h2>
+
+    <p>
+      Sterile water and bacteriostatic water are not identical products.
+      They may differ in composition, preservatives, packaging
+      and labeled intended use.
+    </p>
+
+    <p>
+      Bacteriostatic water typically contains a preservative,
+      while sterile water generally does not.
+    </p>
+
+    <div class="highlight">
+      Always rely on the actual product label, manufacturer documentation
+      and applicable professional guidance rather than assuming
+      different water products are interchangeable.
+    </div>
+
+  </section>
+
+
+  <!-- ORGANIZATION -->
+
+  <section class="guide" id="organization">
+
+    <h2>
+      🧊 Laboratory Vial Storage & Organization
+    </h2>
+
+    <p>
+      Good organization helps maintain traceability and reduces
+      the chance of mixing up research materials.
+    </p>
+
+    <ul>
+      <li>Use clearly labeled containers</li>
+      <li>Keep lot and batch information available</li>
+      <li>Use storage boxes or vial inserts when appropriate</li>
+      <li>Separate different materials clearly</li>
+      <li>Maintain an inventory record</li>
+      <li>Follow documented temperature requirements</li>
+    </ul>
+
+  </section>
+
+
+  <!-- VENDOR DUE DILIGENCE -->
+
+  <section class="guide" id="vendors">
+
+    <h2>
+      🔎 Research Vendor Due Diligence
+    </h2>
+
+    <p>
+      Third-party supplier listings should be evaluated independently.
+      Peppers Research Hub does not guarantee independent vendors.
+    </p>
+
+    <h3>
+      Things worth reviewing
+    </h3>
+
+    <ul>
+      <li>Clear business or contact information</li>
+      <li>Product descriptions</li>
+      <li>Lot or batch traceability</li>
+      <li>Independent analytical documentation when applicable</li>
+      <li>Testing laboratory identity</li>
+      <li>Shipping and return policies</li>
+      <li>Payment protections</li>
+      <li>Independent reputation and feedback</li>
+    </ul>
+
+    <h3>
+      Warning signs
+    </h3>
+
+    <ul>
+      <li>Claims that cannot be supported</li>
+      <li>Missing or unverifiable testing information</li>
+      <li>Pressure to send irreversible payments immediately</li>
+      <li>Impersonation or inconsistent contact information</li>
+      <li>Refusal to answer reasonable product questions</li>
+    </ul>
+
+  </section>
+
+
+  <!-- TERMINOLOGY -->
+
+  <section class="guide" id="terminology">
+
+    <h2>
+      📖 Research Terminology
+    </h2>
+
+    <h3>Lyophilized</h3>
+    <p>
+      Freeze-dried material produced by removing water
+      under controlled conditions.
+    </p>
+
+    <h3>Purity</h3>
+    <p>
+      A measurement describing how much of the detected
+      material corresponds to a particular analytical component
+      under the testing method used.
+    </p>
+
+    <h3>Assay</h3>
+    <p>
+      A test used to measure the amount, activity or another
+      characteristic of a substance.
+    </p>
+
+    <h3>Lot / Batch</h3>
+    <p>
+      An identifier used to associate a product or sample
+      with a specific production or processing group.
+    </p>
+
+    <h3>Molecular Weight</h3>
+    <p>
+      The calculated or measured mass associated with a molecule.
+    </p>
+
+    <h3>Identity Testing</h3>
+    <p>
+      Analytical testing intended to determine whether a sample
+      is consistent with the material it is claimed to contain.
+    </p>
+
+  </section>
+
+
+  <!-- SAFETY -->
+
+  <section class="guide" id="safety">
+
+    <h2>
+      🥽 Research Safety & Responsible Handling
+    </h2>
+
+    <p>
+      Responsible laboratory practices help reduce contamination,
+      accidental exposure and mix-ups.
+    </p>
+
+    <ul>
+      <li>Keep work surfaces clean</li>
+      <li>Use appropriate PPE when required</li>
+      <li>Keep materials clearly labeled</li>
+      <li>Avoid unnecessary handling</li>
+      <li>Store materials securely</li>
+      <li>Keep research materials away from food</li>
+      <li>Keep materials away from children and pets</li>
+      <li>Follow manufacturer and laboratory documentation</li>
+    </ul>
+
+  </section>
+
+
+  <!-- SHARPS -->
+
+  <section class="guide" id="sharps">
+
+    <h2>
+      ♻️ Sharps & Laboratory Waste Safety
+    </h2>
+
+    <p>
+      Used needles and other sharps should be handled and disposed
+      of according to applicable local requirements and recognized
+      sharps-disposal practices.
+    </p>
+
+    <p>
+      Purpose-built sharps containers help reduce accidental
+      needlestick injuries and unsafe disposal.
+    </p>
+
+    <p>
+      Disposal rules may vary by location, so use current local
+      guidance or an authorized disposal program.
+    </p>
+
+  </section>
+
+
+  <!-- PEPTIDE LIBRARY LINK -->
+
+  <section class="peptide-link">
+
+    <h2>
+      🧬 Looking for Peptide-Specific Research?
+    </h2>
+
+    <p>
+      Pinealon, Cartalax, Epithalon / Epitalon and future
+      peptide-specific resources now have their own dedicated library.
+    </p>
+
+    <a
+      class="peptide-button"
+      href="peptide-research.html">
+
+      🧬 Open Peptide Research Library
+
+    </a>
+
+  </section>
+
 
   <footer>
 
@@ -765,8 +718,14 @@
 
     <br><br>
 
+    <a href="peptide-research.html">
+      🧬 Peptide Research Library
+    </a>
+
+    &nbsp; • &nbsp;
+
     <a href="index.html">
-      ← Return to Peppers Research Hub
+      ← Main Hub
     </a>
 
   </footer>
