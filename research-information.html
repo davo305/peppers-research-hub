@@ -9,7 +9,7 @@
 
   <meta
     name="description"
-    content="General laboratory research information covering storage, handling, safety, analytical testing, documentation and research terminology."
+    content="Educational laboratory information covering COAs, analytical testing, lyophilization, storage, handling, safety and research terminology."
   >
 
   <style>
@@ -119,6 +119,11 @@
       padding-left: 22px;
     }
 
+    .updated {
+      color: #8e99a5;
+      font-size: 13px;
+    }
+
     .highlight {
       margin-top: 18px;
       padding: 14px;
@@ -128,13 +133,50 @@
       color: #ddd2f6;
     }
 
-    .safety-highlight {
+    .warning {
       margin-top: 18px;
       padding: 14px;
       border-left: 4px solid #e09a2c;
       background: rgba(80,45,5,.20);
       border-radius: 8px;
       color: #e6d8bd;
+    }
+
+    .coa-box {
+      background: #0b1116;
+      border: 1px solid #35414b;
+      border-radius: 14px;
+      padding: 17px;
+      margin: 15px 0;
+    }
+
+    .coa-box strong {
+      color: #76e3aa;
+    }
+
+    .testing-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 12px;
+      margin: 18px 0;
+    }
+
+    .testing-item {
+      background: #0b1116;
+      border: 1px solid #35414b;
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .testing-item strong {
+      color: #76e3aa;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .testing-item p {
+      margin: 0;
+      font-size: 14px;
     }
 
     .peptide-link {
@@ -149,10 +191,6 @@
       padding: 25px;
       margin: 40px 0;
       text-align: center;
-    }
-
-    .peptide-link h2 {
-      margin-top: 0;
     }
 
     .peptide-button {
@@ -180,7 +218,7 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
       .page {
         padding: 20px 15px 55px;
       }
@@ -193,13 +231,17 @@
         padding: 20px;
       }
 
+      .testing-grid {
+        grid-template-columns: 1fr;
+      }
+
       .peptide-button {
         display: block;
-        width: 100%;
       }
     }
   </style>
 </head>
+
 
 <body>
 
@@ -212,8 +254,8 @@
   <h1>📚 Research Information</h1>
 
   <p class="subtitle">
-    General laboratory education covering storage, handling, safety,
-    analytical testing, documentation and research terminology.
+    General laboratory education covering testing, documentation,
+    storage, handling, safety and research terminology.
   </p>
 
   <div class="notice">
@@ -221,12 +263,11 @@
 
     <br><br>
 
-    Information provided on this page is for general educational
-    and laboratory research purposes.
+    Information provided here is for general educational and
+    laboratory research purposes.
 
     Peppers Research Hub does not provide medical advice,
-    diagnosis, treatment recommendations, individualized healthcare
-    guidance or human-use instructions.
+    diagnosis, treatment recommendations or human-use instructions.
 
     Product-specific manufacturer documentation and validated
     laboratory procedures should take priority over general information.
@@ -237,54 +278,574 @@
 
   <div class="quick-nav">
 
-    <a href="#storage">
-      ❄️ Storage & Handling
-    </a>
+    <a href="#coa">📊 How to Read a COA</a>
 
-    <a href="#safety">
-      🥽 Safety
-    </a>
+    <a href="#lyophilization">🧪 Lyophilization</a>
 
-    <a href="#lyophilization">
-      🧪 Lyophilization
-    </a>
+    <a href="#storage">❄️ Storage & Handling</a>
 
-    <a href="#coa">
-      📊 COAs
-    </a>
+    <a href="#safety">🥽 Safety</a>
 
-    <a href="#hplc">
-      🔬 HPLC
-    </a>
+    <a href="#hplc">🔬 HPLC</a>
 
-    <a href="#mass-spec">
-      🧬 Mass Spectrometry
-    </a>
+    <a href="#mass-spec">🧬 Mass Spectrometry</a>
 
-    <a href="#water">
-      💧 Research Water
-    </a>
+    <a href="#water">💧 Research Water</a>
 
-    <a href="#organization">
-      🧊 Organization
-    </a>
+    <a href="#organization">🧊 Organization</a>
 
-    <a href="#vendors">
-      🔎 Due Diligence
-    </a>
+    <a href="#vendors">🔎 Due Diligence</a>
 
-    <a href="#terminology">
-      📖 Terminology
-    </a>
+    <a href="#terminology">📖 Terminology</a>
 
-    <a href="#sharps">
-      ♻️ Sharps
-    </a>
+    <a href="#sharps">♻️ Sharps</a>
 
   </div>
 
 
-  <!-- STORAGE & HANDLING -->
+  <!-- ======================================
+       HOW TO READ A COA
+  ======================================= -->
+
+  <section class="guide" id="coa">
+
+    <h2>
+      📊 How to Read a Certificate of Analysis (COA)
+    </h2>
+
+    <p class="updated">
+      Last updated: August 2026
+    </p>
+
+    <p>
+      A Certificate of Analysis, commonly called a COA, is a document
+      reporting analytical results associated with a particular
+      material, sample, lot or batch.
+    </p>
+
+    <p>
+      Learning how to read a COA is important because different
+      analytical tests answer different questions.
+    </p>
+
+    <div class="highlight">
+      <strong>The most important concept:</strong>
+      a single number such as “99% purity” does not automatically
+      establish identity, quantity, sterility, endotoxin status
+      or overall quality.
+    </div>
+
+
+    <h3>
+      1️⃣ Start With the Sample Information
+    </h3>
+
+    <p>
+      Before looking at the analytical numbers, identify exactly
+      what sample the report claims to represent.
+    </p>
+
+    <p>
+      Look for:
+    </p>
+
+    <ul>
+      <li>Sample or material name</li>
+      <li>Sample identification number</li>
+      <li>Lot or batch number</li>
+      <li>Date received by the laboratory</li>
+      <li>Date tested</li>
+      <li>Date the report was issued</li>
+    </ul>
+
+    <p>
+      When a product carries a lot or batch number, compare it with
+      the identifier shown on the laboratory report when possible.
+    </p>
+
+
+    <h3>
+      2️⃣ Identify the Testing Laboratory
+    </h3>
+
+    <p>
+      Determine which laboratory actually performed the testing.
+    </p>
+
+    <p>
+      A report may contain:
+    </p>
+
+    <ul>
+      <li>Laboratory name</li>
+      <li>Address</li>
+      <li>Website</li>
+      <li>Report number</li>
+      <li>QR code</li>
+      <li>Verification link or verification system</li>
+    </ul>
+
+    <p>
+      When independent verification is available, use the
+      laboratory's own verification system rather than relying
+      exclusively on an image supplied by a seller.
+    </p>
+
+
+    <h3>
+      3️⃣ Identify Which Tests Were Actually Performed
+    </h3>
+
+    <p>
+      Do not assume that every COA includes every type of testing.
+    </p>
+
+    <p>
+      Look specifically at the analytical methods listed on the report.
+    </p>
+
+
+    <div class="testing-grid">
+
+      <div class="testing-item">
+
+        <strong>🔬 Purity</strong>
+
+        <p>
+          Often evaluated using chromatography such as HPLC.
+          This describes the analytical composition observed
+          under the particular method used.
+        </p>
+
+      </div>
+
+
+      <div class="testing-item">
+
+        <strong>🧬 Identity</strong>
+
+        <p>
+          Tests such as mass spectrometry may help determine
+          whether detected material is consistent with an
+          expected molecular identity.
+        </p>
+
+      </div>
+
+
+      <div class="testing-item">
+
+        <strong>⚖️ Quantity / Content</strong>
+
+        <p>
+          Determines how much material is present.
+          This is a different analytical question from purity.
+        </p>
+
+      </div>
+
+
+      <div class="testing-item">
+
+        <strong>🦠 Sterility</strong>
+
+        <p>
+          Evaluates microbial contamination using an
+          appropriate sterility test. Purity testing does
+          not establish sterility.
+        </p>
+
+      </div>
+
+
+      <div class="testing-item">
+
+        <strong>🧫 Endotoxin</strong>
+
+        <p>
+          Evaluates bacterial endotoxin under the specific
+          test performed. This is separate from sterility
+          and chromatographic purity.
+        </p>
+
+      </div>
+
+
+      <div class="testing-item">
+
+        <strong>💧 Other Testing</strong>
+
+        <p>
+          Depending on the material, reports may include
+          moisture, residual solvent or other analytical
+          measurements.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <h3>
+      4️⃣ Understand Purity
+    </h3>
+
+    <p>
+      Purity is one of the most commonly misunderstood numbers
+      on analytical reports.
+    </p>
+
+    <div class="coa-box">
+
+      <strong>Example:</strong>
+
+      <br><br>
+
+      HPLC Purity: 99.2%
+
+    </div>
+
+    <p>
+      A result like this generally refers to the relative
+      chromatographic composition detected under that HPLC method.
+    </p>
+
+    <p>
+      It does <strong>not</strong> automatically mean:
+    </p>
+
+    <ul>
+      <li>The container contains exactly the labeled quantity</li>
+      <li>The molecular identity has independently been confirmed</li>
+      <li>The material is sterile</li>
+      <li>The material has passed endotoxin testing</li>
+      <li>The material is suitable for a particular use</li>
+    </ul>
+
+
+    <h3>
+      5️⃣ Purity and Quantity Are Different
+    </h3>
+
+    <p>
+      This distinction is particularly important.
+    </p>
+
+    <p>
+      <strong>Purity</strong> asks how much of the detected
+      chromatographic material corresponds to a particular component.
+    </p>
+
+    <p>
+      <strong>Quantity or content testing</strong> asks how much
+      material is actually present.
+    </p>
+
+    <div class="warning">
+      A high purity percentage should not automatically be interpreted
+      as confirmation that a container contains the amount printed
+      on its label.
+    </div>
+
+
+    <h3>
+      6️⃣ Identity and Purity Are Different
+    </h3>
+
+    <p>
+      A chromatography result and an identity test provide
+      different information.
+    </p>
+
+    <p>
+      HPLC can separate components and provide information
+      about chromatographic purity.
+    </p>
+
+    <p>
+      Mass spectrometry can provide information about molecular
+      mass and help determine whether detected material is
+      consistent with an expected identity.
+    </p>
+
+    <p>
+      This is one reason laboratories may use multiple analytical
+      techniques when characterizing a sample.
+    </p>
+
+
+    <h3>
+      7️⃣ Sterility Is a Separate Test
+    </h3>
+
+    <p>
+      Chemical purity does not establish microbiological sterility.
+    </p>
+
+    <p>
+      A report showing high chromatographic purity should therefore
+      not be described as a sterility test unless an appropriate
+      sterility test was actually performed and reported.
+    </p>
+
+
+    <h3>
+      8️⃣ Endotoxin Is Also Separate
+    </h3>
+
+    <p>
+      Endotoxins are components associated with certain bacteria.
+    </p>
+
+    <p>
+      Endotoxin testing is a separate analytical category and
+      should not be inferred from HPLC, mass spectrometry or
+      sterility results.
+    </p>
+
+
+    <h3>
+      9️⃣ Look at the Testing Date
+    </h3>
+
+    <p>
+      Check when the sample was tested.
+    </p>
+
+    <p>
+      A report from an old batch does not automatically represent
+      a different or newly produced batch.
+    </p>
+
+    <p>
+      Lot numbers, sample identifiers and testing dates help
+      establish traceability between a report and a material.
+    </p>
+
+
+    <h3>
+      🔟 Look for the Actual Analytical Data
+    </h3>
+
+    <p>
+      Some reports include supporting information such as:
+    </p>
+
+    <ul>
+      <li>Chromatograms</li>
+      <li>Mass spectra</li>
+      <li>Peak information</li>
+      <li>Test methodology</li>
+      <li>Acceptance criteria</li>
+      <li>Analyst or laboratory authorization</li>
+    </ul>
+
+    <p>
+      The amount of information shown varies by laboratory
+      and testing service.
+    </p>
+
+
+    <h3>
+      🚩 COA Red Flags Worth Investigating
+    </h3>
+
+    <p>
+      A questionable feature does not automatically prove a
+      report is fraudulent, but it may justify additional verification.
+    </p>
+
+    <p>
+      Things worth investigating include:
+    </p>
+
+    <ul>
+      <li>No identifiable testing laboratory</li>
+      <li>No sample or report number</li>
+      <li>No testing date</li>
+      <li>No analytical method listed</li>
+      <li>Missing lot or batch information when one should exist</li>
+      <li>Verification links that do not work</li>
+      <li>QR codes leading somewhere unrelated</li>
+      <li>Obvious alterations or inconsistent formatting</li>
+      <li>A seller presenting one old report for multiple unrelated batches</li>
+      <li>Claims about testing that are not actually shown on the report</li>
+    </ul>
+
+
+    <h3>
+      📋 A Simple COA Checklist
+    </h3>
+
+    <div class="coa-box">
+
+      <strong>Before relying on a COA, ask:</strong>
+
+      <br><br>
+
+      ✓ What sample was tested?<br>
+      ✓ What lot or batch does it represent?<br>
+      ✓ When was it tested?<br>
+      ✓ Which laboratory performed the test?<br>
+      ✓ Can the report be independently verified?<br>
+      ✓ Which analytical methods were used?<br>
+      ✓ Was purity tested?<br>
+      ✓ Was identity tested?<br>
+      ✓ Was quantity/content tested?<br>
+      ✓ Was sterility actually tested?<br>
+      ✓ Was endotoxin actually tested?<br>
+      ✓ Do the claims being made match what the report actually shows?
+
+    </div>
+
+
+    <h3>
+      📚 Key Takeaway
+    </h3>
+
+    <p>
+      A COA should be read as a collection of specific analytical
+      results rather than as a universal stamp of quality.
+    </p>
+
+    <p>
+      Different tests answer different questions.
+    </p>
+
+    <div class="highlight">
+
+      <strong>Remember:</strong>
+
+      <br><br>
+
+      📊 Purity ≠ Quantity
+
+      <br>
+
+      🔬 Purity ≠ Identity
+
+      <br>
+
+      🦠 Purity ≠ Sterility
+
+      <br>
+
+      🧫 Sterility ≠ Endotoxin testing
+
+      <br><br>
+
+      Understanding exactly what was tested is more useful
+      than looking at a single percentage.
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       LYOPHILIZATION
+  ======================================= -->
+
+  <section class="guide" id="lyophilization">
+
+    <h2>
+      🧪 Understanding Lyophilized Research Materials
+    </h2>
+
+    <p class="updated">
+      Last updated: August 2026
+    </p>
+
+    <p>
+      Lyophilization, commonly known as freeze-drying, is a process
+      used to remove water from a material while helping preserve
+      characteristics that may be affected by conventional drying.
+    </p>
+
+    <h3>🔬 How Lyophilization Works</h3>
+
+    <p>
+      Lyophilization generally involves freezing the material,
+      primary drying and secondary drying.
+    </p>
+
+    <p>
+      During primary drying, frozen water is removed through
+      sublimation — a transition from solid ice directly to vapor.
+    </p>
+
+    <p>
+      Secondary drying further reduces moisture associated
+      with the material.
+    </p>
+
+
+    <h3>🧊 What Is a Lyophilized Cake?</h3>
+
+    <p>
+      Material freeze-dried inside a vial may form a structure
+      commonly called a lyophilized cake.
+    </p>
+
+    <p>
+      It may appear:
+    </p>
+
+    <ul>
+      <li>Compact</li>
+      <li>Fluffy</li>
+      <li>Porous</li>
+      <li>Powder-like</li>
+      <li>Cracked</li>
+      <li>Uneven</li>
+    </ul>
+
+
+    <h3>🔎 Why Can Appearance Vary?</h3>
+
+    <p>
+      Physical appearance may be influenced by:
+    </p>
+
+    <ul>
+      <li>Formulation</li>
+      <li>Concentration</li>
+      <li>Fill volume</li>
+      <li>Vial dimensions</li>
+      <li>Freezing rate</li>
+      <li>Drying conditions</li>
+      <li>Residual moisture</li>
+      <li>Transportation</li>
+    </ul>
+
+
+    <h3>⚠️ What Appearance Cannot Prove</h3>
+
+    <p>
+      Visual inspection cannot by itself confirm:
+    </p>
+
+    <ul>
+      <li>Identity</li>
+      <li>Purity</li>
+      <li>Quantity</li>
+      <li>Sterility</li>
+      <li>Endotoxin levels</li>
+      <li>Overall quality</li>
+    </ul>
+
+    <div class="highlight">
+      A material looking “perfect” does not establish its analytical
+      characteristics. Testing and appropriate documentation provide
+      more meaningful information than appearance alone.
+    </div>
+
+  </section>
+
+
+  <!-- ======================================
+       STORAGE
+  ======================================= -->
 
   <section class="guide" id="storage">
 
@@ -295,96 +856,72 @@
     <p>
       Proper storage and handling help maintain the integrity,
       traceability and stability of laboratory research materials.
-      Requirements vary by product, so manufacturer or laboratory
-      documentation should always be followed when available.
     </p>
 
     <h3>Temperature</h3>
 
     <p>
-      Research materials may require controlled room temperature,
-      refrigeration or frozen storage. Temperature requirements
-      are product-specific and should not be assumed based on appearance
-      or product category alone.
+      Different materials may require controlled room temperature,
+      refrigeration or frozen storage.
     </p>
 
     <p>
-      Avoid unnecessary temperature fluctuations and repeated movement
-      between warm and cold environments when product documentation
-      recommends stable storage conditions.
+      Follow product-specific manufacturer or laboratory
+      documentation whenever available.
     </p>
 
-    <h3>Light Protection</h3>
+
+    <h3>Light</h3>
 
     <p>
-      Some research materials may degrade when exposed to ultraviolet
-      or visible light. Amber containers, opaque boxes or protected
-      storage areas may be useful when light-sensitive storage
-      is specified.
+      Some materials may be sensitive to ultraviolet or visible light.
+      Appropriate protected storage should be used when specified.
     </p>
 
-    <h3>Moisture Control</h3>
 
-    <p>
-      Moisture can affect certain dry materials and packaging.
-      Containers should remain properly closed and protected from
-      unnecessary humidity.
-    </p>
+    <h3>Moisture</h3>
 
     <p>
-      Desiccants may be useful in appropriate storage systems,
-      but they should not directly contact materials unless
-      specifically designed for that purpose.
+      Moisture can affect certain dry materials. Containers should
+      remain properly closed and protected from unnecessary humidity.
     </p>
+
 
     <h3>Labeling</h3>
 
     <p>
-      Every stored research item should be easy to identify.
-      A useful label may include:
+      Useful storage records may include:
     </p>
 
     <ul>
       <li>Material name</li>
       <li>Lot or batch number</li>
       <li>Date received</li>
-      <li>Storage requirement</li>
-      <li>Supplier or source</li>
-      <li>Relevant testing reference</li>
+      <li>Supplier</li>
+      <li>Storage requirements</li>
+      <li>Testing reference</li>
     </ul>
 
-    <h3>Handling Practices</h3>
-
-    <p>
-      Minimize unnecessary handling. Keep work areas clean,
-      avoid touching container openings, and use clean equipment
-      appropriate to the laboratory task.
-    </p>
 
     <h3>Secure Storage</h3>
 
     <p>
-      Research materials should be clearly separated from food,
-      household products and medications. They should also be
-      stored securely away from children, pets and unauthorized people.
-    </p>
-
-    <h3>Unknown Storage Requirements</h3>
-
-    <p>
-      If reliable storage information is unavailable, contact
-      the manufacturer or supplier rather than guessing.
+      Research materials should be separated from food,
+      household products and medications and kept away
+      from children, pets and unauthorized individuals.
     </p>
 
     <div class="highlight">
-      Product-specific documentation should always take priority
-      over general storage advice found online.
+      Product-specific documentation should take priority
+      over general storage recommendations.
     </div>
 
   </section>
 
 
-  <!-- SAFETY & HANDLING -->
+  <!-- ======================================
+       SAFETY
+  ======================================= -->
 
   <section class="guide" id="safety">
 
@@ -393,65 +930,53 @@
     </h2>
 
     <p>
-      Good laboratory safety practices help reduce accidental exposure,
-      contamination, mix-ups, damaged materials and improper disposal.
+      Good laboratory practices help reduce accidental exposure,
+      contamination, mix-ups and improper disposal.
     </p>
+
 
     <h3>Clean Work Area</h3>
 
     <p>
-      Keep laboratory work surfaces clean, organized and free of
-      unrelated materials. Avoid preparing research materials near
-      food, drinks or household items.
+      Keep laboratory surfaces clean, organized and separated
+      from food, drinks and unrelated household materials.
     </p>
+
 
     <h3>Personal Protective Equipment</h3>
 
     <p>
-      Depending on the material and laboratory activity, appropriate
-      protective equipment may include gloves, eye protection,
-      protective clothing or other PPE.
+      Appropriate PPE may include gloves, eye protection,
+      protective clothing or other equipment depending on
+      the material and activity.
     </p>
+
 
     <h3>Avoid Cross-Contamination</h3>
 
     <p>
-      Use separate, clean tools where appropriate. Do not return
-      unused material to its original container if doing so could
-      introduce contamination.
+      Use clean equipment appropriate to the laboratory task
+      and maintain organized handling procedures.
     </p>
 
-    <h3>Clear Identification</h3>
-
-    <p>
-      Never rely on vial appearance alone. Keep containers labeled
-      and maintain clear records so similar-looking materials are
-      not confused.
-    </p>
 
     <h3>Damaged Containers</h3>
 
     <p>
-      Containers that are cracked, leaking, improperly sealed,
-      visibly compromised or otherwise damaged should be isolated
-      and evaluated according to appropriate laboratory procedures.
+      Cracked, leaking, improperly sealed or otherwise compromised
+      containers should be isolated and evaluated appropriately.
     </p>
 
-    <h3>Children & Pets</h3>
+
+    <h3>Documentation</h3>
 
     <p>
-      Research materials, sharps and laboratory supplies should be
-      stored where children and pets cannot access them.
+      Safety Data Sheets, manufacturer documentation,
+      laboratory SOPs and applicable workplace requirements
+      should be followed whenever available.
     </p>
 
-    <h3>Follow Documentation</h3>
-
-    <p>
-      Safety Data Sheets, manufacturer documentation, laboratory SOPs
-      and applicable workplace rules should be followed whenever available.
-    </p>
-
-    <div class="safety-highlight">
+    <div class="warning">
       ⚠️ Do not use appearance, smell or informal internet advice
       as a substitute for appropriate laboratory documentation.
     </div>
@@ -459,96 +984,9 @@
   </section>
 
 
-  <!-- LYOPHILIZATION -->
-
-  <section class="guide" id="lyophilization">
-
-    <h2>
-      🧪 Understanding Lyophilization
-    </h2>
-
-    <p>
-      Lyophilization, also called freeze-drying, removes water
-      from a frozen material under reduced pressure.
-    </p>
-
-    <p>
-      The process is commonly used when laboratories need a dry
-      material that may offer improved stability or easier transport
-      under appropriate storage conditions.
-    </p>
-
-    <h3>Why Appearance Can Vary</h3>
-
-    <p>
-      A freeze-dried material does not always form a perfect,
-      uniform cake. Appearance may vary because of:
-    </p>
-
-    <ul>
-      <li>Formulation</li>
-      <li>Fill volume</li>
-      <li>Vial size</li>
-      <li>Freeze-drying conditions</li>
-      <li>Transportation vibration</li>
-      <li>Temperature exposure</li>
-    </ul>
-
-    <div class="highlight">
-      Appearance alone does not prove identity, purity,
-      sterility or quality.
-    </div>
-
-  </section>
-
-
-  <!-- COA -->
-
-  <section class="guide" id="coa">
-
-    <h2>
-      📊 Understanding Certificates of Analysis
-    </h2>
-
-    <p>
-      A Certificate of Analysis, commonly called a COA,
-      summarizes analytical results associated with a specific
-      sample, lot or batch.
-    </p>
-
-    <h3>Common COA Information</h3>
-
-    <ul>
-      <li>Product or sample name</li>
-      <li>Lot or batch identifier</li>
-      <li>Testing date</li>
-      <li>Analytical method</li>
-      <li>Purity or assay results</li>
-      <li>Identity information</li>
-      <li>Testing laboratory</li>
-    </ul>
-
-    <h3>Verify the Laboratory</h3>
-
-    <p>
-      When possible, confirm that the laboratory exists and that
-      report identifiers, contact details or verification methods
-      are consistent with the report.
-    </p>
-
-    <h3>What a COA Does Not Automatically Prove</h3>
-
-    <p>
-      A COA does not automatically establish sterility,
-      authenticity, safety, biological activity or suitability
-      for a particular purpose unless those characteristics were
-      specifically evaluated using appropriate testing.
-    </p>
-
-  </section>
-
-
-  <!-- HPLC -->
+  <!-- ======================================
+       HPLC
+  ======================================= -->
 
   <section class="guide" id="hplc">
 
@@ -558,25 +996,30 @@
 
     <p>
       High-performance liquid chromatography, or HPLC,
-      separates components in a sample so they can be detected
-      and measured.
+      separates components of a sample so they can be
+      detected and measured.
     </p>
 
     <p>
-      HPLC is commonly used to estimate chromatographic purity.
-      Results depend on the analytical method, equipment,
+      HPLC is commonly used to evaluate chromatographic purity.
+    </p>
+
+    <p>
+      Results depend on factors such as the analytical method,
       detector, standards and sample preparation.
     </p>
 
     <div class="highlight">
-      A high HPLC purity percentage does not by itself prove
-      molecular identity, sterility or biological activity.
+      A high HPLC purity percentage does not by itself establish
+      identity, quantity, sterility or endotoxin status.
     </div>
 
   </section>
 
 
-  <!-- MASS SPEC -->
+  <!-- ======================================
+       MASS SPEC
+  ======================================= -->
 
   <section class="guide" id="mass-spec">
 
@@ -590,31 +1033,35 @@
     </p>
 
     <p>
-      It can help determine whether a sample contains material
-      consistent with an expected molecular mass.
+      In analytical research, mass spectrometry can help determine
+      whether detected material is consistent with an expected
+      molecular mass.
     </p>
 
     <p>
-      Mass spectrometry and HPLC answer different analytical questions,
-      which is why laboratories may use both methods together.
+      HPLC and mass spectrometry provide different information,
+      which is why laboratories may use both when characterizing
+      a sample.
     </p>
 
   </section>
 
 
-  <!-- WATER -->
+  <!-- ======================================
+       RESEARCH WATER
+  ======================================= -->
 
   <section class="guide" id="water">
 
     <h2>
-      💧 Sterile Water vs. Bacteriostatic Water
+      💧 Understanding Research Water Products
     </h2>
 
     <p>
-      Sterile water and bacteriostatic water are different products.
-      They can differ in composition, preservatives, packaging
-      and labeled intended use.
+      Different water products are manufactured for different
+      purposes and should not automatically be treated as interchangeable.
     </p>
+
 
     <h3>Sterile Water</h3>
 
@@ -623,50 +1070,63 @@
       preservative.
     </p>
 
+
     <h3>Bacteriostatic Water</h3>
 
     <p>
       Bacteriostatic water generally contains a preservative
-      intended to inhibit bacterial growth in accordance with
-      the product's labeled use.
+      according to its labeled formulation and intended use.
+    </p>
+
+
+    <h3>Laboratory Water</h3>
+
+    <p>
+      Laboratory environments may also use purified, deionized,
+      distilled or other grades of water depending on the
+      analytical procedure.
     </p>
 
     <div class="highlight">
-      Always read the actual product label and manufacturer
-      documentation. Do not assume different water products
+      Always read the product label and applicable manufacturer
+      documentation rather than assuming different water products
       are interchangeable.
     </div>
 
   </section>
 
 
-  <!-- ORGANIZATION -->
+  <!-- ======================================
+       ORGANIZATION
+  ======================================= -->
 
   <section class="guide" id="organization">
 
     <h2>
-      🧊 Laboratory Vial Storage & Organization
+      🧊 Research Material Storage & Organization
     </h2>
 
     <p>
-      Good organization improves traceability and reduces
-      the chance of mixing up similar-looking materials.
+      Good organization improves traceability and helps reduce
+      mix-ups between similar-looking research materials.
     </p>
 
     <ul>
       <li>Use clearly labeled containers</li>
-      <li>Keep lot and batch information</li>
-      <li>Use storage boxes or vial inserts</li>
-      <li>Separate different materials clearly</li>
+      <li>Record lot and batch information</li>
+      <li>Use appropriate storage boxes or inserts</li>
+      <li>Separate different materials</li>
       <li>Maintain inventory records</li>
       <li>Record storage requirements</li>
-      <li>Keep supplier information available</li>
+      <li>Keep testing documentation organized</li>
     </ul>
 
   </section>
 
 
-  <!-- VENDOR DUE DILIGENCE -->
+  <!-- ======================================
+       DUE DILIGENCE
+  ======================================= -->
 
   <section class="guide" id="vendors">
 
@@ -676,38 +1136,42 @@
 
     <p>
       Independent suppliers should be evaluated before relying
-      on product claims, documentation or transaction terms.
+      on product claims or analytical documentation.
     </p>
 
-    <h3>What to Review</h3>
+
+    <h3>Things Worth Reviewing</h3>
 
     <ul>
       <li>Clear contact information</li>
       <li>Product descriptions</li>
       <li>Lot or batch traceability</li>
       <li>Independent analytical documentation</li>
-      <li>Testing laboratory information</li>
+      <li>Testing laboratory identity</li>
+      <li>Report verification</li>
       <li>Shipping policies</li>
-      <li>Refund or return policies</li>
-      <li>Payment protections</li>
+      <li>Return policies</li>
       <li>Independent reputation</li>
     </ul>
+
 
     <h3>Possible Warning Signs</h3>
 
     <ul>
-      <li>Unverifiable testing documents</li>
-      <li>Claims unsupported by evidence</li>
-      <li>Pressure to send irreversible payments immediately</li>
-      <li>Changing or inconsistent contact information</li>
+      <li>Unverifiable laboratory reports</li>
+      <li>Claims not supported by the report shown</li>
+      <li>Inconsistent contact information</li>
       <li>Impersonation</li>
+      <li>Pressure to make irreversible payments</li>
       <li>Refusal to answer reasonable questions</li>
     </ul>
 
   </section>
 
 
-  <!-- TERMINOLOGY -->
+  <!-- ======================================
+       TERMINOLOGY
+  ======================================= -->
 
   <section class="guide" id="terminology">
 
@@ -715,34 +1179,46 @@
       📖 Research Terminology
     </h2>
 
+
+    <h3>COA</h3>
+
+    <p>
+      Certificate of Analysis — a document reporting analytical
+      results associated with a sample, lot or batch.
+    </p>
+
+
     <h3>Lyophilized</h3>
 
     <p>
-      Freeze-dried material produced by removing water
-      under controlled conditions.
+      Freeze-dried material produced by removing water under
+      controlled conditions.
     </p>
+
 
     <h3>Purity</h3>
 
     <p>
-      A measurement describing how much detected material
-      corresponds to a particular analytical component under
-      the method being used.
+      A measurement describing analytical composition under
+      the particular testing method used.
     </p>
+
 
     <h3>Assay</h3>
 
     <p>
-      A test used to measure the amount, activity or another
-      characteristic of a substance.
+      A test used to measure an amount, activity or another
+      characteristic of a material.
     </p>
+
 
     <h3>Lot / Batch</h3>
 
     <p>
-      An identifier linking a material to a particular
+      An identifier used to associate material with a particular
       production or processing group.
     </p>
+
 
     <h3>Molecular Weight</h3>
 
@@ -750,24 +1226,37 @@
       The calculated or measured mass associated with a molecule.
     </p>
 
+
     <h3>Identity Testing</h3>
 
     <p>
-      Testing intended to determine whether a sample is
-      consistent with the material it is claimed to contain.
+      Analytical testing intended to determine whether a sample
+      is consistent with the material it is claimed to contain.
     </p>
 
-    <h3>Analytical Method</h3>
+
+    <h3>Sterility Testing</h3>
 
     <p>
-      The specific testing procedure used by a laboratory
-      to evaluate a sample.
+      Testing designed to evaluate the presence or absence
+      of viable contaminating microorganisms under the
+      specified test conditions.
+    </p>
+
+
+    <h3>Endotoxin Testing</h3>
+
+    <p>
+      Testing used to evaluate bacterial endotoxin according
+      to the analytical method being performed.
     </p>
 
   </section>
 
 
-  <!-- SHARPS -->
+  <!-- ======================================
+       SHARPS
+  ======================================= -->
 
   <section class="guide" id="sharps">
 
@@ -776,46 +1265,39 @@
     </h2>
 
     <p>
-      Used needles and other sharps should be placed into
-      an appropriate sharps container rather than discarded
-      loosely into household trash.
+      Used needles and other sharps should be handled using
+      appropriate sharps-disposal practices.
     </p>
-
-    <p>
-      Sharps containers are designed to reduce accidental
-      punctures and unsafe handling.
-    </p>
-
-    <h3>General Principles</h3>
 
     <ul>
       <li>Use a puncture-resistant sharps container</li>
       <li>Do not overfill the container</li>
-      <li>Keep the container upright when possible</li>
-      <li>Keep it away from children and pets</li>
-      <li>Follow local disposal requirements</li>
+      <li>Keep the container secure and upright when possible</li>
+      <li>Keep sharps away from children and pets</li>
+      <li>Follow applicable local disposal requirements</li>
     </ul>
 
     <p>
-      Disposal rules vary by location, so current local
-      guidance or an authorized disposal program should
-      be used.
+      Disposal requirements vary by location, so current local
+      guidance or an authorized disposal program should be used.
     </p>
 
   </section>
 
 
-  <!-- PEPTIDE LIBRARY -->
+  <!-- ======================================
+       PEPTIDE LIBRARY
+  ======================================= -->
 
   <section class="peptide-link">
 
     <h2>
-      🧬 Looking for Peptide Research?
+      🧬 Looking for Peptide-Specific Research?
     </h2>
 
     <p>
-      Peptide-specific information has been moved to its own
-      separate library.
+      Compound-specific resources are maintained separately
+      from the general laboratory education library.
     </p>
 
     <a
@@ -829,9 +1311,11 @@
   </section>
 
 
+  <!-- FOOTER -->
+
   <footer>
 
-    🌶️ Peppers Research Hub
+    © 2026 Peppers Research Hub
 
     <br>
 
@@ -839,14 +1323,32 @@
 
     <br><br>
 
+    <a href="about.html">
+      About
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="privacy.html">
+      Privacy Policy
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="terms.html">
+      Terms &amp; Disclaimer
+    </a>
+
+    <br><br>
+
     <a href="peptide-research.html">
-      🧬 Peptide Research Library
+      Peptide Research Library
     </a>
 
     &nbsp; • &nbsp;
 
     <a href="index.html">
-      ← Main Hub
+      Main Hub
     </a>
 
   </footer>
