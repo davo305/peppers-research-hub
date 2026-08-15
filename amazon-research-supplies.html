@@ -9,10 +9,11 @@
 
   <meta
     name="description"
-    content="Amazon research supply recommendations from Peppers Research Hub."
+    content="Amazon research storage, organization, laboratory and supply resources from Peppers Research Hub."
   >
 
   <style>
+
     * {
       box-sizing: border-box;
     }
@@ -26,17 +27,17 @@
       font-family: Arial, Helvetica, sans-serif;
 
       background:
-        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
-        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
+        radial-gradient(circle at 20% 10%, #201405 0%, transparent 32%),
+        radial-gradient(circle at 80% 45%, #08251c 0%, transparent 35%),
         linear-gradient(180deg, #06090f, #090d12);
 
       color: white;
       min-height: 100vh;
-      line-height: 1.65;
+      line-height: 1.6;
     }
 
     .page {
-      max-width: 960px;
+      max-width: 920px;
       margin: auto;
       padding: 25px 18px 70px;
     }
@@ -52,160 +53,112 @@
       font-weight: bold;
     }
 
+    .header {
+      margin-bottom: 25px;
+    }
+
     h1 {
-      font-size: 40px;
+      font-size: 38px;
       margin: 0 0 8px;
-      line-height: 1.1;
+      line-height: 1.15;
     }
 
     .subtitle {
       color: #aeb8c4;
-      margin: 0 0 28px;
+      margin: 0;
       font-size: 17px;
     }
 
-    .affiliate-disclosure {
+    .disclosure {
       border-left: 5px solid #ff9900;
-      background: rgba(110,70,0,.22);
-      padding: 20px;
-      border-radius: 12px;
-      margin-bottom: 20px;
+      background: rgba(100,60,0,.20);
+      padding: 18px;
+      border-radius: 10px;
+      margin: 25px 0 35px;
       color: #ffe0a3;
     }
 
-    .affiliate-disclosure strong {
+    .disclosure strong {
       color: #ffbd55;
     }
 
-    .notice {
-      border-left: 5px solid #168bd2;
-      background: rgba(5,44,80,.25);
-      padding: 18px;
-      border-radius: 10px;
-      margin-bottom: 35px;
-      color: #c8d9e8;
+    .supply-number {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 5px 10px;
+      border-radius: 999px;
+
+      background: rgba(255,153,0,.14);
+      border: 1px solid rgba(255,153,0,.35);
+
+      color: #ffbd55;
+      font-size: 12px;
+      font-weight: 900;
     }
 
-    .section-title {
-      font-size: 29px;
-      margin: 40px 0 8px;
-    }
-
-    .section-subtitle {
-      color: #9ea9b4;
-      margin: 0 0 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 18px;
-    }
-
-    .product-card {
+    .item {
       background: rgba(18,23,29,.96);
-      border: 1px solid #35414b;
+      border: 1px solid #303a43;
       border-radius: 18px;
       padding: 22px;
+      margin-bottom: 18px;
 
       box-shadow:
         0 12px 30px rgba(0,0,0,.30);
-
-      display: flex;
-      flex-direction: column;
     }
 
-    .product-card h2 {
-      margin: 0 0 8px;
-      font-size: 21px;
+    .item h2 {
+      margin: 0 0 6px;
+      font-size: 23px;
+      line-height: 1.25;
     }
 
-    .amazon-badge {
+    .supplier {
       display: inline-block;
-      width: fit-content;
-
-      background: rgba(255,153,0,.13);
       color: #ffbd55;
-
-      border: 1px solid rgba(255,153,0,.35);
-
-      padding: 6px 11px;
-      border-radius: 999px;
-
-      font-size: 12px;
+      font-size: 13px;
       font-weight: bold;
-
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
-    .product-card p {
+    .item p {
       color: #c4cbd2;
-      flex: 1;
+      margin: 7px 0;
     }
 
-    .paid-link {
-      margin: 12px 0;
-      padding: 11px 12px;
-
-      background: rgba(80,45,5,.18);
-
+    .reminder {
+      margin: 16px 0;
+      padding: 12px 13px;
+      background: rgba(90,60,10,.16);
       border-radius: 9px;
-
       color: #d2b873;
-
       font-size: 12px;
     }
 
-    .amazon-button {
+    .button {
       display: block;
-
-      margin-top: 8px;
-
+      width: 100%;
       padding: 14px 18px;
-
       border-radius: 11px;
-
-      background: #258044;
-
+      background: #e58200;
       color: white;
-
-      text-align: center;
       text-decoration: none;
-
+      text-align: center;
       font-weight: 900;
-
       transition: .2s ease;
     }
 
-    .amazon-button:hover {
+    .button:hover {
       transform: translateY(-2px);
-    }
-
-    .bottom-note {
-      margin-top: 40px;
-
-      padding: 20px;
-
-      border-left: 5px solid #e09a2c;
-
-      background: rgba(80,45,5,.20);
-
-      border-radius: 10px;
-
-      color: #e6d8bd;
+      background: #f18c00;
     }
 
     footer {
       margin-top: 55px;
-
       padding-top: 30px;
-
       border-top: 1px solid #28313a;
-
       text-align: center;
-
       color: #7f8a94;
-
       font-size: 13px;
     }
 
@@ -214,25 +167,26 @@
       text-decoration: none;
     }
 
-    @media (max-width: 700px) {
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 600px) {
 
       .page {
         padding: 20px 15px 55px;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 33px;
       }
 
-      .product-card {
-        padding: 20px;
+      .item {
+        padding: 19px;
+      }
+
+      .item h2 {
+        font-size: 21px;
       }
 
     }
+
   </style>
 </head>
 
@@ -250,17 +204,20 @@
   </a>
 
 
-  <h1>
-    🛒 Amazon Research Supplies
-  </h1>
+  <header class="header">
 
-  <p class="subtitle">
-    Amazon product links for storage, organization
-    and general research-supply convenience.
-  </p>
+    <h1>
+      🛒 Amazon Research Supplies
+    </h1>
+
+    <p class="subtitle">
+      Selected storage, organization, laboratory and research-support supplies.
+    </p>
+
+  </header>
 
 
-  <div class="affiliate-disclosure">
+  <div class="disclosure">
 
     <strong>
       Affiliate Disclosure
@@ -270,594 +227,638 @@
 
     As an Amazon Associate I earn from qualifying purchases.
 
-    Some links on this page are affiliate links, which means
-    Peppers Research Hub may earn a commission from qualifying
-    purchases at no additional cost to you.
-
-  </div>
-
-
-  <div class="notice">
-
-    <strong>
-      🔬 Research Supply Notice
-    </strong>
-
-    <br><br>
-
-    Products listed here are independent third-party retail
-    products available through Amazon.
-
-    Peppers Research Hub does not manufacture these products.
-
-    Review product dimensions, specifications, compatibility,
-    seller information and current product details before purchasing.
-
-  </div>
-
-
-  <h2 class="section-title">
-    📦 Amazon Research Supply Directory
-  </h2>
-
-  <p class="section-subtitle">
-    Product names can be updated as the supply directory grows.
-  </p>
-
-
-  <div class="grid">
-
-
-    <!-- 1 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        📦 Amazon Research Supply #1
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/45yDsxA"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 2 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧪 Amazon Research Supply #2
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/3TZwMGd"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 3 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🔬 Amazon Research Supply #3
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4bQboJJ"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 4 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧊 Amazon Research Supply #4
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/3S59Zbv"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 5 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        📦 Amazon Research Supply #5
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/3SeSLZ7"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 6 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧪 Amazon Research Supply #6
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4gfY0jt"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 7 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🔬 Amazon Research Supply #7
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4gzjxVu"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 8 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        📦 Amazon Research Supply #8
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4qmZCMT"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 9 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧊 Amazon Research Supply #9
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4ic7A9n"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 10 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🔬 Amazon Research Supply #10
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4xA865I"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 11 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        📦 Amazon Research Supply #11
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4x71YSA"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 12 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧪 Amazon Research Supply #12
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4zgzLu0"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 13 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🔬 Amazon Research Supply #13
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4xdgfwU"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 14 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🧊 Amazon Research Supply #14
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4x4aB0h"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 15 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        📦 Amazon Research Supply #15
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/4xJAEd3"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-
-    <!-- 16 -->
-
-    <div class="product-card">
-
-      <span class="amazon-badge">
-        AMAZON • PAID LINK
-      </span>
-
-      <h2>
-        🔬 Amazon Research Supply #16
-      </h2>
-
-      <p>
-        Research storage, organization or laboratory-support product.
-      </p>
-
-      <div class="paid-link">
-        #CommissionsEarned
-      </div>
-
-      <a
-        class="amazon-button"
-        href="https://amzn.to/3RVHw81"
-        target="_blank"
-        rel="noopener noreferrer sponsored">
-
-        View on Amazon
-
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="bottom-note">
-
-    <strong>
-      ⚠️ Product Selection Reminder
-    </strong>
-
-    <br><br>
-
-    Check current Amazon product descriptions, dimensions,
-    materials, compatibility, seller information and reviews
+    Product prices, availability, specifications and seller
+    information may change. Always review the Amazon listing
     before purchasing.
 
-    Product availability and specifications may change over time.
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 1
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 1
+    </span>
+
+    <h2>
+      💉 0.5 mL Syringes
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      0.5 mL syringes with 31G, 5/16-inch needles,
+      individually wrapped in a 100-count package.
+    </p>
+
+    <div class="reminder">
+      Review gauge, capacity, needle length, packaging
+      and product specifications before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4zgzLu0"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View 0.5 mL Syringes
+
+    </a>
 
   </div>
 
+
+
+  <!-- =========================
+       SUPPLY 2
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 2
+    </span>
+
+    <h2>
+      🧼 Alcohol Prep Pads
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      MED PRIDE sterile alcohol prep pads with
+      70% isopropyl alcohol, 200-count package.
+    </p>
+
+    <div class="reminder">
+      Review packaging and manufacturer information before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/3RVHw81"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Alcohol Prep Pads
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 3
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 3
+    </span>
+
+    <h2>
+      🧊 Hydrapeak Vial Storage
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Hydrapeak 25 oz insulated stainless steel container
+      commonly used as a compact vial storage container.
+    </p>
+
+    <div class="reminder">
+      Review dimensions and compatibility with your storage setup.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/45yDsxA"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Hydrapeak Storage
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 4
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 4
+    </span>
+
+    <h2>
+      🧊 42-Vial Storage Insert
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      EVA 3 mL vial storage insert designed for compatible
+      Hydrapeak containers with storage for up to 42 vials.
+    </p>
+
+    <div class="reminder">
+      Verify vial size and Hydrapeak compatibility before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4xJAEd3"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View 42-Vial Insert
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 5
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 5
+    </span>
+
+    <h2>
+      💉 3 mL Luer Lock Syringes
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      50-pack of individually packaged 3 mL
+      Luer Lock syringes with 23G needles.
+    </p>
+
+    <div class="reminder">
+      Review capacity, needle specifications
+      and product information before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4xdgfwU"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View 3 mL Syringes
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 6
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 6
+    </span>
+
+    <h2>
+      🔬 0.22 μm Syringe Filters
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Sterile 13 mm PES syringe filters with
+      a 0.22 μm pore size, individually packaged.
+    </p>
+
+    <div class="reminder">
+      Review membrane compatibility, pore size
+      and manufacturer specifications before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4x4aB0h"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Syringe Filters
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 7
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 7
+    </span>
+
+    <h2>
+      🧪 5 mL Sterile Vials
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Ks-Tek 5 mL sterile empty vials with
+      self-healing ports and flip-off aluminum caps.
+    </p>
+
+    <div class="reminder">
+      Review packaging and manufacturer specifications before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4gzjxVu"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View 5 mL Sterile Vials
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 8
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 8
+    </span>
+
+    <h2>
+      🧪 3 mL Sterile Vials
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Ks-Tek 3 mL sterile empty vials with
+      self-healing ports and flip-off aluminum caps.
+    </p>
+
+    <div class="reminder">
+      Review packaging and manufacturer specifications before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4qmZCMT"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View 3 mL Sterile Vials
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 9
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 9
+    </span>
+
+    <h2>
+      🧪 Silicone Vial Holder
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Silicone vial holder designed for compatible
+      Hydrapeak containers and 3 mL vials.
+    </p>
+
+    <div class="reminder">
+      Verify vial and container dimensions before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4x71YSA"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Silicone Vial Holder
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 10
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 10
+    </span>
+
+    <h2>
+      🧊 Vial Storage Set
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Abode 3 mL vial storage set designed for
+      compatible Hydrapeak insulated containers.
+    </p>
+
+    <div class="reminder">
+      Verify vial and container compatibility before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4ic7A9n"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Vial Storage Set
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 11
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 11
+    </span>
+
+    <h2>
+      💊 Pill Organizer
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      AUVON weekly AM/PM pill organizer with
+      large-opening compartments.
+    </p>
+
+    <div class="reminder">
+      Review dimensions and product specifications before purchasing.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/3TZwMGd"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Pill Organizer
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 12
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 12
+    </span>
+
+    <h2>
+      ❄️ Shipping Cold Packs
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Cold packs for insulated shipping,
+      coolers and temperature-sensitive packages.
+    </p>
+
+    <div class="reminder">
+      Review preparation instructions and temperature requirements.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4bQboJJ"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Shipping Cold Packs
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 13
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 13
+    </span>
+
+    <h2>
+      🧊 Reusable Gel Ice Packs
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      ICE-BRIX compact reusable gel ice packs for
+      insulated shipping containers and small coolers.
+    </p>
+
+    <div class="reminder">
+      Review pack dimensions and temperature requirements before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/3S59Zbv"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Gel Ice Packs
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 14
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 14
+    </span>
+
+    <h2>
+      👃 Nasal Spray Bottles
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Refillable 30 mL glass fine-mist spray bottles
+      with funnels and labels.
+    </p>
+
+    <div class="reminder">
+      Review materials, capacity and intended application before use.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4gfY0jt"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Spray Bottles
+
+    </a>
+
+  </div>
+
+
+
+  <!-- =========================
+       SUPPLY 15
+  ========================== -->
+
+  <div class="item">
+
+    <span class="supply-number">
+      SUPPLY 15
+    </span>
+
+    <h2>
+      🧳 Medication Travel Cooler
+    </h2>
+
+    <span class="supplier">
+      Amazon • Affiliate Link
+    </span>
+
+    <p>
+      Insulated medication travel bag with two
+      TSA-approved ice packs and storage for compatible pens.
+    </p>
+
+    <div class="reminder">
+      Review dimensions, airline requirements and product
+      storage specifications before travel.
+    </div>
+
+    <a
+      class="button"
+      href="https://amzn.to/4xA865I"
+      target="_blank"
+      rel="noopener noreferrer sponsored">
+
+      View Travel Cooler
+
+    </a>
+
+  </div>
+
+
+
+  <!-- FOOTER -->
 
   <footer>
 
-    © 2026 Peppers Research Hub
+    🌶️ Peppers Research Hub
 
     <br>
 
@@ -865,26 +866,30 @@
 
     <br><br>
 
+    As an Amazon Associate I earn from qualifying purchases.
+
+    <br><br>
+
     <a href="research-supplies.html">
-      Research Supplies
+      ← Research Supplies
     </a>
 
     &nbsp; • &nbsp;
 
     <a href="privacy.html">
-      Privacy Policy
+      Privacy
     </a>
 
     &nbsp; • &nbsp;
 
     <a href="terms.html">
-      Terms &amp; Disclaimer
+      Terms
     </a>
 
-    <br><br>
+    &nbsp; • &nbsp;
 
     <a href="index.html">
-      Main Hub
+      Home
     </a>
 
   </footer>
