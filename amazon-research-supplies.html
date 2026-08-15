@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Amazon Research Supplies | Peppers Research Hub</title>
+
+  <meta
+    name="description"
+    content="Amazon research supply recommendations from Peppers Research Hub."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+
+      background:
+        radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
+        linear-gradient(180deg, #06090f, #090d12);
+
+      color: white;
+      min-height: 100vh;
+      line-height: 1.65;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: auto;
+      padding: 25px 18px 70px;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      padding: 11px 16px;
+      border-radius: 10px;
+      background: #168bd2;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin: 0 0 8px;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      color: #aeb8c4;
+      margin: 0 0 28px;
+      font-size: 17px;
+    }
+
+    .affiliate-disclosure {
+      border-left: 5px solid #ff9900;
+      background: rgba(110,70,0,.22);
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      color: #ffe0a3;
+    }
+
+    .affiliate-disclosure strong {
+      color: #ffbd55;
+    }
+
+    .notice {
+      border-left: 5px solid #168bd2;
+      background: rgba(5,44,80,.25);
+      padding: 18px;
+      border-radius: 10px;
+      margin-bottom: 35px;
+      color: #c8d9e8;
+    }
+
+    .section-title {
+      font-size: 29px;
+      margin: 40px 0 8px;
+    }
+
+    .section-subtitle {
+      color: #9ea9b4;
+      margin: 0 0 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .product-card {
+      background: rgba(18,23,29,.96);
+      border: 1px solid #35414b;
+      border-radius: 18px;
+      padding: 22px;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.30);
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card h2 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .amazon-badge {
+      display: inline-block;
+      width: fit-content;
+
+      background: rgba(255,153,0,.13);
+      color: #ffbd55;
+
+      border: 1px solid rgba(255,153,0,.35);
+
+      padding: 6px 11px;
+      border-radius: 999px;
+
+      font-size: 12px;
+      font-weight: bold;
+
+      margin-bottom: 12px;
+    }
+
+    .product-card p {
+      color: #c4cbd2;
+      flex: 1;
+    }
+
+    .paid-link {
+      margin: 12px 0;
+      padding: 11px 12px;
+
+      background: rgba(80,45,5,.18);
+
+      border-radius: 9px;
+
+      color: #d2b873;
+
+      font-size: 12px;
+    }
+
+    .amazon-button {
+      display: block;
+
+      margin-top: 8px;
+
+      padding: 14px 18px;
+
+      border-radius: 11px;
+
+      background: #258044;
+
+      color: white;
+
+      text-align: center;
+      text-decoration: none;
+
+      font-weight: 900;
+
+      transition: .2s ease;
+    }
+
+    .amazon-button:hover {
+      transform: translateY(-2px);
+    }
+
+    .bottom-note {
+      margin-top: 40px;
+
+      padding: 20px;
+
+      border-left: 5px solid #e09a2c;
+
+      background: rgba(80,45,5,.20);
+
+      border-radius: 10px;
+
+      color: #e6d8bd;
+    }
+
+    footer {
+      margin-top: 55px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid #28313a;
+
+      text-align: center;
+
+      color: #7f8a94;
+
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+    @media (max-width: 700px) {
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .page {
+        padding: 20px 15px 55px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .product-card {
+        padding: 20px;
+      }
+
+    }
+  </style>
+</head>
+
+
+<body>
+
+<main class="page">
+
+  <a
+    class="back"
+    href="research-supplies.html">
+
+    ← Back to Research Supplies
+
+  </a>
+
+
+  <h1>
+    🛒 Amazon Research Supplies
+  </h1>
+
+  <p class="subtitle">
+    Amazon product links for storage, organization
+    and general research-supply convenience.
+  </p>
+
+
+  <div class="affiliate-disclosure">
+
+    <strong>
+      Affiliate Disclosure
+    </strong>
+
+    <br><br>
+
+    As an Amazon Associate I earn from qualifying purchases.
+
+    Some links on this page are affiliate links, which means
+    Peppers Research Hub may earn a commission from qualifying
+    purchases at no additional cost to you.
+
+  </div>
+
+
+  <div class="notice">
+
+    <strong>
+      🔬 Research Supply Notice
+    </strong>
+
+    <br><br>
+
+    Products listed here are independent third-party retail
+    products available through Amazon.
+
+    Peppers Research Hub does not manufacture these products.
+
+    Review product dimensions, specifications, compatibility,
+    seller information and current product details before purchasing.
+
+  </div>
+
+
+  <h2 class="section-title">
+    📦 Amazon Research Supply Directory
+  </h2>
+
+  <p class="section-subtitle">
+    Product names can be updated as the supply directory grows.
+  </p>
+
+
+  <div class="grid">
+
+
+    <!-- 1 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        📦 Amazon Research Supply #1
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/45yDsxA"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 2 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧪 Amazon Research Supply #2
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/3TZwMGd"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 3 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🔬 Amazon Research Supply #3
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4bQboJJ"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 4 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧊 Amazon Research Supply #4
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/3S59Zbv"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 5 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        📦 Amazon Research Supply #5
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/3SeSLZ7"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 6 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧪 Amazon Research Supply #6
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4gfY0jt"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 7 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🔬 Amazon Research Supply #7
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4gzjxVu"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 8 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        📦 Amazon Research Supply #8
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4qmZCMT"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 9 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧊 Amazon Research Supply #9
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4ic7A9n"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 10 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🔬 Amazon Research Supply #10
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4xA865I"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 11 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        📦 Amazon Research Supply #11
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4x71YSA"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 12 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧪 Amazon Research Supply #12
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4zgzLu0"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 13 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🔬 Amazon Research Supply #13
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4xdgfwU"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 14 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🧊 Amazon Research Supply #14
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4x4aB0h"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 15 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        📦 Amazon Research Supply #15
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/4xJAEd3"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+
+    <!-- 16 -->
+
+    <div class="product-card">
+
+      <span class="amazon-badge">
+        AMAZON • PAID LINK
+      </span>
+
+      <h2>
+        🔬 Amazon Research Supply #16
+      </h2>
+
+      <p>
+        Research storage, organization or laboratory-support product.
+      </p>
+
+      <div class="paid-link">
+        #CommissionsEarned
+      </div>
+
+      <a
+        class="amazon-button"
+        href="https://amzn.to/3RVHw81"
+        target="_blank"
+        rel="noopener noreferrer sponsored">
+
+        View on Amazon
+
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <div class="bottom-note">
+
+    <strong>
+      ⚠️ Product Selection Reminder
+    </strong>
+
+    <br><br>
+
+    Check current Amazon product descriptions, dimensions,
+    materials, compatibility, seller information and reviews
+    before purchasing.
+
+    Product availability and specifications may change over time.
+
+  </div>
+
+
+  <footer>
+
+    © 2026 Peppers Research Hub
+
+    <br>
+
+    Research • Education • Community
+
+    <br><br>
+
+    <a href="research-supplies.html">
+      Research Supplies
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="privacy.html">
+      Privacy Policy
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="terms.html">
+      Terms &amp; Disclaimer
+    </a>
+
+    <br><br>
+
+    <a href="index.html">
+      Main Hub
+    </a>
+
+  </footer>
+
+</main>
+
+</body>
+</html>
