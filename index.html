@@ -7,6 +7,11 @@
 
   <title>Peppers Research Hub</title>
 
+  <meta
+    name="description"
+    content="Official home of the Pepper Collective community. Research, education, information sharing and community updates."
+  >
+
   <style>
     * {
       box-sizing: border-box;
@@ -19,12 +24,12 @@
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      color: white;
-      line-height: 1.6;
       background:
         radial-gradient(circle at 20% 10%, #071b2b 0%, transparent 35%),
         radial-gradient(circle at 80% 35%, #20102b 0%, transparent 35%),
-        linear-gradient(180deg, #02060c, #05090f 50%, #020508);
+        linear-gradient(180deg, #06090f 0%, #090d12 100%);
+      color: white;
+      line-height: 1.6;
       overflow-x: hidden;
     }
 
@@ -32,227 +37,124 @@
       color: inherit;
     }
 
-    body::before {
-      content: "";
+    /* =========================
+       FLOATING SCIENCE BACKGROUND
+    ========================== */
+
+    .science-background {
       position: fixed;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(0,180,255,.025) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,180,255,.025) 1px, transparent 1px);
-      background-size: 45px 45px;
+      overflow: hidden;
       pointer-events: none;
       z-index: 0;
     }
 
-    .page {
-      position: relative;
-      z-index: 5;
-    }
-
-    /* FLOATING LAB ELEMENTS */
-
-    .lab-background {
-      position: fixed;
-      inset: 0;
-      overflow: hidden;
-      pointer-events: none;
-      z-index: 1;
-    }
-
     .float-item {
       position: absolute;
-      opacity: .12;
+      opacity: 0.10;
       user-select: none;
+      filter: drop-shadow(0 0 10px rgba(0, 200, 255, .5));
     }
 
-    .syringe {
-      font-size: 44px;
-      animation: floatSyringe 10s ease-in-out infinite;
-      filter: drop-shadow(0 0 8px rgba(0,200,255,.55));
-    }
-
-    .molecule {
-      font-size: 34px;
-      animation: moleculeMove 12s ease-in-out infinite;
-    }
-
-    .pepper-float {
+    .float1 {
       font-size: 42px;
-      animation: pepperMove 9s ease-in-out infinite;
-      filter: drop-shadow(0 0 9px rgba(255,20,20,.45));
+      left: 5%;
+      top: 18%;
+      animation: floatOne 11s ease-in-out infinite;
     }
 
-    .vial {
-      position: absolute;
-      width: 34px;
-      height: 72px;
-      border: 2px solid rgba(100,210,255,.7);
-      border-radius: 8px 8px 14px 14px;
-      background:
-        linear-gradient(
-          to top,
-          rgba(0,190,255,.25) 0 38%,
-          rgba(255,255,255,.05) 38%
-        );
-      box-shadow:
-        0 0 12px rgba(0,190,255,.35),
-        inset 0 0 12px rgba(0,190,255,.14);
-      opacity: .28;
-      animation: floatVial 9s ease-in-out infinite;
+    .float2 {
+      font-size: 38px;
+      right: 7%;
+      top: 28%;
+      animation: floatTwo 14s ease-in-out infinite;
     }
 
-    .vial::before {
-      content: "";
-      position: absolute;
-      top: -15px;
-      left: 4px;
-      width: 24px;
-      height: 14px;
-      background: #384652;
-      border-radius: 3px;
-      border: 1px solid #8ca2b1;
+    .float3 {
+      font-size: 45px;
+      left: 12%;
+      top: 65%;
+      animation: floatTwo 16s ease-in-out infinite;
     }
 
-    .vial::after {
-      content: "LAB";
-      position: absolute;
-      top: 27px;
-      left: 4px;
-      width: 24px;
-      text-align: center;
-      font-size: 7px;
-      padding: 2px 0;
-      background: rgba(255,255,255,.82);
-      color: #111;
-      border-radius: 2px;
+    .float4 {
+      font-size: 35px;
+      right: 12%;
+      top: 78%;
+      animation: floatOne 13s ease-in-out infinite;
     }
 
-    .vial1 { top: 15%; left: 3%; }
-    .vial2 { top: 43%; right: 4%; animation-delay: -2s; }
-    .vial3 { top: 74%; left: 6%; animation-delay: -5s; }
-
-    .syringe1 { top: 28%; right: 7%; }
-    .syringe2 { top: 62%; left: 4%; animation-delay: -4s; }
-
-    .molecule1 { top: 20%; left: 14%; }
-    .molecule2 { top: 55%; right: 15%; animation-delay: -5s; }
-
-    .pepper1 { top: 34%; left: 7%; }
-    .pepper2 { top: 70%; right: 6%; animation-delay: -5s; }
-
-    @keyframes floatVial {
-      0%, 100% {
-        transform: translateY(0) rotate(-7deg);
-      }
-      50% {
-        transform: translateY(-28px) rotate(7deg);
-      }
+    .float5 {
+      font-size: 34px;
+      left: 48%;
+      top: 48%;
+      animation: floatThree 18s linear infinite;
     }
 
-    @keyframes floatSyringe {
-      0%, 100% {
-        transform: translateY(0) rotate(-24deg);
-      }
-      50% {
-        transform: translateY(26px) rotate(-10deg);
-      }
-    }
-
-    @keyframes moleculeMove {
-      0%, 100% {
-        transform: translate(0,0) rotate(0deg);
-      }
-      50% {
-        transform: translate(18px,-24px) rotate(45deg);
-      }
-    }
-
-    @keyframes pepperMove {
+    @keyframes floatOne {
       0%, 100% {
         transform: translateY(0) rotate(-8deg);
       }
+
       50% {
-        transform: translateY(-22px) rotate(10deg);
+        transform: translateY(-45px) rotate(8deg);
       }
     }
 
-    /* NAV */
+    @keyframes floatTwo {
+      0%, 100% {
+        transform: translateY(0) translateX(0) rotate(8deg);
+      }
 
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      background: rgba(2,6,12,.90);
-      backdrop-filter: blur(14px);
-      border-bottom: 1px solid rgba(0,180,255,.23);
+      50% {
+        transform: translateY(35px) translateX(-25px) rotate(-8deg);
+      }
     }
 
-    .nav-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 12px 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
+    @keyframes floatThree {
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
 
-    .logo {
-      font-weight: 900;
-      font-size: 17px;
-      white-space: nowrap;
+    .page {
+      position: relative;
+      z-index: 2;
     }
 
-    .logo span {
-      color: #ff2e2e;
-    }
-
-    .nav-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 13px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #ddd;
-    }
-
-    .nav-links a:hover {
-      color: #00c8ff;
-    }
-
-    /* HERO */
+    /* =========================
+       HERO
+    ========================== */
 
     .hero {
-      min-height: 88vh;
       position: relative;
+      min-height: 92vh;
       display: flex;
       align-items: flex-end;
       justify-content: center;
       text-align: center;
-      padding: 70px 20px 58px;
+      padding: 55px 20px;
+
       background:
         linear-gradient(
-          rgba(0,0,0,.15),
-          rgba(0,0,0,.84)
+          to bottom,
+          rgba(0, 0, 0, 0.10),
+          rgba(0, 0, 0, 0.30) 45%,
+          rgba(0, 0, 0, 0.92) 100%
         ),
-        url('peppers-lab-hero.png')
-        center / cover no-repeat;
-      overflow: hidden;
+        url('peppers-lab-hero.jpg')
+        center center / cover no-repeat;
     }
 
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(
-          circle at center,
-          transparent 20%,
-          rgba(0,0,0,.48) 100%
-        );
+      box-shadow: inset 0 -100px 100px rgba(0,0,0,.7);
       pointer-events: none;
     }
 
@@ -261,481 +163,419 @@
       z-index: 2;
       width: 100%;
       max-width: 900px;
-      animation: heroEnter 1s ease;
     }
 
-    @keyframes heroEnter {
-      from {
-        opacity: 0;
-        transform: translateY(35px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .brand {
+    .brand-badge {
       display: inline-block;
-      background: rgba(5,8,15,.84);
-      border: 1px solid rgba(0,210,255,.42);
-      border-radius: 999px;
       padding: 8px 17px;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .75);
+      border: 1px solid rgba(255,255,255,.25);
+      backdrop-filter: blur(8px);
       font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      box-shadow: 0 0 18px rgba(0,190,255,.15);
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      margin-bottom: 15px;
     }
 
-    .hero h1 {
-      margin: 17px 0 8px;
-      font-size: clamp(45px,10vw,82px);
-      line-height: .96;
-      text-transform: uppercase;
-      font-weight: 900;
+    h1 {
+      margin: 0;
+      font-size: clamp(43px, 10vw, 78px);
+      line-height: .98;
       text-shadow: 0 5px 20px #000;
     }
 
-    .hero h1 span {
-      display: block;
-      color: #ff2525;
-      font-size: .63em;
-      font-style: italic;
-      margin-top: 6px;
-      text-shadow: 0 0 20px rgba(255,25,25,.42);
-    }
-
     .tagline {
-      font-size: 19px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #eee;
+      margin: 17px 0 26px;
+      font-size: 20px;
+      font-weight: 600;
+      text-shadow: 0 3px 10px #000;
     }
 
-    .hero-buttons {
+    .buttons {
       display: flex;
       justify-content: center;
+      gap: 12px;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 28px;
     }
-
-    /* BUTTONS */
 
     .btn {
       display: inline-block;
-      padding: 14px 23px;
-      border-radius: 9px;
+      padding: 14px 22px;
+      border-radius: 12px;
+      background: #e52b2b;
+      color: white;
       text-decoration: none;
       font-weight: 800;
-      color: white;
-      transition: .22s;
-      cursor: pointer;
-    }
-
-    .btn-red {
-      background: linear-gradient(180deg,#ff3434,#c90f17);
-      border: 1px solid #ff5353;
-      box-shadow: 0 0 22px rgba(255,35,35,.28);
-    }
-
-    .btn-blue {
-      background: linear-gradient(180deg,#0d6b9f,#07324e);
-      border: 1px solid #42c6ff;
-      box-shadow: 0 0 20px rgba(0,180,255,.20);
-    }
-
-    .btn-orange {
-      background: linear-gradient(180deg,#e79a20,#a75805);
-      border: 1px solid #ffc25c;
-      box-shadow: 0 0 20px rgba(255,145,0,.20);
+      box-shadow: 0 7px 20px rgba(229,43,43,.25);
+      transition: .2s ease;
     }
 
     .btn:hover {
-      transform: translateY(-3px) scale(1.01);
+      transform: translateY(-3px);
     }
 
-    /* CONTENT */
+    .btn-green {
+      background: #258044;
+      box-shadow: 0 7px 20px rgba(37,128,68,.25);
+    }
+
+    .btn-blue {
+      background: #168bd2;
+      box-shadow: 0 7px 20px rgba(22,139,210,.25);
+    }
+
+    /* =========================
+       SECTIONS
+    ========================== */
 
     .section {
-      max-width: 1030px;
+      max-width: 960px;
       margin: auto;
-      padding: 50px 18px;
+      padding: 48px 20px;
     }
 
     .section-title {
       margin: 0 0 18px;
       font-size: 30px;
-      font-weight: 900;
-      text-transform: uppercase;
+      line-height: 1.2;
     }
 
-    .section-title span {
-      color: #ff2828;
+    .section-subtitle {
+      color: #aeb8c4;
+      margin-top: -8px;
+      margin-bottom: 22px;
     }
 
     .card {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(5,19,32,.94),
-          rgba(5,10,17,.97)
-        );
-      border: 1px solid rgba(0,190,255,.45);
-      border-radius: 15px;
+      background: rgba(18, 23, 29, .92);
+      border: 1px solid #29323b;
+      border-radius: 20px;
       padding: 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 14px 35px rgba(0,0,0,.30);
+      backdrop-filter: blur(8px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .highlight-card {
+      border: 1px solid rgba(229,43,43,.5);
       box-shadow:
-        0 0 24px rgba(0,170,255,.08),
-        inset 0 0 20px rgba(255,255,255,.015);
-      backdrop-filter: blur(10px);
+        0 15px 35px rgba(0,0,0,.35),
+        0 0 25px rgba(229,43,43,.08);
     }
 
-    .card-green {
-      border-color: rgba(0,255,125,.58);
-      box-shadow: 0 0 24px rgba(0,255,120,.11);
+    /* =========================
+       BACKUP SIGNUP
+    ========================== */
+
+    .signup-section {
+      padding-top: 35px;
     }
 
-    .card-red {
-      border-color: rgba(255,30,50,.60);
-      box-shadow: 0 0 25px rgba(255,25,40,.10);
+    .signup-header {
+      text-align: center;
+      margin-bottom: 20px;
     }
 
-    .card-orange {
-      border-color: rgba(255,155,20,.60);
-      box-shadow: 0 0 25px rgba(255,145,15,.10);
+    .signup-header h2 {
+      margin-bottom: 8px;
+      font-size: 32px;
     }
 
-    /* SIGNUP */
-
-    .signup-card {
-      border: 1px solid #00ed82;
-      box-shadow: 0 0 27px rgba(0,255,125,.15);
-    }
-
-    .signup-grid {
-      display: grid;
-      grid-template-columns: .8fr 1.2fr;
-      gap: 28px;
-      align-items: center;
+    .signup-header p {
+      color: #b8c0ca;
+      max-width: 700px;
+      margin: auto;
     }
 
     .form-group {
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
 
-    .form-group label {
+    label {
       display: block;
-      margin-bottom: 6px;
-      font-weight: bold;
+      font-weight: 800;
+      margin-bottom: 8px;
     }
 
-    .form-group input {
+    input[type="email"],
+    input[type="text"] {
       width: 100%;
-      border: 1px solid #224760;
-      background: rgba(2,8,14,.94);
+      padding: 15px 16px;
+      border-radius: 12px;
+      border: 1px solid #46515c;
+      background: #090d10;
       color: white;
-      border-radius: 8px;
-      padding: 14px;
       font-size: 16px;
       outline: none;
     }
 
-    .form-group input:focus {
-      border-color: #00cfff;
-      box-shadow: 0 0 0 3px rgba(0,195,255,.09);
+    input:focus {
+      border-color: #e52b2b;
+      box-shadow: 0 0 0 3px rgba(229,43,43,.12);
     }
 
     .consent {
       display: flex;
-      gap: 9px;
+      gap: 12px;
       align-items: flex-start;
-      margin: 15px 0;
-      color: #c7cdd1;
-      font-size: 13px;
+      margin: 20px 0;
+      color: #d5d9df;
     }
 
     .consent input {
-      margin-top: 4px;
+      margin-top: 5px;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
     }
 
     .privacy-note {
-      padding: 13px;
-      margin: 15px 0;
-      background: rgba(0,40,25,.36);
-      border-left: 4px solid #00db70;
-      border-radius: 7px;
-      color: #c9d7cf;
-      font-size: 13px;
+      background: #0d130f;
+      border-left: 5px solid #2d9b50;
+      padding: 17px;
+      border-radius: 10px;
+      margin: 18px 0;
+      color: #d5d9df;
     }
 
-    .submit {
+    .submit-button {
       width: 100%;
-      padding: 15px;
-      border: none;
-      border-radius: 8px;
-      background: linear-gradient(180deg,#ff3434,#cb111b);
+      border: 0;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: #e52b2b;
       color: white;
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 900;
       cursor: pointer;
-      box-shadow: 0 0 20px rgba(255,30,40,.22);
     }
 
-    /* TELEGRAM MAIN IMAGE */
+    /* =========================
+       COMMUNITY
+    ========================== */
 
     .community-image {
       width: 100%;
-      max-width: 520px;
+      max-height: 540px;
+      object-fit: cover;
+      object-position: center;
       display: block;
-      margin: 18px auto;
       border-radius: 16px;
-      border: 1px solid rgba(255,40,40,.55);
-      box-shadow:
-        0 0 30px rgba(255,30,30,.17),
-        0 15px 35px rgba(0,0,0,.35);
-    }
-
-    .image-note {
-      background: rgba(50,8,8,.32);
-      border-left: 4px solid #ff3434;
-      border-radius: 8px;
-      padding: 14px;
-      margin: 15px 0;
-      color: #e6dede;
-    }
-
-    /* COMMUNITY */
-
-    .two-column {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
+      margin-bottom: 22px;
+      border: 1px solid #333;
     }
 
     .status {
       display: inline-block;
-      padding: 5px 12px;
+      background: #123c20;
+      color: #84ffa1;
+      padding: 7px 13px;
       border-radius: 999px;
-      font-size: 12px;
-      font-weight: 800;
-      background: rgba(0,150,80,.20);
-      color: #46ff9a;
-      margin-bottom: 8px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 10px;
     }
 
-    .status-orange {
-      background: rgba(255,145,0,.17);
-      color: #ffc356;
+    .backup-status {
+      background: #30270d;
+      color: #ffd75e;
     }
 
-    .alert {
-      margin: 18px 0;
-      padding: 15px;
-      border-left: 4px solid #ff9800;
-      background: rgba(80,40,0,.22);
-      border-radius: 6px;
+    .telegram-button {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 14px 20px;
+      border-radius: 11px;
+      text-decoration: none;
+      background: #168bd2;
+      color: white;
+      font-weight: 900;
     }
 
-    /* RULES */
-
-    .rules-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 13px;
+    .backup-button {
+      background: #e52b2b;
     }
+
+    /* =========================
+       RULES
+    ========================== */
 
     .rule {
-      background: rgba(2,10,17,.70);
-      border: 1px solid rgba(0,170,255,.18);
-      padding: 16px;
-      border-radius: 9px;
+      padding: 17px 0;
+      border-bottom: 1px solid #293039;
     }
 
-    .rule strong {
-      display: block;
+    .rule:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .rule:first-child {
+      padding-top: 0;
+    }
+
+    .rule-title {
+      font-weight: 900;
+      font-size: 18px;
       margin-bottom: 5px;
     }
 
-    /* PRIVACY */
-
-    .policy-item {
-      padding: 15px 0;
-      border-bottom: 1px solid rgba(255,255,255,.08);
+    .rule p {
+      margin: 0;
+      color: #c6ccd3;
     }
 
-    .policy-item:last-child {
-      border-bottom: none;
+    /* =========================
+       GRID
+    ========================== */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
     }
 
-    /* REVEAL */
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(25px);
-      transition:
-        opacity .8s ease,
-        transform .8s ease;
+    .mini-card {
+      background: rgba(16,21,26,.9);
+      border: 1px solid #29323b;
+      padding: 20px;
+      border-radius: 16px;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
+    .mini-card .icon {
+      font-size: 30px;
+      margin-bottom: 8px;
     }
 
-    /* FOOTER */
+    .mini-card h3 {
+      margin: 0 0 7px;
+    }
+
+    .mini-card p {
+      margin: 0;
+      color: #b8c0c8;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
-      margin-top: 40px;
-      border-top: 1px solid rgba(0,180,255,.22);
-      background: rgba(1,5,10,.95);
-      padding: 35px 18px;
       text-align: center;
-      color: #88949d;
-      font-size: 13px;
+      padding: 40px 20px;
+      border-top: 1px solid #242c34;
+      color: #8e99a5;
+      font-size: 14px;
     }
 
     footer a {
-      color: #78d9ff;
+      color: #c7d0d9;
+      text-decoration: none;
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================== */
 
-    @media(max-width:700px) {
-      .nav-links {
-        display: none;
-      }
+    @media (max-width: 650px) {
 
       .hero {
-        min-height: 76vh;
-      }
-
-      .signup-grid,
-      .two-column,
-      .rules-grid {
-        grid-template-columns: 1fr;
+        min-height: 82vh;
+        background-position: center center;
+        padding: 35px 18px;
       }
 
       .section {
-        padding: 40px 17px;
+        padding: 38px 16px;
       }
 
-      .section-title {
-        font-size: 25px;
+      .card {
+        padding: 20px;
       }
 
-      .vial {
-        opacity: .20;
+      .grid {
+        grid-template-columns: 1fr;
       }
 
-      .syringe,
-      .pepper-float,
-      .molecule {
-        opacity: .09;
+      .community-image {
+        max-height: none;
+      }
+
+      .buttons {
+        gap: 9px;
+      }
+
+      .btn {
+        padding: 13px 17px;
+        font-size: 14px;
       }
     }
 
-    @media(prefers-reduced-motion:reduce) {
-      *,
-      *::before,
-      *::after {
-        animation-duration: .01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: .01ms !important;
-      }
-
-      .reveal {
-        opacity: 1;
-        transform: none;
-      }
-    }
   </style>
 </head>
 
 
 <body>
 
-  <!-- FLOATING BACKGROUND -->
+  <!-- MOVING SCIENCE BACKGROUND -->
 
-  <div class="lab-background" aria-hidden="true">
-
-    <div class="vial vial1"></div>
-    <div class="vial vial2"></div>
-    <div class="vial vial3"></div>
-
-    <div class="float-item syringe syringe1">💉</div>
-    <div class="float-item syringe syringe2">💉</div>
-
-    <div class="float-item molecule molecule1">⚛️</div>
-    <div class="float-item molecule molecule2">⚛️</div>
-
-    <div class="float-item pepper-float pepper1">🌶️</div>
-    <div class="float-item pepper-float pepper2">🌶️</div>
-
+  <div class="science-background">
+    <div class="float-item float1">🧪</div>
+    <div class="float-item float2">🧬</div>
+    <div class="float-item float3">🔬</div>
+    <div class="float-item float4">🌶️</div>
+    <div class="float-item float5">⚗️</div>
   </div>
 
 
   <div class="page">
 
-
-    <!-- NAV -->
-
-    <nav class="navbar">
-
-      <div class="nav-inner">
-
-        <div class="logo">
-          🌶️ PEPPERS <span>RESEARCH HUB</span>
-        </div>
-
-        <div class="nav-links">
-
-          <a href="#join">Join</a>
-          <a href="#community">Community</a>
-          <a href="#backup">Backup</a>
-          <a href="#rules">Rules</a>
-          <a href="#research">Research</a>
-          <a href="#privacy">Privacy</a>
-
-        </div>
-
-      </div>
-
-    </nav>
-
-
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+    ========================== -->
 
     <header class="hero">
 
       <div class="hero-content">
 
-        <div class="brand">
-          🌶️ PEPPER COLLECTIVE • RESEARCH COMMUNITY
+        <div class="brand-badge">
+          🌶️ PEPPER COLLECTIVE
         </div>
 
         <h1>
-          PEPPERS
-          <span>RESEARCH HUB</span>
+          Peppers<br>
+          Research Hub
         </h1>
 
         <p class="tagline">
           Research • Share • Learn • Grow
         </p>
 
-        <div class="hero-buttons">
-
-          <a
-            class="btn btn-red"
-            href="https://t.me/+M25pGmfiPD4wZGIx"
-            target="_blank"
-            rel="noopener noreferrer">
-            ✈️ JOIN COMMUNITY
-          </a>
+        <div class="buttons">
 
           <a
             class="btn btn-blue"
+            href="https://t.me/+M25pGmfiPD4wZGIx"
+            target="_blank"
+            rel="noopener noreferrer">
+            Join Community
+          </a>
+
+          <a
+            class="btn"
+            href="#backup-list">
+            Backup Signup
+          </a>
+
+          <a
+            class="btn btn-green"
             href="#research">
-            🧪 EXPLORE RESEARCH
+            Research Hub
           </a>
 
         </div>
@@ -745,205 +585,196 @@
     </header>
 
 
-    <!-- SIGNUP FIRST -->
+    <!-- =========================
+         BACKUP CONTACT LIST
+         MOVED CLOSE TO TOP
+    ========================== -->
 
-    <section class="section reveal" id="join">
+    <section class="section signup-section" id="backup-list">
 
-      <div class="card signup-card">
+      <div class="signup-header">
 
-        <div class="signup-grid">
+        <h2>
+          🌶️ Peppers Backup Contact List
+        </h2>
 
-          <div>
+        <p>
+          Stay connected with Pepper Collective even if our
+          current Telegram community ever becomes unavailable.
+        </p>
 
-            <h2 class="section-title">
-              📬 STAY <span>CONNECTED</span>
-            </h2>
+      </div>
 
-            <h3>Peppers Backup Contact List</h3>
 
-            <p>
-              Add your contact information so we can reach you with
-              important Peppers Research Hub announcements or send you
-              a replacement Telegram link if our community becomes unavailable.
-            </p>
+      <div class="card highlight-card">
 
-            <div class="privacy-note">
-              🔒 <strong>Your privacy matters.</strong>
-              Your information will not be sold or shared for marketing purposes.
-            </div>
+        <p>
+          Add your contact information so we can reach you with
+          important Peppers Research Hub announcements or send
+          you a new Telegram community link if our current group
+          becomes unavailable.
+        </p>
+
+
+        <form
+          action="https://formspree.io/f/mbgrkvlr"
+          method="POST">
+
+          <div class="form-group">
+
+            <label for="email">
+              Email Address *
+            </label>
+
+            <input
+              id="email"
+              type="email"
+              name="email"
+              placeholder="you@example.com"
+              required>
 
           </div>
 
 
-          <form
-            action="https://formspree.io/f/mbgrkvlr"
-            method="POST">
+          <div class="form-group">
 
-            <input
-              type="hidden"
-              name="_subject"
-              value="New Peppers Research Hub Contact">
-
-            <div class="form-group">
-
-              <label for="email">
-                Email Address *
-              </label>
-
-              <input
-                id="email"
-                type="email"
-                name="email"
-                placeholder="your@email.com"
-                required>
-
-            </div>
-
-            <div class="form-group">
-
-              <label for="telegram">
-                Telegram Username
-              </label>
-
-              <input
-                id="telegram"
-                type="text"
-                name="telegram"
-                placeholder="@username">
-
-            </div>
-
-            <label class="consent">
-
-              <input
-                type="checkbox"
-                name="consent"
-                value="Agreed"
-                required>
-
-              <span>
-                I agree to receive important Peppers Research Hub
-                announcements and replacement Telegram community links.
-              </span>
-
+            <label for="telegram">
+              Telegram Username
             </label>
 
-            <button
-              class="submit"
-              type="submit">
-              🌶️ JOIN BACKUP CONTACT LIST
-            </button>
+            <input
+              id="telegram"
+              type="text"
+              name="telegram_username"
+              placeholder="@username">
 
-          </form>
+          </div>
 
-        </div>
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New Peppers Backup Contact List Signup">
+
+
+          <div class="consent">
+
+            <input
+              id="consent"
+              type="checkbox"
+              name="consent"
+              value="Agreed"
+              required>
+
+            <label for="consent">
+              I agree to receive important Peppers Research Hub
+              announcements and replacement Telegram community links.
+            </label>
+
+          </div>
+
+
+          <div class="privacy-note">
+
+            🔒 <strong>Your privacy matters.</strong>
+
+            Your information will be kept private and will not
+            be shared or sold. It will only be used for important
+            Peppers Research Hub announcements and community contact.
+
+          </div>
+
+
+          <button
+            class="submit-button"
+            type="submit">
+            🌶️ Join Backup Contact List
+          </button>
+
+        </form>
 
       </div>
 
     </section>
 
 
-    <!-- OFFICIAL MAIN COMMUNITY -->
+    <!-- =========================
+         WELCOME
+    ========================== -->
 
-    <section class="section reveal" id="community">
+    <section class="section">
 
       <h2 class="section-title">
-        🌶️ OFFICIAL <span>PEPPER COLLECTIVE</span>
+        🌶️ Welcome to the Hub
       </h2>
 
-      <div class="card card-red">
+      <div class="card">
+
+        <h3>
+          Research. Education. Community.
+        </h3>
+
+        <p>
+          Peppers Research Hub is the online home of the
+          Pepper Collective community.
+        </p>
+
+        <p>
+          Our goal is to provide a central place for research,
+          education, information sharing, community resources
+          and official updates.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN COMMUNITY
+    ========================== -->
+
+    <section class="section" id="community">
+
+      <h2 class="section-title">
+        🌶️ Pepper Collective Community
+      </h2>
+
+      <p class="section-subtitle">
+        Our main Telegram community.
+      </p>
+
+
+      <div class="card">
+
+        <img
+          class="community-image"
+          src="pepper-collective-main.jpg"
+          alt="Pepper Collective community">
+
 
         <div class="status">
           ● MAIN COMMUNITY ONLINE
         </div>
 
-        <h2>
-          Pepper Collective Telegram
-        </h2>
+
+        <h3>
+          Pepper Collective
+        </h3>
 
         <p>
-          This is the official picture used for the main
-          Pepper Collective Telegram community.
+          Join the main Pepper Collective Telegram community
+          for discussions, research information, announcements
+          and community updates.
         </p>
 
-        <div class="image-note">
-          👀 <strong>Look for this picture.</strong>
-          If you are joining the main Pepper Collective community,
-          this image helps you recognize the official group.
-        </div>
-
-        <img
-          class="community-image"
-          src="pepper-collective-main.jpg"
-          alt="Official Pepper Collective Telegram community image">
-
-        <div style="text-align:center;">
-
-          <a
-            class="btn btn-red"
-            href="https://t.me/+M25pGmfiPD4wZGIx"
-            target="_blank"
-            rel="noopener noreferrer">
-            ✈️ JOIN MAIN TELEGRAM
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- BACKUP -->
-
-    <section class="section reveal" id="backup">
-
-      <h2 class="section-title">
-        🚨 TELEGRAM <span>BACKUP</span>
-      </h2>
-
-      <div class="card card-orange">
-
-        <div class="status status-orange">
-          OFFICIAL BACKUP COMMUNITY
-        </div>
-
-        <h2>
-          Peppers Collective 2
-        </h2>
-
-        <p>
-          This is our official backup Telegram community if the main
-          Pepper Collective group becomes unavailable.
-        </p>
-
-        <div class="alert">
-
-          <strong>⚠️ IMPORTANT</strong>
-
-          <p>
-            The backup is named
-            <strong>Peppers Collective 2</strong>.
-          </p>
-
-          <p>
-            It currently <strong>does not have a profile picture.</strong>
-            This is normal.
-          </p>
-
-          <p>
-            Use the official link below to make sure you are joining
-            the correct backup group.
-          </p>
-
-        </div>
 
         <a
-          class="btn btn-orange"
-          href="https://t.me/+UIja7xE0s2YwNDA5"
+          class="telegram-button"
+          href="https://t.me/+M25pGmfiPD4wZGIx"
           target="_blank"
           rel="noopener noreferrer">
-          🚨 JOIN PEPPERS COLLECTIVE 2
+          ✈️ Join Main Telegram
         </a>
 
       </div>
@@ -951,102 +782,280 @@
     </section>
 
 
-    <!-- RULES -->
+    <!-- =========================
+         BACKUP TELEGRAM
+    ========================== -->
 
-    <section class="section reveal" id="rules">
+    <section class="section">
 
       <h2 class="section-title">
-        🌶️ COMMUNITY <span>RULES</span>
+        🚨 Backup Community
       </h2>
+
 
       <div class="card">
 
-        <div class="rules-grid">
+        <div class="status backup-status">
+          BACKUP COMMUNITY
+        </div>
 
-          <div class="rule">
-            <strong>🤝 1. Be Respectful</strong>
-            Treat members with respect. No harassment, bullying,
-            hate speech, threats, or personal attacks.
+
+        <h3>
+          🌶️ Peppers Collective 2
+        </h3>
+
+
+        <p>
+          This is the official backup Telegram community.
+          Join it now so you have another way to find the
+          community if the main group ever becomes unavailable.
+        </p>
+
+
+        <p>
+          <strong>Note:</strong>
+          Peppers Collective 2 currently does not have a
+          profile picture. Make sure the group name says
+          <strong>Peppers Collective 2</strong>.
+        </p>
+
+
+        <a
+          class="telegram-button backup-button"
+          href="https://t.me/+UIja7xE0s2YwNDA5"
+          target="_blank"
+          rel="noopener noreferrer">
+          🚨 Join Backup Telegram
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         COMMUNITY RULES
+    ========================== -->
+
+    <section class="section" id="rules">
+
+      <h2 class="section-title">
+        📋 Community Rules
+      </h2>
+
+      <p class="section-subtitle">
+        Help us keep Pepper Collective organized, useful and respectful.
+      </p>
+
+
+      <div class="card">
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            🤝 1. Be Respectful
           </div>
 
-          <div class="rule">
-            <strong>🔬 2. Research & Education</strong>
-            Keep research discussions focused on education,
-            information sharing, and community learning.
-          </div>
-
-          <div class="rule">
-            <strong>📝 3. No Conversations Inside Topics</strong>
-            Topics are used to organize information so members can
-            quickly find what they need. Use general chat for
-            conversations and follow-up discussions.
-          </div>
-
-          <div class="rule">
-            <strong>🚫 4. No Unauthorized Selling or Reselling</strong>
-            Do not use community or research topics for unauthorized
-            selling, reselling, pricing, advertising, or transactions.
-          </div>
-
-          <div class="rule">
-            <strong>✅ 5. Admin Approval Required</strong>
-            Anyone wanting to sell, promote, advertise, or offer
-            products or services must contact an admin and receive
-            approval first.
-          </div>
-
-          <div class="rule">
-            <strong>⚠️ 6. Third-Party Responsibility</strong>
-            Pepper Collective and Peppers Research Hub do not guarantee
-            independent vendors, services, or transactions. Members
-            should conduct their own due diligence.
-          </div>
-
-          <div class="rule">
-            <strong>📚 7. Stay Organized</strong>
-            Use the correct areas and help keep information organized
-            and easy to find.
-          </div>
-
-          <div class="rule">
-            <strong>🛡️ 8. Protect the Community</strong>
-            No spam, scams, impersonation, misleading links,
-            or behavior that puts members at unnecessary risk.
-          </div>
+          <p>
+            Treat members with respect. No harassment,
+            bullying, hate speech or personal attacks.
+          </p>
 
         </div>
 
+
+        <div class="rule">
+
+          <div class="rule-title">
+            🔬 2. Research & Education
+          </div>
+
+          <p>
+            Keep research discussions educational and informative.
+            Clearly separate research information from personal opinions.
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            📝 3. No Conversations Inside Topics
+          </div>
+
+          <p>
+            Please do not have conversations inside topic threads.
+            Topics are designed to organize information so members
+            can quickly find what they are looking for without
+            scrolling through long conversations.
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            🚫 4. No Selling or Reselling Discussions
+          </div>
+
+          <p>
+            Do not use the community to discuss selling or reselling.
+            Keep general community discussions focused on research,
+            education and information sharing.
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            📣 5. Promotion Requires Admin Approval
+          </div>
+
+          <p>
+            Anyone wishing to promote a vendor, product, service,
+            group, website or other commercial offering must first
+            contact an admin and receive approval.
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            💬 6. Keep It Helpful
+          </div>
+
+          <p>
+            Ask questions, share useful information and help keep
+            the community welcoming and organized.
+          </p>
+
+        </div>
+
+
+        <div class="rule">
+
+          <div class="rule-title">
+            🛡️ 7. Follow Admin & Telegram Rules
+          </div>
+
+          <p>
+            Follow moderator instructions and Telegram's applicable
+            rules and policies.
+          </p>
+
+        </div>
+
+
       </div>
 
     </section>
 
 
-    <!-- RESEARCH -->
+    <!-- =========================
+         RESEARCH HUB
+    ========================== -->
 
-    <section class="section reveal" id="research">
+    <section class="section" id="research">
 
       <h2 class="section-title">
-        🔬 RESEARCH & <span>EDUCATION</span>
+        🔬 Research & Education
       </h2>
 
-      <div class="card card-green">
 
-        <h3>🧪 Research Library</h3>
+      <div class="grid">
+
+
+        <div class="mini-card">
+
+          <div class="icon">
+            📚
+          </div>
+
+          <h3>
+            Research Library
+          </h3>
+
+          <p>
+            Research references and educational resources
+            will be organized here.
+          </p>
+
+        </div>
+
+
+        <div class="mini-card">
+
+          <div class="icon">
+            🧪
+          </div>
+
+          <h3>
+            Compound Information
+          </h3>
+
+          <p>
+            Educational compound information and research
+            references can be added here.
+          </p>
+
+        </div>
+
+
+        <div class="mini-card">
+
+          <div class="icon">
+            🧬
+          </div>
+
+          <h3>
+            Community Knowledge
+          </h3>
+
+          <p>
+            Useful research discussions and educational
+            information from the community.
+          </p>
+
+        </div>
+
+
+        <div class="mini-card">
+
+          <div class="icon">
+            🔎
+          </div>
+
+          <h3>
+            Research Resources
+          </h3>
+
+          <p>
+            Helpful research tools, references and educational
+            resources will be added as the hub grows.
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="card" style="margin-top:18px; text-align:center;">
+
+        <h3>
+          🚧 Research Library Coming Soon
+        </h3>
 
         <p>
-          Educational resources, research references,
-          compound information, published studies,
-          and community knowledge will be organized here.
-        </p>
-
-        <p>
-          Information provided through Peppers Research Hub
-          is for educational and informational purposes and
-          should not be considered medical advice.
-        </p>
-
-        <p>
-          🚧 Research library coming soon.
+          The research section will continue expanding as
+          resources are added to Peppers Research Hub.
         </p>
 
       </div>
@@ -1054,13 +1063,16 @@
     </section>
 
 
-    <!-- ANNOUNCEMENTS -->
+    <!-- =========================
+         ANNOUNCEMENTS
+    ========================== -->
 
-    <section class="section reveal" id="announcements">
+    <section class="section">
 
       <h2 class="section-title">
-        📢 LATEST <span>ANNOUNCEMENTS</span>
+        📢 Latest Announcements
       </h2>
+
 
       <div class="card">
 
@@ -1069,162 +1081,75 @@
         </h3>
 
         <p>
-          Bookmark the website to find official updates,
-          community information, and replacement Telegram links.
+          Bookmark this website. It serves as an official
+          community hub where members can find updates,
+          community links and ways to reconnect with
+          Pepper Collective.
         </p>
-
-        <hr style="
-          border:0;
-          border-top:1px solid rgba(255,255,255,.1);
-          margin:24px 0;">
-
-        <h3>
-          🚨 Backup Telegram Available
-        </h3>
-
-        <p>
-          Our official backup Telegram is
-          <strong>Peppers Collective 2</strong>.
-          It currently does not have a profile picture.
-        </p>
-
-        <a
-          class="btn btn-orange"
-          href="https://t.me/+UIja7xE0s2YwNDA5"
-          target="_blank"
-          rel="noopener noreferrer">
-          JOIN BACKUP TELEGRAM
-        </a>
 
       </div>
 
-    </section>
-
-
-    <!-- PRIVACY -->
-
-    <section class="section reveal" id="privacy">
-
-      <h2 class="section-title">
-        🔐 PRIVACY <span>POLICY</span>
-      </h2>
 
       <div class="card">
 
-        <div class="policy-item">
+        <h3>
+          🚨 Join the Backup Community
+        </h3>
 
-          <strong>
-            Information We Collect
-          </strong>
-
-          <p>
-            If you choose to join our backup contact list,
-            Peppers Research Hub may collect your email address
-            and optional Telegram username.
-          </p>
-
-        </div>
-
-        <div class="policy-item">
-
-          <strong>
-            How We Use Your Information
-          </strong>
-
-          <p>
-            Contact information is used to send important
-            Peppers Research Hub announcements, community updates,
-            or replacement Telegram links.
-          </p>
-
-        </div>
-
-        <div class="policy-item">
-
-          <strong>
-            No Selling of Personal Information
-          </strong>
-
-          <p>
-            Peppers Research Hub does not sell your personal
-            contact information or share it with third parties
-            for advertising or unrelated marketing purposes.
-          </p>
-
-        </div>
-
-        <div class="policy-item">
-
-          <strong>
-            Form Processing
-          </strong>
-
-          <p>
-            Our contact form uses Formspree to process submissions.
-            Information submitted through the form may therefore
-            be processed by Formspree as necessary to provide
-            the service.
-          </p>
-
-        </div>
-
-        <div class="policy-item">
-
-          <strong>
-            Removal Requests
-          </strong>
-
-          <p>
-            You may request removal from our contact list at any time by emailing
-            <a href="mailto:contact@peppersresearchhub.com">
-              contact@peppersresearchhub.com
-            </a>.
-          </p>
-
-        </div>
+        <p>
+          Members are encouraged to join Peppers Collective 2
+          and the backup contact list so the community has
+          multiple ways to stay connected.
+        </p>
 
       </div>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        ✉️ Contact
+      </h2>
+
+
+      <div class="card">
+
+        <h3>
+          Peppers Research Hub
+        </h3>
+
+        <p>
+          Questions, community matters or administrative inquiries:
+        </p>
+
+        <p>
+          <a href="mailto:contact@peppersresearchhub.com">
+            <strong>contact@peppersresearchhub.com</strong>
+          </a>
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
-      🌶️ <strong>PEPPERS RESEARCH HUB</strong>
-
-      <br><br>
-
       © 2026 Peppers Research Hub
-
       <br>
 
       Research • Education • Community
-
       <br><br>
-
-      <a href="#join">Stay Connected</a>
-
-      &nbsp; • &nbsp;
-
-      <a href="#community">Main Community</a>
-
-      &nbsp; • &nbsp;
-
-      <a href="#backup">Backup</a>
-
-      &nbsp; • &nbsp;
-
-      <a href="#rules">Rules</a>
-
-      &nbsp; • &nbsp;
-
-      <a href="#privacy">Privacy</a>
-
-      <br><br>
-
-      Contact:
 
       <a href="mailto:contact@peppersresearchhub.com">
         contact@peppersresearchhub.com
@@ -1234,46 +1159,6 @@
 
 
   </div>
-
-
-  <!-- SCROLL ANIMATION -->
-
-  <script>
-
-    const reveals =
-      document.querySelectorAll('.reveal');
-
-    const observer =
-      new IntersectionObserver(
-        entries => {
-
-          entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-              entry.target
-                .classList
-                .add('visible');
-
-              observer
-                .unobserve(entry.target);
-
-            }
-
-          });
-
-        },
-        {
-          threshold: .08
-        }
-      );
-
-    reveals.forEach(element => {
-      observer.observe(element);
-    });
-
-  </script>
-
 
 </body>
 
