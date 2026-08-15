@@ -51,44 +51,67 @@
 
     .float-item {
       position: absolute;
-      opacity: 0.10;
+      opacity: 0.24;
       user-select: none;
-      filter: drop-shadow(0 0 10px rgba(0, 200, 255, .5));
+      filter:
+        drop-shadow(0 0 8px rgba(0, 200, 255, .65))
+        drop-shadow(0 0 18px rgba(0, 120, 255, .24));
     }
 
     .float1 {
-      font-size: 42px;
-      left: 5%;
-      top: 18%;
+      font-size: 54px;
+      left: 4%;
+      top: 15%;
       animation: floatOne 11s ease-in-out infinite;
     }
 
     .float2 {
-      font-size: 38px;
-      right: 7%;
-      top: 28%;
+      font-size: 50px;
+      right: 6%;
+      top: 26%;
       animation: floatTwo 14s ease-in-out infinite;
     }
 
     .float3 {
-      font-size: 45px;
-      left: 12%;
-      top: 65%;
+      font-size: 58px;
+      left: 8%;
+      top: 56%;
       animation: floatTwo 16s ease-in-out infinite;
     }
 
     .float4 {
-      font-size: 35px;
-      right: 12%;
-      top: 78%;
+      font-size: 48px;
+      right: 10%;
+      top: 69%;
       animation: floatOne 13s ease-in-out infinite;
     }
 
     .float5 {
-      font-size: 34px;
-      left: 48%;
-      top: 48%;
+      font-size: 44px;
+      left: 47%;
+      top: 45%;
       animation: floatThree 18s linear infinite;
+    }
+
+    .float6 {
+      font-size: 50px;
+      right: 18%;
+      top: 84%;
+      animation: floatOne 15s ease-in-out infinite;
+    }
+
+    .float7 {
+      font-size: 48px;
+      left: 20%;
+      top: 82%;
+      animation: floatTwo 17s ease-in-out infinite;
+    }
+
+    .float8 {
+      font-size: 42px;
+      right: 3%;
+      top: 48%;
+      animation: floatThree 21s linear infinite;
     }
 
     @keyframes floatOne {
@@ -97,7 +120,7 @@
       }
 
       50% {
-        transform: translateY(-45px) rotate(8deg);
+        transform: translateY(-48px) rotate(10deg);
       }
     }
 
@@ -107,7 +130,7 @@
       }
 
       50% {
-        transform: translateY(35px) translateX(-25px) rotate(-8deg);
+        transform: translateY(38px) translateX(-28px) rotate(-10deg);
       }
     }
 
@@ -142,8 +165,8 @@
       background:
         linear-gradient(
           to bottom,
-          rgba(0, 0, 0, 0.10),
-          rgba(0, 0, 0, 0.30) 45%,
+          rgba(0, 0, 0, 0.08),
+          rgba(0, 0, 0, 0.28) 48%,
           rgba(0, 0, 0, 0.92) 100%
         ),
         url('peppers-lab-hero.jpg')
@@ -154,7 +177,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      box-shadow: inset 0 -100px 100px rgba(0,0,0,.7);
+      box-shadow: inset 0 -110px 110px rgba(0,0,0,.72);
       pointer-events: none;
     }
 
@@ -169,13 +192,14 @@
       display: inline-block;
       padding: 8px 17px;
       border-radius: 999px;
-      background: rgba(0, 0, 0, .75);
+      background: rgba(0, 0, 0, .76);
       border: 1px solid rgba(255,255,255,.25);
       backdrop-filter: blur(8px);
       font-size: 14px;
       font-weight: 800;
       letter-spacing: 1.2px;
       margin-bottom: 15px;
+      box-shadow: 0 0 22px rgba(0,180,255,.12);
     }
 
     h1 {
@@ -226,6 +250,44 @@
     }
 
     /* =========================
+       HERO TRANSITION
+    ========================== */
+
+    .transition-wrap {
+      max-width: 960px;
+      margin: -26px auto 0;
+      padding: 0 20px;
+      position: relative;
+      z-index: 5;
+    }
+
+    .transition-card {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(4,22,30,.96),
+          rgba(13,18,24,.96)
+        );
+      border: 1px solid rgba(0,255,145,.60);
+      border-radius: 22px;
+      padding: 22px;
+      text-align: center;
+      box-shadow:
+        0 0 32px rgba(0,255,145,.14),
+        0 16px 40px rgba(0,0,0,.42);
+      backdrop-filter: blur(10px);
+    }
+
+    .transition-card strong {
+      color: #69ffb2;
+    }
+
+    .transition-card p {
+      margin: 7px 0 0;
+      color: #c5d0d9;
+    }
+
+    /* =========================
        SECTIONS
     ========================== */
 
@@ -262,10 +324,10 @@
     }
 
     .highlight-card {
-      border: 1px solid rgba(229,43,43,.5);
+      border: 1px solid rgba(0,255,145,.55);
       box-shadow:
         0 15px 35px rgba(0,0,0,.35),
-        0 0 25px rgba(229,43,43,.08);
+        0 0 30px rgba(0,255,145,.10);
     }
 
     /* =========================
@@ -273,7 +335,7 @@
     ========================== */
 
     .signup-section {
-      padding-top: 35px;
+      padding-top: 32px;
     }
 
     .signup-header {
@@ -353,6 +415,7 @@
       font-size: 17px;
       font-weight: 900;
       cursor: pointer;
+      box-shadow: 0 0 24px rgba(229,43,43,.18);
     }
 
     /* =========================
@@ -368,6 +431,7 @@
       border-radius: 16px;
       margin-bottom: 22px;
       border: 1px solid #333;
+      box-shadow: 0 0 24px rgba(255,40,40,.10);
     }
 
     .status {
@@ -490,6 +554,15 @@
         padding: 35px 18px;
       }
 
+      .transition-wrap {
+        margin-top: -20px;
+        padding: 0 14px;
+      }
+
+      .transition-card {
+        padding: 18px;
+      }
+
       .section {
         padding: 38px 16px;
       }
@@ -514,6 +587,20 @@
         padding: 13px 17px;
         font-size: 14px;
       }
+
+      .float-item {
+        opacity: 0.20;
+      }
+
+      .float1,
+      .float3 {
+        left: 2%;
+      }
+
+      .float2,
+      .float4 {
+        right: 2%;
+      }
     }
 
   </style>
@@ -526,10 +613,13 @@
 
   <div class="science-background">
     <div class="float-item float1">🧪</div>
-    <div class="float-item float2">🧬</div>
+    <div class="float-item float2">💉</div>
     <div class="float-item float3">🔬</div>
     <div class="float-item float4">🌶️</div>
     <div class="float-item float5">⚗️</div>
+    <div class="float-item float6">🧬</div>
+    <div class="float-item float7">🧫</div>
+    <div class="float-item float8">⚛️</div>
   </div>
 
 
@@ -585,9 +675,28 @@
     </header>
 
 
+    <!-- HERO TRANSITION -->
+
+    <div class="transition-wrap">
+
+      <div class="transition-card">
+
+        <strong>
+          🌶️ Stay connected even if Telegram changes.
+        </strong>
+
+        <p>
+          Join the backup contact list below so we can send
+          important announcements and replacement community links.
+        </p>
+
+      </div>
+
+    </div>
+
+
     <!-- =========================
          BACKUP CONTACT LIST
-         MOVED CLOSE TO TOP
     ========================== -->
 
     <section class="section signup-section" id="backup-list">
@@ -679,8 +788,9 @@
             🔒 <strong>Your privacy matters.</strong>
 
             Your information will be kept private and will not
-            be shared or sold. It will only be used for important
-            Peppers Research Hub announcements and community contact.
+            be sold or shared for marketing purposes. It will only
+            be used for important Peppers Research Hub announcements
+            and community contact.
 
           </div>
 
