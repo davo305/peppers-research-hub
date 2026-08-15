@@ -124,10 +124,25 @@
       margin-bottom: 18px;
     }
 
+    .card h3 {
+      margin-top: 5px;
+    }
+
     .status {
       display: inline-block;
       background: #143d20;
       color: #83ff9f;
+      padding: 7px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .backup-status {
+      display: inline-block;
+      background: #3d2d10;
+      color: #ffd76a;
       padding: 7px 13px;
       border-radius: 999px;
       font-size: 13px;
@@ -144,6 +159,28 @@
       text-decoration: none;
       font-weight: bold;
       border-radius: 10px;
+    }
+
+    .backup-button {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 14px 22px;
+      background: #b77916;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    /* BACKUP ALERT */
+
+    .backup-alert {
+      background: #1c1710;
+      border: 1px solid #5b451d;
+      border-left: 5px solid #d99b27;
+      border-radius: 12px;
+      padding: 18px;
+      margin: 18px 0;
     }
 
     /* CONTACT FORM */
@@ -217,6 +254,44 @@
       opacity: 0.92;
     }
 
+    /* RULES */
+
+    .rule {
+      padding: 18px 0;
+      border-bottom: 1px solid #2a302a;
+    }
+
+    .rule:last-child {
+      border-bottom: none;
+    }
+
+    .rule h3 {
+      margin: 0 0 6px;
+      font-size: 19px;
+    }
+
+    .rule p {
+      margin: 0;
+      color: #d0d4d0;
+    }
+
+    /* PRIVACY */
+
+    .policy-item {
+      margin-bottom: 22px;
+    }
+
+    .policy-item h3 {
+      margin-bottom: 6px;
+    }
+
+    .policy-item p {
+      margin-top: 0;
+      color: #d0d4d0;
+    }
+
+    /* FOOTER */
+
     footer {
       border-top: 1px solid #232823;
       padding: 35px 20px;
@@ -245,6 +320,13 @@
         padding: 14px 20px;
       }
 
+      .section {
+        padding: 42px 18px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
     }
   </style>
 </head>
@@ -311,7 +393,12 @@
 
       <p>
         Built around research, education, information
-        sharing, and staying connected.
+        sharing, community organization, and staying connected.
+      </p>
+
+      <p>
+        Bookmark <strong>PeppersResearchHub.com</strong>
+        so you can always find official community updates.
       </p>
 
     </div>
@@ -319,12 +406,12 @@
   </section>
 
 
-  <!-- COMMUNITY -->
+  <!-- MAIN COMMUNITY -->
 
   <section class="section">
 
     <h2 class="section-title">
-      🌶️ Community
+      🌶️ Main Community
     </h2>
 
     <div class="card">
@@ -338,9 +425,8 @@
       </h3>
 
       <p>
-        Join our Telegram community for discussions,
-        announcements, research information and
-        community updates.
+        Join our main Telegram community for discussions,
+        announcements, research information and community updates.
       </p>
 
       <a
@@ -348,8 +434,76 @@
         href="https://t.me/+M25pGmfiPD4wZGIx"
         target="_blank"
         rel="noopener noreferrer">
-        Join Telegram Community
+        🌶️ Join Main Telegram
       </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- TELEGRAM BACKUP -->
+
+  <section class="section" id="telegram-backup">
+
+    <h2 class="section-title">
+      🚨 Telegram Backup
+    </h2>
+
+    <div class="card">
+
+      <div class="backup-status">
+        OFFICIAL BACKUP COMMUNITY
+      </div>
+
+      <h3>
+        Peppers Collective 2
+      </h3>
+
+      <p>
+        We have created an official backup Telegram community
+        so members can stay connected if the main Pepper Collective
+        group ever becomes unavailable.
+      </p>
+
+      <div class="backup-alert">
+
+        <strong>⚠️ Important:</strong>
+
+        <p>
+          The backup Telegram is called
+          <strong>Peppers Collective 2</strong>.
+        </p>
+
+        <p>
+          It currently <strong>does not have a profile picture.</strong>
+          This is normal.
+        </p>
+
+        <p>
+          Use the official button below to make sure you are joining
+          the correct backup community.
+        </p>
+
+      </div>
+
+      <p>
+        We recommend joining the backup now so you already have
+        access if anything happens to the main Telegram.
+      </p>
+
+      <a
+        class="backup-button"
+        href="https://t.me/+UIja7xE0s2YwNDA5"
+        target="_blank"
+        rel="noopener noreferrer">
+        🚨 Join Peppers Collective 2
+      </a>
+
+      <p style="margin-top:20px;color:#aaa;font-size:14px;">
+        Bookmark PeppersResearchHub.com as another official place
+        to find replacement links and important community announcements.
+      </p>
 
     </div>
 
@@ -371,10 +525,10 @@
       </h3>
 
       <p>
-        Add your contact information so we can reach you
-        with important Peppers Research Hub announcements
-        or send you a new Telegram community link if our
-        current group becomes unavailable.
+        Add your contact information so we can reach you with
+        important Peppers Research Hub announcements or send you
+        a new Telegram community link if our current groups become
+        unavailable.
       </p>
 
 
@@ -445,23 +599,19 @@
         </label>
 
 
-        <!-- PRIVACY -->
+        <!-- PRIVACY NOTICE -->
 
         <div class="privacy-note">
 
           🔒 <strong>Your privacy matters.</strong>
 
-          Your information will be kept private and will not
-          be sold or shared for marketing purposes.
-
-          It will only be used to send important Peppers
-          Research Hub announcements and replacement
-          Telegram community links.
+          Your information will be kept private and will not be sold
+          or shared for marketing purposes. It will only be used to
+          send important Peppers Research Hub announcements and
+          replacement Telegram community links.
 
         </div>
 
-
-        <!-- SUBMIT -->
 
         <button
           class="submit-button"
@@ -472,6 +622,145 @@
         </button>
 
       </form>
+
+    </div>
+
+  </section>
+
+
+  <!-- COMMUNITY RULES -->
+
+  <section class="section" id="rules">
+
+    <h2 class="section-title">
+      🌶️ Community Rules
+    </h2>
+
+    <div class="card">
+
+
+      <div class="rule">
+
+        <h3>
+          1. 🤝 Be Respectful
+        </h3>
+
+        <p>
+          Treat all members with respect. No harassment,
+          bullying, hate speech, threats, or personal attacks.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          2. 🔬 Research & Education
+        </h3>
+
+        <p>
+          Keep research discussions focused on education,
+          information sharing, and community learning.
+          Clearly separate published information from personal
+          opinions or experiences.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          3. 📝 Do Not Have Conversations Inside Topics
+        </h3>
+
+        <p>
+          Topic threads are designed to organize information so
+          members can quickly find what they are looking for.
+          Please do not fill topic threads with ongoing conversations.
+          Use the appropriate general chat area for conversations
+          and follow-up discussions.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          4. 🚫 No Unauthorized Selling or Reselling Discussions
+        </h3>
+
+        <p>
+          Do not use the community or research topics for
+          unauthorized selling, reselling, pricing discussions,
+          advertisements, or transactions.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          5. ✅ Admin Approval Required for Promotions
+        </h3>
+
+        <p>
+          Anyone who wants to sell, promote, advertise, or offer
+          products or services within the community must contact
+          an admin and receive approval first.
+          Unauthorized promotional posts may be removed.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          6. ⚠️ Third-Party Responsibility
+        </h3>
+
+        <p>
+          Pepper Collective and Peppers Research Hub do not guarantee
+          independent third-party vendors, services, transactions,
+          or arrangements. Members are responsible for conducting
+          their own due diligence.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          7. 📚 Keep Information Organized
+        </h3>
+
+        <p>
+          Post information in the appropriate area and help keep
+          the community clean, organized, and easy to search.
+        </p>
+
+      </div>
+
+
+      <div class="rule">
+
+        <h3>
+          8. 🌶️ Help Protect the Community
+        </h3>
+
+        <p>
+          Avoid spam, scams, impersonation, misleading links,
+          and behavior that could put members or the community
+          at unnecessary risk.
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -499,6 +788,12 @@
       </p>
 
       <p>
+        Information provided through Peppers Research Hub
+        is for educational and informational purposes and
+        should not be considered medical advice.
+      </p>
+
+      <p>
         🚧 Research library coming soon.
       </p>
 
@@ -522,9 +817,156 @@
       </h3>
 
       <p>
-        Bookmark this website to find official updates
-        and reconnect with the Pepper Collective community.
+        Bookmark this website to find official updates,
+        community information, and replacement Telegram links.
       </p>
+
+      <hr style="border:0;border-top:1px solid #292f29;margin:24px 0;">
+
+      <h3>
+        🚨 Backup Telegram Available
+      </h3>
+
+      <p>
+        Our official backup Telegram is
+        <strong>Peppers Collective 2</strong>.
+        The backup group currently does not have a profile picture.
+      </p>
+
+      <a
+        class="backup-button"
+        href="https://t.me/+UIja7xE0s2YwNDA5"
+        target="_blank"
+        rel="noopener noreferrer">
+        Join Backup Telegram
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRIVACY POLICY -->
+
+  <section class="section" id="privacy">
+
+    <h2 class="section-title">
+      🔐 Privacy Policy
+    </h2>
+
+    <div class="card">
+
+
+      <div class="policy-item">
+
+        <h3>
+          Information We Collect
+        </h3>
+
+        <p>
+          If you choose to join our backup contact list,
+          Peppers Research Hub may collect your email address
+          and optional Telegram username.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          How We Use Your Information
+        </h3>
+
+        <p>
+          Contact information is collected only so we can send
+          important Peppers Research Hub announcements,
+          community updates, or replacement Telegram links
+          if our existing community becomes unavailable.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          No Selling of Personal Information
+        </h3>
+
+        <p>
+          Peppers Research Hub does not sell your personal
+          contact information or share it with third parties
+          for advertising or unrelated marketing purposes.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          Form Processing
+        </h3>
+
+        <p>
+          Our contact form uses Formspree to process form
+          submissions. Information submitted through the form
+          may therefore be processed by Formspree as necessary
+          to provide the form service.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          Voluntary Participation
+        </h3>
+
+        <p>
+          Joining the backup contact list is completely voluntary.
+          You do not need to provide your email address or Telegram
+          username to access the public areas of this website.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          Removal Requests
+        </h3>
+
+        <p>
+          You may request removal of your contact information
+          from our contact list at any time by emailing
+          contact@peppersresearchhub.com.
+        </p>
+
+      </div>
+
+
+      <div class="policy-item">
+
+        <h3>
+          Contact
+        </h3>
+
+        <p>
+          Questions regarding this privacy policy may be sent to:
+          <br>
+          <a
+            href="mailto:contact@peppersresearchhub.com"
+            style="color:#aaa;">
+            contact@peppersresearchhub.com
+          </a>
+        </p>
+
+      </div>
+
 
     </div>
 
@@ -540,6 +982,24 @@
     <br>
 
     Research • Education • Community
+
+    <br><br>
+
+    <a href="#rules">
+      Community Rules
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="#privacy">
+      Privacy Policy
+    </a>
+
+    &nbsp; • &nbsp;
+
+    <a href="#telegram-backup">
+      Telegram Backup
+    </a>
 
     <br><br>
 
