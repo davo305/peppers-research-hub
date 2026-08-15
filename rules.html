@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Community Rules | Peppers Research Hub</title>
+
+  <meta
+    name="description"
+    content="Pepper Collective community rules and guidelines."
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+
+      background:
+        radial-gradient(circle at 15% 15%, #071b2b 0%, transparent 35%),
+        radial-gradient(circle at 85% 45%, #10251d 0%, transparent 35%),
+        linear-gradient(180deg, #06090f, #090d12);
+
+      color: white;
+      min-height: 100vh;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+
+    /* FLOATING BACKGROUND */
+
+    .lab-background {
+      position: fixed;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .lab-emoji {
+      position: absolute;
+      opacity: 0.18;
+      font-size: 42px;
+
+      filter:
+        drop-shadow(0 0 8px rgba(80,220,255,.30));
+
+      animation:
+        floating 12s ease-in-out infinite;
+    }
+
+    .e1 {
+      top: 10%;
+      left: 5%;
+    }
+
+    .e2 {
+      top: 28%;
+      right: 5%;
+      animation-delay: -3s;
+    }
+
+    .e3 {
+      top: 48%;
+      left: 4%;
+      animation-delay: -6s;
+    }
+
+    .e4 {
+      top: 67%;
+      right: 5%;
+      animation-delay: -8s;
+    }
+
+    .e5 {
+      top: 85%;
+      left: 8%;
+      animation-delay: -4s;
+    }
+
+    @keyframes floating {
+
+      0% {
+        transform:
+          translateY(0)
+          rotate(-4deg);
+      }
+
+      50% {
+        transform:
+          translateY(-22px)
+          rotate(5deg);
+      }
+
+      100% {
+        transform:
+          translateY(0)
+          rotate(-4deg);
+      }
+
+    }
+
+
+    /* PAGE */
+
+    .page {
+      position: relative;
+      z-index: 2;
+
+      max-width: 900px;
+
+      margin: auto;
+
+      padding:
+        25px 18px 70px;
+    }
+
+
+    /* BACK */
+
+    .back {
+      display: inline-block;
+
+      margin-bottom: 30px;
+
+      padding:
+        11px 16px;
+
+      border-radius: 10px;
+
+      background: #168bd2;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+
+    /* HEADER */
+
+    .header {
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size:
+        clamp(36px, 8vw, 52px);
+
+      margin:
+        0 0 10px;
+
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      color: #aeb8c4;
+
+      font-size: 17px;
+
+      margin: 0;
+    }
+
+
+    /* WELCOME NOTICE */
+
+    .welcome {
+      background:
+        rgba(36,115,58,.14);
+
+      border:
+        1px solid rgba(70,200,100,.35);
+
+      border-left:
+        5px solid #38a85a;
+
+      border-radius: 14px;
+
+      padding: 20px;
+
+      margin-bottom: 32px;
+
+      color: #c7dfce;
+    }
+
+    .welcome strong {
+      color: #78e59a;
+    }
+
+
+    /* RULE CARD */
+
+    .rule {
+      background:
+        rgba(18,23,29,.95);
+
+      border:
+        1px solid #303a43;
+
+      border-radius: 18px;
+
+      padding: 22px;
+
+      margin-bottom: 17px;
+
+      box-shadow:
+        0 12px 30px rgba(0,0,0,.28);
+    }
+
+    .rule h2 {
+      margin:
+        0 0 10px;
+
+      font-size: 22px;
+    }
+
+    .rule p {
+      margin: 0;
+
+      color: #c4cbd2;
+    }
+
+
+    /* IMPORTANT RULE */
+
+    .important {
+      border:
+        1px solid rgba(220,150,50,.45);
+
+      background:
+        rgba(40,31,16,.88);
+    }
+
+
+    /* COMMUNITY BUTTON */
+
+    .community-box {
+      margin-top: 38px;
+
+      padding: 25px;
+
+      border-radius: 18px;
+
+      text-align: center;
+
+      background:
+        rgba(20,61,32,.50);
+
+      border:
+        1px solid rgba(80,200,110,.35);
+    }
+
+    .community-box h2 {
+      margin-top: 0;
+    }
+
+    .community-box p {
+      color: #b8c8bd;
+    }
+
+    .telegram-button {
+      display: block;
+
+      padding:
+        15px 20px;
+
+      margin-top: 18px;
+
+      border-radius: 11px;
+
+      background: #258044;
+
+      color: white;
+
+      text-decoration: none;
+
+      font-weight: bold;
+    }
+
+
+    /* DISCLAIMER */
+
+    .disclaimer {
+      margin-top: 35px;
+
+      padding: 18px;
+
+      border-radius: 12px;
+
+      background:
+        rgba(80,60,15,.15);
+
+      border:
+        1px solid rgba(200,160,70,.25);
+
+      color: #bcb39d;
+
+      font-size: 13px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 50px;
+
+      padding-top: 30px;
+
+      border-top:
+        1px solid #28313a;
+
+      text-align: center;
+
+      color: #7f8a94;
+
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #b9c5ce;
+      text-decoration: none;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 600px) {
+
+      .page {
+        padding:
+          20px 15px 55px;
+      }
+
+      .rule {
+        padding: 19px;
+      }
+
+      .lab-emoji {
+        opacity: 0.20;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<!-- FLOATING LAB BACKGROUND -->
+
+<div class="lab-background">
+
+  <span class="lab-emoji e1">
+    🧪
+  </span>
+
+  <span class="lab-emoji e2">
+    🔬
+  </span>
+
+  <span class="lab-emoji e3">
+    🧬
+  </span>
+
+  <span class="lab-emoji e4">
+    ⚗️
+  </span>
+
+  <span class="lab-emoji e5">
+    🌶️
+  </span>
+
+</div>
+
+
+
+<main class="page">
+
+
+  <!-- BACK -->
+
+  <a
+    class="back"
+    href="index.html">
+
+    ← Back to Peppers Research Hub
+
+  </a>
+
+
+
+  <!-- HEADER -->
+
+  <header class="header">
+
+    <h1>
+      📋 Community Guidelines
+    </h1>
+
+    <p class="subtitle">
+      Pepper Collective Community Rules
+    </p>
+
+  </header>
+
+
+
+  <!-- INTRO -->
+
+  <div class="welcome">
+
+    🌶️ <strong>Welcome to Pepper Collective</strong>
+
+    <br><br>
+
+    We're here to learn, share research,
+    exchange information and build a respectful community.
+
+    Please review the guidelines below before participating.
+
+  </div>
+
+
+
+  <!-- RULE 1 -->
+
+  <div class="rule">
+
+    <h2>
+      🤝 1. Be Respectful
+    </h2>
+
+    <p>
+      Treat all members with respect.
+      No harassment, bullying, hate speech,
+      threats or personal attacks.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 2 -->
+
+  <div class="rule">
+
+    <h2>
+      🧪 2. Research & Education
+    </h2>
+
+    <p>
+      Keep research-related discussions focused on
+      education, information sharing and community knowledge.
+      Clearly separate established information from personal
+      opinions or experiences.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 3 -->
+
+  <div class="rule">
+
+    <h2>
+      📝 3. Use Topics Correctly
+    </h2>
+
+    <p>
+      Please use community topics for their intended purpose
+      so information remains organized and easy for members
+      to locate. Use the appropriate discussion areas for
+      general conversations and follow-up questions.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 4 -->
+
+  <div class="rule">
+
+    <h2>
+      💬 4. Keep It Helpful
+    </h2>
+
+    <p>
+      Ask questions, share useful information and contribute
+      constructively. Avoid excessive spam, repeated posts
+      or content that disrupts the community.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 5 -->
+
+  <div class="rule important">
+
+    <h2>
+      🏪 5. Vendors & Third Parties
+    </h2>
+
+    <p>
+      Third-party vendors, resources and group buys may be
+      discussed or shared within designated areas.
+
+      Pepper Collective and Peppers Research Hub do not
+      independently verify or guarantee third-party vendors,
+      products, transactions, payments, shipping, quality
+      or services.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 6 -->
+
+  <div class="rule">
+
+    <h2>
+      🔒 6. Respect Member Privacy
+    </h2>
+
+    <p>
+      Do not publicly share another member's private
+      information, messages, contact information or other
+      personal details without their permission.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 7 -->
+
+  <div class="rule">
+
+    <h2>
+      🚫 7. No Scams or Misleading Information
+    </h2>
+
+    <p>
+      Scamming, impersonation, intentionally misleading
+      members or fraudulent activity is not permitted.
+    </p>
+
+  </div>
+
+
+
+  <!-- RULE 8 -->
+
+  <div class="rule">
+
+    <h2>
+      🛡️ 8. Moderator Decisions
+    </h2>
+
+    <p>
+      Moderators may remove content or restrict participation
+      when necessary to protect the community, maintain
+      organization or enforce these guidelines.
+    </p>
+
+  </div>
+
+
+
+  <!-- COMMUNITY -->
+
+  <div class="community-box">
+
+    <h2>
+      🌶️ Join Pepper Collective
+    </h2>
+
+    <p>
+      Join the community for research discussions,
+      announcements and community updates.
+    </p>
+
+    <a
+      class="telegram-button"
+      href="https://t.me/+M25pGmfiPD4wZGIx"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      Join Telegram Community
+
+    </a>
+
+  </div>
+
+
+
+  <!-- DISCLAIMER -->
+
+  <div class="disclaimer">
+
+    <strong>Community Notice:</strong>
+
+    Pepper Collective and Peppers Research Hub provide
+    community and informational resources. Information
+    shared by individual members or third parties does not
+    necessarily represent the views or recommendations of
+    Pepper Collective or Peppers Research Hub.
+
+  </div>
+
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    🌶️ Peppers Research Hub
+
+    <br>
+
+    Research • Education • Community
+
+    <br><br>
+
+    <a href="index.html">
+      ← Return Home
+    </a>
+
+  </footer>
+
+
+</main>
+
+</body>
+
+</html>
